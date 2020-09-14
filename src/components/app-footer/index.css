@@ -1,0 +1,50 @@
+.app-footer{
+  color: white;
+  border-top: 6px solid var(--theme-color);
+}
+.footer-top{
+  background-color: var(--secondary-color);
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+.footer-top hr {
+  background-color: var(--theme-color);
+  width: 40px;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 35px;
+  display: inline-block;
+}
+.footer-top p{
+  font-size: 14px;
+}
+.footer-top h5 {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.footer-top-contact-info p{
+  font-size: 16px;
+}
+.useful-links{
+  list-style-type: none;
+  padding: 0;
+}
+.useful-links li{
+  margin-bottom: 10px;
+}
+.useful-links li a{
+  color: white;
+}
+.footer-copy{
+  background-color: var(--secondary-dark-color);
+  min-height: 80px;
+}
+.footer-payment-img{
+  width: 100%;
+  max-width: 390px;
+}
+@media (min-width: 768px)  { 
+  .footer-copy{
+    height: 80px;
+  }
+}
