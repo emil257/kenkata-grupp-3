@@ -6,6 +6,8 @@ export default function index() {
       This is home
       <p>Hej</p>
       This is homeawdawd
+
+      f1
     </div>
   )
 }
