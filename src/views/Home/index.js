@@ -11,6 +11,8 @@ import RelatedProductsHeader from '../../components/app-section-headers/related-
 import Shipping from '../../components/app-shipping/index'
 import CustomerBanner from '../../components/app-customer-banner'
 import FlashSaleBanner from '../../components/app-flash-sale-banner'
+import Subscribe from '../../components/app-subscribe/index'
+import AppReviews from '../../components/app-reviews/index'
 
 
 export default function index() {
@@ -23,6 +25,9 @@ export default function index() {
     <FeaturedProductsHeader></FeaturedProductsHeader>
     <TopSellersHeader></TopSellersHeader>
     <LatestBlogHeader></LatestBlogHeader>
+    <Subscribe></Subscribe>
+    <AppReviews></AppReviews>
+
     <YouMayAlsoLikeHeader></YouMayAlsoLikeHeader>
     <RelatedProductsHeader></RelatedProductsHeader>
 
@@ -30,6 +35,7 @@ export default function index() {
     <Shipping />
     <FlashSaleBanner />
     <CustomerBanner />
+
     </div>
   )
 }
