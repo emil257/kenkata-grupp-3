@@ -1,13 +1,12 @@
 import React from 'react'
 
+import Banner from '../../components/app-banner/index'
+
+
 export default function index() {
   return (
     <div>
-      This is home
-      <p>Hej</p>
-      This is homeawdawd
-
-      f1
+    <Banner></Banner>
     </div>
   )
 }

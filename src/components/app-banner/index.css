@@ -1,0 +1,20 @@
+.banner {
+    background-color: var(--product-bg);
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner-content {
+    color: var(--secondary-color);
+}
+
+.banner-content h1 {
+    font-size: 60px;
+}
+
+.banner-content h1 span {
+    font-weight: bold;
+    display: block;
+}
