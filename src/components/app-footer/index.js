@@ -59,7 +59,7 @@ export default function index() {
                 <img src={recentInstagram} alt="" />
               </div>
             </div>
-            </div>
+          </div>
         </div>
         <div className="footer-copy">
           <div className="container d-flex flex-column-reverse flex-md-row align-items-center h-100 justify-content-md-between py-3 py-md-0">
