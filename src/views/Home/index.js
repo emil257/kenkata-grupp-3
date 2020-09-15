@@ -8,6 +8,9 @@ import TopSellersHeader from '../../components/app-section-headers/top-sellers/i
 import LatestBlogHeader from '../../components/app-section-headers/latest-blog/index'
 import YouMayAlsoLikeHeader from '../../components/app-section-headers/you-may-also-like/index'
 import RelatedProductsHeader from '../../components/app-section-headers/related-products/index'
+import Shipping from '../../components/app-shipping/index'
+import CustomerBanner from '../../components/app-customer-banner'
+import FlashSaleBanner from '../../components/app-flash-sale-banner'
 
 
 export default function index() {
@@ -23,6 +26,10 @@ export default function index() {
     <YouMayAlsoLikeHeader></YouMayAlsoLikeHeader>
     <RelatedProductsHeader></RelatedProductsHeader>
 
+    
+    <Shipping />
+    <FlashSaleBanner />
+    <CustomerBanner />
     </div>
   )
 }
