@@ -13,29 +13,28 @@ import CustomerBanner from '../../components/app-customer-banner'
 import FlashSaleBanner from '../../components/app-flash-sale-banner'
 import Subscribe from '../../components/app-subscribe/index'
 import AppReviews from '../../components/app-reviews/index'
-
+import ShopCategory from "../../components/app-shop-category/index";
+import Brands from '../../components/app-brands'
 
 export default function index() {
   return (
     <div>
-      
-    <Banner></Banner>
-    <ShopByCatHeader></ShopByCatHeader>
-    <NewArrivalsHeader></NewArrivalsHeader>
-    <FeaturedProductsHeader></FeaturedProductsHeader>
-    <TopSellersHeader></TopSellersHeader>
-    <LatestBlogHeader></LatestBlogHeader>
-    <Subscribe></Subscribe>
-    <AppReviews></AppReviews>
 
-    <YouMayAlsoLikeHeader></YouMayAlsoLikeHeader>
-    <RelatedProductsHeader></RelatedProductsHeader>
-
-    
-    <Shipping />
-    <FlashSaleBanner />
-    <CustomerBanner />
-
+      <Banner></Banner>
+      <ShopByCatHeader></ShopByCatHeader>
+      <NewArrivalsHeader></NewArrivalsHeader>
+      <FeaturedProductsHeader></FeaturedProductsHeader>
+      <TopSellersHeader></TopSellersHeader>
+      <LatestBlogHeader></LatestBlogHeader>
+      <Subscribe></Subscribe>
+      <AppReviews></AppReviews>
+      <YouMayAlsoLikeHeader></YouMayAlsoLikeHeader>
+      <RelatedProductsHeader></RelatedProductsHeader>
+      <Shipping />
+      <FlashSaleBanner />
+      <CustomerBanner />
+      <ShopCategory></ShopCategory>
+      <Brands></Brands>
     </div>
-  )
+  );
 }
