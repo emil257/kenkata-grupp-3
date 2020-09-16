@@ -30,3 +30,13 @@
     color: white;
     margin-bottom: 33px;
 }
+
+.swiper-button-next {
+    left: 5% !important;
+}
+
+.swiper-button-prev {
+    right: 5% !important;
+}
+
+
