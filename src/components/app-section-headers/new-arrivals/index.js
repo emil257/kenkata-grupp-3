@@ -23,7 +23,6 @@ export default function Index() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
-        
         spaceBetween: 30,
         slidesPerView: 3,
         breakpoints: {
@@ -65,7 +64,7 @@ export default function Index() {
                 <div className="swiper-button-prev"></div>
                 <div className="swiper-button-next"></div>
             </Swiper>
-            <div className="container">
+            <div className="container-pagination">
                 <div className="swiper-pagination"></div>
             </div>
         </div>
