@@ -31,14 +31,18 @@ export default function index() {
             disableOnInteraction: false
         },
         breakpoints: {
-            // when window width is >= 320px
+            // when window width is >= 100px
+            100: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
             320: {
               slidesPerView: 1,
               spaceBetween: 20
             },
             // when window width is >= 480px
             480: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 30
             },
             // when window width is >= 640px
@@ -49,8 +53,8 @@ export default function index() {
           }
         }
     return (
-            <div class="app-latest-blog">
-                <div class="container position-relative">
+            <div className="app-latest-blog">
+                <div className="container position-relative">
 
                     <Swiper
                         {...params}
