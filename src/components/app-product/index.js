@@ -4,12 +4,43 @@ import "./index.css";
 import Boxim from "../../assets/img/brands/Bexim.png";
 import Product1 from "../../assets/img/product-img/product-1.png";
 
-export default function index(props) {
-  return (
-      <div className={props.className}>      
+const tag = (t) => {
+  switch(t){
+    case 'new':
+      return (
+        <div className="p-tag p-tag-new d-flex align-items-center justify-content-center" v-if="tag == 1">
+          <p>NEW</p>
+        </div>
+      )
+    case 'hot':
+      return (
+        <div className="p-tag p-tag-hot d-flex align-items-center justify-content-center" v-if="tag == 2">
+          <p>HOT</p>
+        </div>
+      )
+    case 'sale':
+      return (
+        <div className="p-tag p-tag-sale d-flex align-items-center justify-content-center" v-if="tag == 3">
+          <p>-20%</p>
+        </div>
+      )
+    default:
+      return (
         <div className="product-brand">
           <img className="product-brand-img" src={Boxim} alt="Boxim" />
-        </div>       
+        </div>  
+      )
+  }
+}
+
+export default function index(props) {
+  return (
+      <div className={props.className}>  
+
+        { tag(props.tag) }
+  
+
+
         <img className="product-image" src={Product1} alt="" />
         <div className="product-footer">
           <p>Men's denim shirts full</p>
