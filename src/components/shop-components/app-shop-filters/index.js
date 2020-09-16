@@ -50,8 +50,8 @@ export default function index() {
       
       <div className="sorting-categories">
         <p className="text-theme-color weight-medium mb-3">Filter by Price</p>
-        <div class="form-group">
-          <input type="range" class="form-control-range" />
+        <div className="form-group">
+          <input type="range" className="form-control-range" />
         </div>
         <span className="d-flex justify-content-between">
           <p>Price: $0 - $10,000</p>
