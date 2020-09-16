@@ -1,3 +1,9 @@
+.fix-controll{
+  text-align: center;
+  width: 100%;
+}
+
+
 .product-background{
   padding: 25px;
   padding-bottom: 46px;
@@ -61,10 +67,6 @@
   display: block;
 }
 
-.product-background:hover .product-footer{
-  display: none;
-}
-
 .product-overlay{
   display: none;
   background-color: #0e153ed9;
@@ -115,6 +117,15 @@
   top: 13px;
   padding: 23px 0;
 }
+.product-overlay-controller i{
+  color: var(--grey);
+}
 .product-overlay-controller i:hover{
   color: var(--theme-color)
+}
+.rfpt{
+  padding-top: 70px !important; 
+}
+.rft{
+  top: 65px;
 }

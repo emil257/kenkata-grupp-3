@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css'
 
 import AppSectionHeader from "../app-section-headers/top-sellers";
-import Product1 from '../app-product/index'
+import Product1 from '../app-product/'
 
 export default function index() {
     return (
@@ -11,7 +11,9 @@ export default function index() {
           <div className="container">
             <AppSectionHeader />
             <div className="product-container">
-                <Product1 className="main-seller" />    
+                <Product1 className="product-background main-seller"/>    
+                <Product1 className="product-background"/>    
+                <Product1 className="product-background"/>    
               
             </div>
           </div>
