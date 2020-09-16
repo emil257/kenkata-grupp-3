@@ -251,6 +251,28 @@ p, h5{
 .owl-dots .owl-dot {
   margin:  0 3px !important;
 }
+
+
+.swiper-button-next.swiper-button-disabled,  .swiper-button-prev.swiper-button-disabled{
+  background-color: white !important;
+  opacity: 1 !important;
+  border: 2px solid var(--line-bullet);
+  color: var(--line-bullet) !important;
+}
+.swiper-button-next,  .swiper-button-prev{
+  color: white  !important;
+  background-color: var(--theme-color);
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50%;
+}
+.swiper-button-next{
+  padding-left: 8px;
+}
+
+.swiper-button-prev {
+  padding-right: 8px;
+}
 /* CAROUSELL END */
 
 /* STARS START */
