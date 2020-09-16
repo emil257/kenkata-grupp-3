@@ -55,12 +55,14 @@
   border-radius: 0 0 6px 6px;
   padding: 10px 25px 10px 25px;
 }
+
 .product-image{
   position: relative;
   height: 100%;
   display:block;
   margin: auto;
-  right: 0;
+  right: 0; 
+  /* width: 100%; */
 }
 
 .product-background:hover .product-overlay{

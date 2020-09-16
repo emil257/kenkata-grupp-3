@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 import Banner from '../../components/app-banner/index'
 import ShopByCatHeader from '../../components/app-section-headers/shop-by-category/index.js'
@@ -13,20 +13,20 @@ import FlashSaleBanner from '../../components/app-flash-sale-banner'
 import Subscribe from '../../components/app-subscribe/index'
 import AppReviews from '../../components/app-reviews/index'
 import ShopCategory from "../../components/app-shop-category/index";
-import Brands from '../../components/app-brands'
-import TopSeller from '../../components/app-topp-sellers'
-import AppLatestBlog from '../../components/app-latest-blog/index'
+import Brands from "../../components/app-brands";
+import TopSeller from "../../components/app-topp-sellers";
+import AppLatestBlog from "../../components/app-latest-blog/index";
 
-
+import NewArivalsCarousel from "../../components/app-new-arrivals-carousel";
 
 export default function index() {
   return (
     <div>
       <Banner></Banner>
-      
+
       <ShopByCatHeader></ShopByCatHeader>
 
-      
+      <NewArivalsCarousel></NewArivalsCarousel>
 
       <NewArrivalsHeader></NewArrivalsHeader>
       <FeaturedProductsHeader></FeaturedProductsHeader>
@@ -42,8 +42,6 @@ export default function index() {
       <CustomerBanner />
       <ShopCategory></ShopCategory>
       <Brands></Brands>
-
-      
     </div>
   );
 }
