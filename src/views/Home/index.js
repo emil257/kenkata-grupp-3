@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 import Banner from '../../components/app-banner/index'
 import ShopByCatHeader from '../../components/app-section-headers/shop-by-category/index.js'
 import NewArrivalsHeader from '../../components/app-section-headers/new-arrivals'

@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Logo from "../../assets/img/Logo.png";
 
 export default function index() {
@@ -27,7 +27,8 @@ export default function index() {
                 >
                   Newsletter
                 </Link>
-                <Link to="/contact"
+                <Link
+                  to="/contact"
                   className="pr-3 pl-3 text-light nav-text-item nav-border-r"
                 >
                   Contact us
@@ -48,7 +49,9 @@ export default function index() {
         </div>
         <div className="nav-middle">
           <div className="container h-100 d-flex flex-column flex-md-row py-4 py-md-0 align-items-start align-items-md-center justify-content-between">
-            <img className="mb-4 mb-md-0" src={Logo} alt="Logo" />
+            <Link to="/">
+              <img className="mb-4 mb-md-0" src={Logo} alt="Logo" />
+            </Link>
 
             <div className="input-group nav-search-grp">
               <input
@@ -123,12 +126,18 @@ export default function index() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/" className="custom-nav-link d-flex h-100 align-items-center mr-4">
+                  <Link
+                    to="/"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                  >
                     Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/shop" className="custom-nav-link d-flex h-100 align-items-center mr-4">
+                  <Link
+                    to="/shop"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                  >
                     Shop
                     <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
                   </Link>
@@ -136,7 +145,8 @@ export default function index() {
                 <li className="nav-item">
                   <Link
                     to="/product"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4">
+                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                  >
                     Products
                     <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
                   </Link>
@@ -144,21 +154,26 @@ export default function index() {
                 <li className="nav-item">
                   <Link
                     to="/categories"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4">
+                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                  >
                     Categories
                     <i className="fas fa-chevron-down fa-sm pt-1 pl-2 dropdown-icon"></i>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/pages"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4">
+                  <Link
+                    to="/pages"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                  >
                     Pages
                     <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/blog"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4">
+                  <Link
+                    to="/blog"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                  >
                     Blog
                   </Link>
                 </li>
@@ -166,7 +181,9 @@ export default function index() {
             </div>
           </nav>
 
-          <button className="custom-theme-btn s-offer-btn">SPECIAL OFFER</button>
+          <button className="custom-theme-btn s-offer-btn">
+            SPECIAL OFFER
+          </button>
         </div>
       </div>
     </div>

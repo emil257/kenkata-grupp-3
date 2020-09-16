@@ -4,10 +4,9 @@ import "./index.css";
 import Boxim from "../../assets/img/brands/Bexim.png";
 import Product1 from "../../assets/img/product-img/product-1.png";
 
-export default function index() {
+export default function index(props) {
   return (
-    <div>
-      <div className="product-background">      
+      <div className={props.className}>      
         <div className="product-brand">
           <img className="product-brand-img" src={Boxim} alt="Boxim" />
         </div>       
@@ -67,6 +66,5 @@ export default function index() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
