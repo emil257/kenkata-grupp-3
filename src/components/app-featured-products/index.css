@@ -1,0 +1,23 @@
+.product-carousel {
+    margin-bottom: 110px;
+}
+
+.product-card {
+    padding: 1.2rem;
+}
+
+.c-carousel {
+    position: relative;
+}
+
+.c-next {
+    position: absolute;
+    top: -24px;
+    right: -64px;
+}
+
+.c-prev {
+    position: absolute;
+    top: -24px;
+    left: -64px;
+}

@@ -144,7 +144,7 @@ export default function index() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/product"
+                    to="/products"
                     className="custom-nav-link d-flex h-100 align-items-center mr-4"
                   >
                     Products
