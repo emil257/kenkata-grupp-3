@@ -1,11 +1,13 @@
 import React from 'react'
 import './index.css'
+import ShopByCategory from '../app-section-headers/shop-by-category/index.js'
 
 export default function index() {
     return (
 <div className="shop-category">
     <div className="container">
-      <app-section-header first="SHOP BY" second="CATEGORY" desc="We always try to give you the best product within a fast and reliable way"></app-section-header>
+      {/* <app-section-header first="SHOP BY" second="CATEGORY" desc="We always try to give you the best product within a fast and reliable way"></app-section-header> */}
+      <ShopByCategory></ShopByCategory>
       <div className="shop-category-grid">
         <div className="shop-category-item item-men">
           <div className="shop-category-footer"><p>Men</p></div>

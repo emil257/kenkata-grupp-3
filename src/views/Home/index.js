@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 
 import Banner from '../../components/app-banner/index'
@@ -9,6 +9,7 @@ import TopSellersHeader from '../../components/app-section-headers/top-sellers/i
 import LatestBlogHeader from '../../components/app-section-headers/latest-blog/index'
 import YouMayAlsoLikeHeader from '../../components/app-section-headers/you-may-also-like/index'
 import RelatedProductsHeader from '../../components/app-section-headers/related-products/index'
+<<<<<<< HEAD
 
 
 import Shipping from "../../components/app-shipping/index";
@@ -17,26 +18,36 @@ import FlashSaleBanner from "../../components/app-flash-sale-banner";
 import ShopCategory from "../../components/app-shop-category/index";
 import ToppSeller from "../../components/app-topp-sellers"
 
+=======
+import Shipping from '../../components/app-shipping/index'
+import CustomerBanner from '../../components/app-customer-banner'
+import FlashSaleBanner from '../../components/app-flash-sale-banner'
+import Subscribe from '../../components/app-subscribe/index'
+import AppReviews from '../../components/app-reviews/index'
+import ShopCategory from "../../components/app-shop-category/index";
+import Brands from '../../components/app-brands'
+>>>>>>> 8e2d8ddf78b35fe3c12592c0f53d2c9344a65026
 
 export default function index() {
   return (
     <div>
+
       <Banner></Banner>
-      <ShopCategory></ShopCategory>
+      <ShopByCatHeader></ShopByCatHeader>
+      <NewArrivalsHeader></NewArrivalsHeader>
+      <FeaturedProductsHeader></FeaturedProductsHeader>
+      <TopSellersHeader></TopSellersHeader>
+      <LatestBlogHeader></LatestBlogHeader>
+      <Subscribe></Subscribe>
+      <AppReviews></AppReviews>
+      <YouMayAlsoLikeHeader></YouMayAlsoLikeHeader>
+      <RelatedProductsHeader></RelatedProductsHeader>
       <Shipping />
       <FlashSaleBanner />
       <ToppSeller />
       <CustomerBanner />
-      
-    <ShopByCatHeader></ShopByCatHeader>
-    <NewArrivalsHeader></NewArrivalsHeader>
-    <FeaturedProductsHeader></FeaturedProductsHeader>
-    <TopSellersHeader></TopSellersHeader>
-    <LatestBlogHeader></LatestBlogHeader>
-    <YouMayAlsoLikeHeader></YouMayAlsoLikeHeader>
-    <RelatedProductsHeader></RelatedProductsHeader>
-
-
+      <ShopCategory></ShopCategory>
+      <Brands></Brands>
     </div>
   );
 }
