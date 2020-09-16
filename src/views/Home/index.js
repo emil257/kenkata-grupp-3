@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 import Banner from '../../components/app-banner/index'
 import ShopByCatHeader from '../../components/app-section-headers/shop-by-category/index.js'
 import NewArrivalsHeader from '../../components/app-section-headers/new-arrivals'
@@ -15,6 +16,7 @@ import Subscribe from '../../components/app-subscribe/index'
 import AppReviews from '../../components/app-reviews/index'
 import ShopCategory from "../../components/app-shop-category/index";
 import Brands from '../../components/app-brands'
+import TopSeller from '../../components/app-topp-sellers'
 
 export default function index() {
   return (
@@ -32,6 +34,7 @@ export default function index() {
       <RelatedProductsHeader></RelatedProductsHeader>
       <Shipping />
       <FlashSaleBanner />
+      <TopSeller />
       <CustomerBanner />
       <ShopCategory></ShopCategory>
       <Brands></Brands>
