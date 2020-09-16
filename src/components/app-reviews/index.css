@@ -40,5 +40,8 @@
     position: absolute !important;
 }
 
-
-
+@media (max-width: 480px) {
+    #swiper-reviews-button-prev, #swiper-reviews-button-next {
+        display: none !important;
+    }
+}

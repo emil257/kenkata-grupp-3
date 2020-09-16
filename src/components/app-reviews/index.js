@@ -27,10 +27,10 @@ export default function index() {
         },
         spaceBetween: 30,
         slidesPerView: 1,
-        // autoplay: {
-        //     delay: 4500,
-        //     disableOnInteraction: false
-        // },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+        },
     
     }
     return (
@@ -98,12 +98,8 @@ export default function index() {
 
                         </SwiperSlide>
                     </Swiper>   
-
-
-                        <div className="swiper-button-prev" id="swiper-reviews-button-prev"></div>
-                        <div className="swiper-button-next" id="swiper-reviews-button-next"></div>
-                    
-                    
+                    <div className="swiper-button-prev" id="swiper-reviews-button-prev"></div>
+                    <div className="swiper-button-next" id="swiper-reviews-button-next"></div>
                     <div className="container-pagination">
                         <div className="swiper-pagination" id="swiper-reviews"></div>
                     </div>
