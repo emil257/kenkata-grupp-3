@@ -3,6 +3,7 @@ import './index.css'
 import AppBlogItem from './app-blog-item/index'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import LatestBlogHeader from '../app-section-headers/latest-blog'
 
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
@@ -49,9 +50,11 @@ export default function index() {
           }
         }
     return (
+        <div>
+            <LatestBlogHeader/>
             <div class="app-latest-blog">
                 <div class="container position-relative">
-
+                    
                     <Swiper
                         {...params}
                         >
@@ -79,5 +82,6 @@ export default function index() {
                     
                 </div>
             </div>
+        </div>
     )
 }

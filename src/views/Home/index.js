@@ -24,7 +24,11 @@ export default function index() {
     <div>
 
       <Banner></Banner>
+      
       <ShopByCatHeader></ShopByCatHeader>
+
+      
+
       <NewArrivalsHeader></NewArrivalsHeader>
       <FeaturedProductsHeader></FeaturedProductsHeader>
       <TopSellersHeader></TopSellersHeader>
@@ -40,6 +44,8 @@ export default function index() {
       <CustomerBanner />
       <ShopCategory></ShopCategory>
       <Brands></Brands>
+
+      
     </div>
   );
 }
