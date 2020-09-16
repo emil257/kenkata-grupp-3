@@ -1,13 +1,13 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import 'swiper/swiper.scss';
 
-SwiperCore.use([Navigation, Pagination ]);
+SwiperCore.use([Navigation, Pagination, Autoplay ]);
 
 export default function index() {
 
@@ -24,6 +24,10 @@ export default function index() {
         },
         spaceBetween: 30,
         slidesPerView: 3,
+        autoplay: {
+            delay: 500,
+            disableOnInteraction: false
+        },
         breakpoints: {
             // when window width is >= 320px
             320: {
