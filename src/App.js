@@ -5,8 +5,9 @@ import './App.css';
 import './assets/css/custom.css'
 
 import Home from '../src/views/Home/index'
+import Shop from '../src/views/Shop'
 import AppFooter from '../src/components/app-footer'
-import AppCarousel from '../src/components/app-carousel'
+
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
       </Switch>
-      <AppCarousel/>
+      <Switch>
+        <Route exact path="/shop" component={Shop} />
+      </Switch>
 
       <AppFooter />
     </BrowserRouter>
