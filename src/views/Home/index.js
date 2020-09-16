@@ -22,7 +22,6 @@ import AppLatestBlog from '../../components/app-latest-blog/index'
 export default function index() {
   return (
     <div>
-
       <Banner></Banner>
       
       <ShopByCatHeader></ShopByCatHeader>

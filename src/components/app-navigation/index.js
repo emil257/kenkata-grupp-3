@@ -22,7 +22,7 @@ export default function index() {
             <div className="d-none d-md-flex">
               <div>
                 <Link
-                  href="/newsletter"
+                  to="/newsletter"
                   className="pr-3 text-light nav-text-item nav-border-r"
                 >
                   Newsletter
@@ -88,10 +88,10 @@ export default function index() {
               <Link to="/heart" className="custom-nav-link ml-4">
                 <i className="far fa-heart custom-nav-link-icon"></i>
               </Link>
-              <Link href="/compare" className="custom-nav-link ml-3">
+              <Link to="/compare" className="custom-nav-link ml-3">
                 <i className="fas fa-arrows-alt-h custom-nav-link-icon"></i>
               </Link>
-              <Link href="/shopping-bag" className="custom-nav-link ml-3">
+              <Link to="/shopping-bag" className="custom-nav-link ml-3">
                 <i className="fas fa-shopping-bag custom-nav-link-icon"></i>
                 $0.00
               </Link>
@@ -117,7 +117,7 @@ export default function index() {
               <ul className="navbar-nav flex-column-reverse flex-lg-row">
                 <li className="nav-item browse-cat px-3 mr-2 mr-xl-4">
                   <Link
-                    href="/"
+                    to="/"
                     className="custom-nav-link d-flex h-100 align-items-center text-white"
                   >
                     <i className="fas fa-list mr-2"></i>
