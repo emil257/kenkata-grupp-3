@@ -16,6 +16,7 @@ import AppReviews from '../../components/app-reviews/index'
 import ShopCategory from "../../components/app-shop-category/index";
 import Brands from '../../components/app-brands'
 import TopSeller from '../../components/app-topp-sellers'
+import AppLatestBlog from '../../components/app-latest-blog/index'
 
 export default function index() {
   return (
@@ -33,6 +34,7 @@ export default function index() {
       <RelatedProductsHeader></RelatedProductsHeader>
       <Shipping />
       <FlashSaleBanner />
+      <AppLatestBlog></AppLatestBlog>
       <TopSeller />
       <CustomerBanner />
       <ShopCategory></ShopCategory>

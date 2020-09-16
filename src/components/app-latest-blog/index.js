@@ -1,4 +1,6 @@
 import React from 'react'
+import './index.css'
+import AppBlogItem from './app-blog-item/index'
 
 export default function index() {
     return (
@@ -10,15 +12,16 @@ export default function index() {
 
                     {/* Carousel */}
 
-                    <app-blog-item></app-blog-item>
-                    <app-blog-item></app-blog-item>
-                    <app-blog-item></app-blog-item>
+                    <AppBlogItem></AppBlogItem>
+                    <AppBlogItem></AppBlogItem>
+                    <AppBlogItem></AppBlogItem>
+                   
 
 
-                    <span class="blog-arrow c-scroll-btn c-scroll-right align-items-center justify-content-center c-next"><img src="@/assets/img/next-arrow.png" alt="" /></span>
+                    {/* <span class="blog-arrow c-scroll-btn c-scroll-right align-items-center justify-content-center c-next"><img src="@/assets/img/next-arrow.png" alt="" /></span> */}
 
 
-                    <span class="blog-arrow c-scroll-btn c-scroll-left align-items-center justify-content-center c-prev"><img src="@/assets/img/next-arrow.png" alt="" /></span>
+                    {/* <span class="blog-arrow c-scroll-btn c-scroll-left align-items-center justify-content-center c-prev"><img src="@/assets/img/next-arrow.png" alt="" /></span> */}
                     
                 </div>
             </div>
