@@ -16,6 +16,7 @@
 
 .app-latest-blog {
     margin-bottom: 120px;
+    margin-top: 120px;
 }
 
 .c-item-bg {
@@ -77,6 +78,30 @@
     padding: 5px 20px !important;
     position: absolute;
     bottom: 1.3rem;
+}
+
+
+.swiper-wrapper {
+    width: 50%;
+}
+.swiper-button-next {
+    right: -5% !important;
+}
+
+.swiper-button-prev {
+    left: -5% !important;
+}
+
+.container-pagination {
+    display: flex;
+    justify-content: center;
+}
+.swiper-pagination-bullet {
+    margin: 0px 2.5px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(32, 211, 194) !important;
 }
 
 .blog-arrow {
