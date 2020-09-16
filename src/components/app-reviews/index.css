@@ -30,3 +30,15 @@
     color: white;
     margin-bottom: 33px;
 }
+
+#swiper-reviews-button-prev {
+    left: 5% !important;
+    position: absolute !important;
+}
+#swiper-reviews-button-next {
+    right: 5% !important;
+    position: absolute !important;
+}
+
+
+
