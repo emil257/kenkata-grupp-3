@@ -9,16 +9,6 @@ import TopSellersHeader from '../../components/app-section-headers/top-sellers/i
 import LatestBlogHeader from '../../components/app-section-headers/latest-blog/index'
 import YouMayAlsoLikeHeader from '../../components/app-section-headers/you-may-also-like/index'
 import RelatedProductsHeader from '../../components/app-section-headers/related-products/index'
-<<<<<<< HEAD
-
-
-import Shipping from "../../components/app-shipping/index";
-import CustomerBanner from "../../components/app-customer-banner";
-import FlashSaleBanner from "../../components/app-flash-sale-banner";
-import ShopCategory from "../../components/app-shop-category/index";
-import ToppSeller from "../../components/app-topp-sellers"
-
-=======
 import Shipping from '../../components/app-shipping/index'
 import CustomerBanner from '../../components/app-customer-banner'
 import FlashSaleBanner from '../../components/app-flash-sale-banner'
@@ -26,7 +16,7 @@ import Subscribe from '../../components/app-subscribe/index'
 import AppReviews from '../../components/app-reviews/index'
 import ShopCategory from "../../components/app-shop-category/index";
 import Brands from '../../components/app-brands'
->>>>>>> 8e2d8ddf78b35fe3c12592c0f53d2c9344a65026
+import TopSeller from '../../components/app-topp-sellers'
 
 export default function index() {
   return (
@@ -44,7 +34,7 @@ export default function index() {
       <RelatedProductsHeader></RelatedProductsHeader>
       <Shipping />
       <FlashSaleBanner />
-      <ToppSeller />
+      <TopSeller />
       <CustomerBanner />
       <ShopCategory></ShopCategory>
       <Brands></Brands>
