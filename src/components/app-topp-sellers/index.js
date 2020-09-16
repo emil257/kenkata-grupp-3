@@ -13,11 +13,7 @@ export default function index() {
             <div className="product-container">
                 <Product1 className="product-background main-seller"/>    
                 <Product1 className="product-background"/>    
-                <Product1 className="product-background"/>    
-              
-                <Product1 />    
-              
-                <Product1 />    
+                <Product1 className="product-background"/>                    
               
             </div>
           </div>
