@@ -5,11 +5,8 @@ import './App.css';
 import './assets/css/custom.css'
 
 import Home from '../src/views/Home/index'
-<<<<<<< HEAD
 import Products from '../src/views/Products/index'
-=======
 import Shop from '../src/views/Shop'
->>>>>>> 63985232c7e17a0e5ab55c5734d31559f1f4e9ef
 import AppFooter from '../src/components/app-footer'
 
 

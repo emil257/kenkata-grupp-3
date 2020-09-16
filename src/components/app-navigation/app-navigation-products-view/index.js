@@ -20,13 +20,13 @@ export default function index() {
                             /
                             <span className="ml-1">Gents Blue Lightweight Trainers</span>
                         </p>
-                        <div className="d-none align-items-center d-lg-flex">
-                            <div className="product-brand ">
-                                <img classNameName="product-brand-img" src={Brand} alt="/#" />
-                            </div>
+                        <div className="d-none d-lg-flex align-items-center flex-row">
+                             <div className="product-brand-fix ">
+                                <img className="product-brand-img" src={Brand} alt="/#" />
+                            </div> 
                             <div className="d-flex align-items-center icons">
                                 <i className="fas fa-angle-left fa-3x mx-3"></i>
-                                <img src={ShopImage} alt="/#" />
+                                <img src={ShopImage} alt="" />
                                 <i className="fas fa-angle-right fa-3x mx-3"></i>
                             </div>
                         </div>
