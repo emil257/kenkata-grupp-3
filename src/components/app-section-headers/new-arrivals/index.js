@@ -25,6 +25,7 @@ export default function Index() {
         },
         spaceBetween: 30,
         slidesPerView: 3,
+        loop: true,
         breakpoints: {
             // when window width is >= 320px
             320: {
