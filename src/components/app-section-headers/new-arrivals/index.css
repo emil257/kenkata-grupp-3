@@ -41,10 +41,10 @@
     align-items: center;
   }
 
-    .container {
-        display: flex;
-        justify-content: center;
-    }
+  .container-pagination {
+      display: flex;
+      justify-content: center;
+  }
     
 
   /* .swiper-button-prev {
@@ -63,11 +63,11 @@
   } */
 
   .swiper-button-next {
-    right: 10% !important;
+    right: 5% !important;
   }
 
   .swiper-button-prev {
-    left: 10% !important;
+    left: 5% !important;
   }
 /* 
   .swiper-button-prev::after {
