@@ -13,6 +13,10 @@ export default function index() {
             <div className="product-container">
                 <Product1 className="main-seller" />    
               
+                <Product1 />    
+              
+                <Product1 />    
+              
             </div>
           </div>
         </div>
