@@ -18,6 +18,7 @@ import Brands from '../../components/app-brands'
 import TopSeller from '../../components/app-topp-sellers'
 import AppLatestBlog from '../../components/app-latest-blog/index'
 
+
 export default function index() {
   return (
     <div>
