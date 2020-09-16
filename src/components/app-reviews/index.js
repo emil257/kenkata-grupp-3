@@ -27,17 +27,17 @@ export default function index() {
         },
         spaceBetween: 30,
         slidesPerView: 1,
-        autoplay: {
-            delay: 4500,
-            disableOnInteraction: false
-        },
+        // autoplay: {
+        //     delay: 4500,
+        //     disableOnInteraction: false
+        // },
     
     }
     return (
         <div>
 
             <div className="app-review d-flex align-items-center ">
-                <div className="container over">
+                <div className="container position-relative">
 
 
                     <Swiper
@@ -97,9 +97,11 @@ export default function index() {
                             </div>
 
                         </SwiperSlide>
+                    </Swiper>   
+
+
                         <div className="swiper-button-prev" id="swiper-reviews-button-prev"></div>
                         <div className="swiper-button-next" id="swiper-reviews-button-next"></div>
-                    </Swiper>
                     
                     
                     <div className="container-pagination">
