@@ -9,13 +9,15 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import 'swiper/swiper.scss';
 
+import BlogHeader from '../app-section-headers/latest-blog'
+
 SwiperCore.use([Navigation, Pagination, Autoplay ]);
 
 
 export default function index() {
     const params = {
         pagination: {
-            el: '.swiper-pagination',
+            el: '#swiper-pagination-blog',
             type: 'bullets',
             clickable: true,
             centeredSlides: true
@@ -54,6 +56,7 @@ export default function index() {
         }
     return (
             <div className="app-latest-blog">
+                <BlogHeader/>
                 <div className="container position-relative">
 
                     <Swiper
@@ -66,7 +69,7 @@ export default function index() {
                         <div className="swiper-button-prev"></div>
                         <div className="swiper-button-next"></div>
                     <div className="container-pagination">
-                        <div className="swiper-pagination"></div>
+                        <div className="swiper-pagination" id="swiper-pagination-blog"></div>
                     </div>
                     {/* <app-section-header first="LATEST" second="BLOG" desc="Read our latest posts about our events and trending news"></app-section-header> */}
 
@@ -82,6 +85,7 @@ export default function index() {
                     {/* <span class="blog-arrow c-scroll-btn c-scroll-left align-items-center justify-content-center c-prev"><img src="@/assets/img/next-arrow.png" alt="" /></span> */}
                     
                 </div>
+
             </div>
     )
 }
