@@ -1,5 +1,6 @@
 .banner {
     background-color: var(--product-bg);
+    margin-bottom: 5rem;
 }
 
 .banner img {
@@ -18,3 +19,4 @@
     font-weight: bold;
     display: block;
 }
+

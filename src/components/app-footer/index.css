@@ -1,6 +1,7 @@
 .app-footer{
   color: white;
   border-top: 6px solid var(--theme-color);
+  margin-top: -5rem;
 }
 .footer-top{
   background-color: var(--secondary-color);
