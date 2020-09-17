@@ -1,3 +1,7 @@
+.shop-category {
+  margin-bottom: 5rem;
+}
+
 .shop-category-grid{
     display: grid;
     grid-template-areas:

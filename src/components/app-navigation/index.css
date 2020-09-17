@@ -1,7 +1,6 @@
 .navbar-toggle {
   color: var(--theme-color) !important;
 }
-
 .nav-top {
   background-color: var(--theme-color);
   height: 40px;
@@ -102,9 +101,16 @@
   }
   .fa-user {
     font-size: 1rem;
+    margin-right: -1rem;
   }
   .badge {
     font-size: 58% !important;
+  }
+  .cart-money {
+    margin-left: 0.8rem;
+  }
+  .my-account{
+    display: none !important;
   }
 }
 
@@ -133,10 +139,19 @@
   .nav-mobile-links {
     margin-right: 0.6rem;
   }
+  .cart-money {
+    margin-left: 0.8rem;
+  }
+  .my-account{
+    display: none !important;
+  }
 }
 @media (min-width: 992px) {
   .nav-item {
     margin: 0;
+  }
+  .my-account{
+    display: inline-block !important;
   }
 }
 @media (min-width: 1200px) {

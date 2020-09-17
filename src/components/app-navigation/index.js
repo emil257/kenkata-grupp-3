@@ -83,7 +83,7 @@ export default function index() {
             <div className=" d-flex align-items-center  nav-mobile-links ">
               <Link to="/account" className="custom-nav-link">
                 <i className="far fa-user custom-nav-link-icon pr-1 "></i>
-                <span className="d-none d-lg-block "> My account </span>
+                <span className=" my-account "> My account </span>
               </Link>
               <Link to="/heart" className="custom-nav-link ml-4">
                 <i className="far fa-heart custom-nav-link-icon"></i>

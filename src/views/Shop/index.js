@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect }from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { getProducts } from '../../store/actions/products'
 
 import './index.css'
 
@@ -9,11 +11,21 @@ import threeXthree from '../../assets/img/shop-img/3x3.png'
 import nextArrow from '../../assets/img/next-arrow.png'
 // import prevArrow from '../../assets/img/prev-arrow.png'
 
+
+
 // Components
 import ProductFilters from '../../components/shop-components/app-shop-filters'
 import Product from '../../components/app-product'
 
-export default function index() {
+export default function Shop() {
+
+  const products = useSelector(state => state.products.products)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getProducts())
+  }, [dispatch])
+
   return (
     <div>
       <div className="shop-banner">
@@ -55,21 +67,14 @@ export default function index() {
           <ProductFilters/>
           <div className="d-flex flex-column align-items-center">
             <div className="product-grid">
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
+              
+              {
+                products.map(product => {
+                  return (
+                    <Product key={product._id} product={product} className="product-background"/>
+                  )
+                })
+              }
             </div>
             <span className="mt-5 d-flex align-items-center">
               <span className="d-flex c-scroll-btn c-scroll-left align-items-center justify-content-center mr-3"><img src={nextArrow} alt="" /></span>
@@ -80,7 +85,7 @@ export default function index() {
               <span className="product-page d-none d-sm-block">24</span>
               <span className="product-page">25</span>
               <span className="product-page d-none d-sm-block">26</span>
-              <span className="d-flex c-scroll-btn c-scroll-right align-items-center justify-content-center ml-3"></span>
+              <span className="d-flex c-scroll-btn c-scroll-right align-items-center justify-content-center ml-3"><img src={nextArrow} alt="" /></span>
             </span>
           </div>
         </div>
