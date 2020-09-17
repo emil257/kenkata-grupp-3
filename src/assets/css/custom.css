@@ -8,6 +8,10 @@ p, h5{
   margin: 0;
 }
 
+textarea {
+  resize: none !important;
+}
+
 /* BUTTONS START */
 .custom-theme-btn{
   width: 156px;
