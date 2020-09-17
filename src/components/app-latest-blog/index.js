@@ -3,7 +3,6 @@ import './index.css'
 import AppBlogItem from './app-blog-item/index'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
-import AppBlogHeader from '../app-section-headers/latest-blog/index';
 
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
@@ -18,7 +17,7 @@ SwiperCore.use([Navigation, Pagination, Autoplay ]);
 export default function index() {
     const params = {
         pagination: {
-            el: '#latest-blog-pagination',
+            el: '#swiper-pagination-blog',
             type: 'bullets',
             clickable: true,
             centeredSlides: true
@@ -56,8 +55,8 @@ export default function index() {
           }
         }
     return (
-      <div className="app-latest-blog">
-      <AppBlogHeader></AppBlogHeader>
+            <div className="app-latest-blog">
+                <BlogHeader/>
                 <div className="container position-relative">
 
                     <Swiper
@@ -67,12 +66,11 @@ export default function index() {
                         <SwiperSlide><AppBlogItem></AppBlogItem></SwiperSlide>
                         <SwiperSlide><AppBlogItem></AppBlogItem></SwiperSlide>
                     </Swiper>
-                        <div className="swiper-button-prev" id="button-prev-blog"></div>
-                        <div className="swiper-button-next" id="button-next-blog"></div>
-                        <div className="container-pagination">
-                            <div className="swiper-pagination" id="latest-blog-pagination"></div>
-                        </div>
-                        
+                        <div className="swiper-button-prev"></div>
+                        <div className="swiper-button-next"></div>
+                    <div className="container-pagination">
+                        <div className="swiper-pagination" id="swiper-pagination-blog"></div>
+                    </div>
                     {/* <app-section-header first="LATEST" second="BLOG" desc="Read our latest posts about our events and trending news"></app-section-header> */}
 
                     {/* Carousel */}
