@@ -80,7 +80,7 @@ export default function index() {
               <span className="product-page d-none d-sm-block">24</span>
               <span className="product-page">25</span>
               <span className="product-page d-none d-sm-block">26</span>
-              <span className="d-flex c-scroll-btn c-scroll-right align-items-center justify-content-center ml-3"></span>
+              <span className="d-flex c-scroll-btn c-scroll-right align-items-center justify-content-center ml-3"><img src={nextArrow} alt="" /></span>
             </span>
           </div>
         </div>
