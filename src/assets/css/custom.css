@@ -8,6 +8,10 @@ p, h5{
   margin: 0;
 }
 
+textarea {
+  resize: none !important;
+}
+
 /* BUTTONS START */
 .custom-theme-btn{
   width: 156px;
@@ -93,6 +97,11 @@ p, h5{
 /* MEDIA END */
 
 /* TEXT HELPERS START */
+.badge-theme {
+  color: white;
+  background-color: var(--theme-color);
+}
+
 .font-montserrat{
   font-family: 'Montserrat', sans-serif;
 }

@@ -8,6 +8,7 @@ import AppProductReview from '../../components/app-product-reviews/index'
 import ProductYouMayAlsoLike from '../../components/app-you-may-also-like/index'
 import RelatedProducts from '../../components/app-related-products/index'
 
+
 export default function index() {
     return (
         <div>
