@@ -8,7 +8,7 @@ export default function index() {
         <div>
             <div className="banner">
                 <div className="container d-flex flex-column flex-lg-row justify-content-between align-items-center pt-5 pt-lg-0">
-                    <div className="banner-content mb-5 mb-lg-0 px-4 px-lg-0">
+                    <div className="banner-content mb-lg-0 px-4 px-lg-0">
                         <h1>
                             Shopping is
                         <span className="text-theme-color">MORE FUN</span>
