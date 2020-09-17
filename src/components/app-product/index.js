@@ -24,12 +24,14 @@ const tag = (t) => {
           <p>-20%</p>
         </div>
       )
-    default:
+    case 'brand': 
       return (
         <div className="product-brand">
           <img className="product-brand-img" src={Boxim} alt="Boxim" />
         </div>  
       )
+    default:
+      return null
   }
 }
 

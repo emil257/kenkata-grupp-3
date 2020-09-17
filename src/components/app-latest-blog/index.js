@@ -23,8 +23,8 @@ export default function index() {
             centeredSlides: true
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '#swiper-button-next-blog',
+            prevEl: '#swiper-button-prev-blog'
         },
         spaceBetween: 30,
         slidesPerView: 3,
@@ -66,8 +66,8 @@ export default function index() {
                         <SwiperSlide><AppBlogItem></AppBlogItem></SwiperSlide>
                         <SwiperSlide><AppBlogItem></AppBlogItem></SwiperSlide>
                     </Swiper>
-                        <div className="swiper-button-prev"></div>
-                        <div className="swiper-button-next"></div>
+                        <div className="swiper-button-prev" id="swiper-button-prev-blog"></div>
+                        <div className="swiper-button-next" id="swiper-button-next-blog"></div>
                     <div className="container-pagination">
                         <div className="swiper-pagination" id="swiper-pagination-blog"></div>
                     </div>
