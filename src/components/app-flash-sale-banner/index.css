@@ -1,5 +1,6 @@
 .flash-sale{
   background-color: var(--secondary-color);
+  margin-bottom: 5rem;
 }
 .flash-sale-off{
   color: white;

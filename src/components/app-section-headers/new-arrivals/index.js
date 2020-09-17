@@ -7,7 +7,7 @@ export default function Index() {
         <div>
             <div className="app-latest-blog-header d-flex align-items-center flex-column">
                 <h3>
-                    <span>NEW ARRIVALS<span className="text-theme-color"> CATEGORY</span></span>
+                    <span>NEW <span className="text-theme-color"> ARRIVALS</span></span>
                 </h3>
                 <img src={Underline} alt="underline" />
                 <p className="text-second-color">Check out our latest products from top fashion designers</p>
