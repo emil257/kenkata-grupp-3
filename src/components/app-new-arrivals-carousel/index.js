@@ -15,14 +15,14 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 export default function index() {
   const params = {
     pagination: {
-      el: "#swiper-pagination-product",
+      el: "#swiper-pagination-arrivals",
       type: "bullets",
       clickable: true,
       centeredSlides: true,
     },
     navigation: {
-      nextEl: "#swiper-product-button-next",
-      prevEl: "#swiper-product-button-prev",
+      nextEl: "#swiper-product-button-next-arrivals",
+      prevEl: "#swiper-product-button-prev-arrivals",
     },
     spaceBetween: 30,
     slidesPerView: 3,
@@ -80,16 +80,16 @@ export default function index() {
         </Swiper>
         <div
           className="swiper-button-prev"
-          id="swiper-product-button-prev"
+          id="swiper-product-button-prev-arrivals"
         ></div>
         <div
           className="swiper-button-next"
-          id="swiper-product-button-next"
+          id="swiper-product-button-next-arrivals"
         ></div>
         <div className="container-pagination">
           <div
             className="swiper-pagination"
-            id="swiper-pagination-product"
+            id="swiper-pagination-arrivals"
           ></div>
         </div>
         {/* <app-section-header first="LATEST" second="BLOG" desc="Read our latest posts about our events and trending news"></app-section-header> */}

@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 
 import ProductPreLarge from "../../assets/img/product-img/product-pre-large.png";
-import ProductIcon from "../../assets/img/product-img/product-pre-large.png";
+import ProductIcon from "../../assets/img/product-img/product-icon.png";
 import ColorPicker from "../../assets/img/product-img/product-options/color-picker.png";
 import Compare from "../../assets/img/product-img/product-options/compare.png";
 import AddWishlist from "../../assets/img/product-img/product-options/add-wishlist.png";
