@@ -16,6 +16,7 @@ import ShopCategory from "../../components/app-shop-category/index";
 import Brands from "../../components/app-brands";
 import TopSeller from "../../components/app-topp-sellers";
 import AppLatestBlog from "../../components/app-latest-blog/index";
+import AppFeaturedProducts from '../../components/app-featured-products/index'
 
 import NewArivalsCarousel from "../../components/app-new-arrivals-carousel";
 
@@ -25,6 +26,7 @@ export default function index() {
       <Banner></Banner>
 
       <ShopByCatHeader></ShopByCatHeader>
+      <AppFeaturedProducts></AppFeaturedProducts>
 
       <NewArivalsCarousel></NewArivalsCarousel>
 

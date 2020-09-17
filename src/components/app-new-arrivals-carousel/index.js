@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import Product1 from "../app-product/";
-import NewArivals from "../app-section-headers/new-arrivals";
+import NewArrivals from "../app-section-headers/new-arrivals/index";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 
@@ -54,7 +54,7 @@ export default function index() {
   };
   return (
     <div className="app-new-arrivals">
-      <NewArivals></NewArivals>
+     <NewArrivals></NewArrivals>
       <div className="container position-relative">
 
       

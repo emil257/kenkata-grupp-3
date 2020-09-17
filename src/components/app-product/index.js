@@ -8,19 +8,19 @@ const tag = (t) => {
   switch(t){
     case 'new':
       return (
-        <div className="p-tag p-tag-new d-flex align-items-center justify-content-center" v-if="tag == 1">
+        <div className="p-tag p-tag-new d-flex align-items-center justify-content-center">
           <p>NEW</p>
         </div>
       )
     case 'hot':
       return (
-        <div className="p-tag p-tag-hot d-flex align-items-center justify-content-center" v-if="tag == 2">
+        <div className="p-tag p-tag-hot d-flex align-items-center justify-content-center">
           <p>HOT</p>
         </div>
       )
     case 'sale':
       return (
-        <div className="p-tag p-tag-sale d-flex align-items-center justify-content-center" v-if="tag == 3">
+        <div className="p-tag p-tag-sale d-flex align-items-center justify-content-center">
           <p>-20%</p>
         </div>
       )
