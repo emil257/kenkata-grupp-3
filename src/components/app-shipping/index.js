@@ -11,7 +11,7 @@ import delivery from '../../assets/img/feature-icons/delivery.svg'
 export default function index() {
     return (
       <div>
-        <div className="app-features">
+        <div className="app-features" id="shipping">
           <div className="app-features-container d-flex flex-column flex-xl-row justify-content-around align-items-center">
           <div className="d-flex flex-column flex-lg-row">
             <div className="app-feature d-flex mb-5 mb-xl-0">
