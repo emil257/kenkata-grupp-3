@@ -26,10 +26,10 @@ export default function index() {
     },
     spaceBetween: 30,
     slidesPerView: 3,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false
-    // },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+    },
     breakpoints: {
       // when window width is >= 100px
       100: {
