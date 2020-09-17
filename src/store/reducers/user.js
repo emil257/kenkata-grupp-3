@@ -1,0 +1,42 @@
+import actiontypes from '../actiontypes'
+
+let initState = {
+  user: {},
+  token: null,
+  loggedIn: false
+}
+
+export default (state = initState, action) => {
+  switch (action.type) {
+    case actiontypes().user.registerUser:
+      return state
+    case actiontypes().user.loginUser:
+      localStorage.setItem('token', action.payload.token)
+      state = {
+        user: state.user,
+        token: action.payload.token,
+        loggedIn: true
+      }
+      return state
+    case actiontypes().user.logoutUser:
+      localStorage.removeItem('token')
+      state = {
+        user: {},
+        token: null,
+        loggedIn: false
+      }
+      return state
+    case actiontypes().user.loadUser:
+      let g_token = localStorage.getItem('token')
+      state = {
+        user: action.payload,
+        token: g_token,
+        loggedIn: g_token !== null
+      }
+      return state
+    case actiontypes().user.updateUserShippingDetails:
+      return state
+    default:
+      return state
+  }
+}
