@@ -7,14 +7,14 @@ import NavigationProductsView from '../../components/app-navigation/app-navigati
 
 
 
+
 export default function index() {
     return (
-        <div>
-            <NavigationProductsView></NavigationProductsView>
-            <Shipping></Shipping>
-            <Subscribe></Subscribe>
-            <Brands></Brands>
-            
-        </div>
-    )
+      <div>
+        <NavigationProductsView></NavigationProductsView>
+        <Shipping></Shipping>
+        <Subscribe></Subscribe>
+        <Brands></Brands>
+      </div>
+    );
 }

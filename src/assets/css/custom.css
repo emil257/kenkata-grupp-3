@@ -93,6 +93,11 @@ p, h5{
 /* MEDIA END */
 
 /* TEXT HELPERS START */
+.badge-theme {
+  color: white;
+  background-color: var(--theme-color);
+}
+
 .font-montserrat{
   font-family: 'Montserrat', sans-serif;
 }

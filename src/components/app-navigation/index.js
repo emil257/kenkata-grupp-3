@@ -80,20 +80,28 @@ export default function index() {
               </div>
             </div>
 
-            <div className="d-none d-lg-block">
+            <div className=" d-flex align-items-center  nav-mobile-links ">
               <Link to="/account" className="custom-nav-link">
                 <i className="far fa-user custom-nav-link-icon pr-1 "></i>
-                My account
+                <span className="d-none d-lg-block "> My account </span>
               </Link>
               <Link to="/heart" className="custom-nav-link ml-4">
                 <i className="far fa-heart custom-nav-link-icon"></i>
               </Link>
-              <Link to="/compare" className="custom-nav-link ml-3">
-                <i className="fas fa-arrows-alt-h custom-nav-link-icon"></i>
+              <Link to="/" className="text-dark ml-3" href="/#">
+                <i className="fas fa-random position-relative">
+                  <span className="badge badge-pill badge-theme position-absolute">
+                    0
+                  </span>
+                </i>
               </Link>
-              <Link to="/shopping-bag" className="custom-nav-link ml-3">
-                <i className="fas fa-shopping-bag custom-nav-link-icon"></i>
-                $0.00
+              <Link to="/" className="text-dark ml-3" href="/#">
+                <i className="fas fa-shopping-bag position-relative">
+                  <span className="badge badge-pill badge-theme position-absolute">
+                    0
+                  </span>
+                </i>
+                <span className="cart-money position-absolute "> $0.00</span>
               </Link>
             </div>
           </div>
