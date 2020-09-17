@@ -1,4 +1,4 @@
-import React, {useEffect }from 'react'
+import React, { useEffect }from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getProducts } from '../../store/actions/products'
 
@@ -67,21 +67,7 @@ export default function Shop() {
           <ProductFilters/>
           <div className="d-flex flex-column align-items-center">
             <div className="product-grid">
-              {/* <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/>
-              <Product tag={'new'} className="product-background"/> */}
+              
               {
                 products.map(product => {
                   return (

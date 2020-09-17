@@ -42,7 +42,7 @@ export default function index(props) {
   
 
 
-        <img className="product-image" src={Product1} alt="" />
+        <img className="product-image" src={props.product.image} alt="" />
         <div className="product-footer">
           <p>Men's denim shirts full</p>
         </div>
