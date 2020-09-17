@@ -85,6 +85,7 @@ export default function index() {
                     {/* <span class="blog-arrow c-scroll-btn c-scroll-left align-items-center justify-content-center c-prev"><img src="@/assets/img/next-arrow.png" alt="" /></span> */}
                     
                 </div>
+
             </div>
     )
 }
