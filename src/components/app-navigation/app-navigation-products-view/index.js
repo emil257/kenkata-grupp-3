@@ -22,7 +22,7 @@ export default function index() {
                         </p>
                         <div className="d-none align-items-center d-lg-flex">
                             <div className="product-brand ">
-                                <img classNameName="product-brand-img" src={Brand} alt="/#" />
+                                <img className="product-brand-img" src={Brand} alt="/#" />
                             </div>
                             <div className="d-flex align-items-center icons">
                                 <i className="fas fa-angle-left fa-3x mx-3"></i>
