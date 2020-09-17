@@ -1,29 +1,28 @@
 import React from 'react'
-import './index.css'
-import AppBlogItem from './app-blog-item/index'
+import Product1 from "../app-product/";
+import YouMayAlsoLikeHeader from '../app-section-headers/you-may-also-like/index'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import './index.css';
 
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/swiper.scss';
 
-import BlogHeader from '../app-section-headers/latest-blog'
-
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-
 export default function index() {
+
     const params = {
         pagination: {
-            el: '#swiper-pagination-blog',
+            el: '#swiper-like-pagination',
             type: 'bullets',
             clickable: true,
             centeredSlides: true
         },
         navigation: {
-            nextEl: '#swiper-button-next-blog',
-            prevEl: '#swiper-button-prev-blog'
+            nextEl: '#swiper-like-button-next',
+            prevEl: '#swiper-like-button-prev'
         },
         spaceBetween: 30,
         slidesPerView: 3,
@@ -50,28 +49,33 @@ export default function index() {
             640: {
               slidesPerView: 2,
               spaceBetween: 40
+            },
+            // when window width is >= 990px
+            990: {
+              slidesPerView: 4,
+              spaceBetween: 40
             }
           }
         }
     return (
-            <div className="app-latest-blog">
-                <BlogHeader/>
+        <div className="app-you-may-also-like">
+            <YouMayAlsoLikeHeader></YouMayAlsoLikeHeader>
                 <div className="container position-relative">
-
-                    <Swiper
-                        {...params}
-                        >
-                        <SwiperSlide><AppBlogItem></AppBlogItem></SwiperSlide>
-                        <SwiperSlide><AppBlogItem></AppBlogItem></SwiperSlide>
-                        <SwiperSlide><AppBlogItem></AppBlogItem></SwiperSlide>
-                    </Swiper>
-                        <div className="swiper-button-prev" id="swiper-button-prev-blog"></div>
-                        <div className="swiper-button-next" id="swiper-button-next-blog"></div>
-                    <div className="container-pagination">
-                        <div className="swiper-pagination" id="swiper-pagination-blog"></div>
-                    </div>
+                <Swiper
+                    {...params}
+                    >
+                    <SwiperSlide><Product1 tag={"hot"} className="product-background" /></SwiperSlide>
+                    <SwiperSlide><Product1 className="product-background" /></SwiperSlide>
+                    <SwiperSlide><Product1 tag={"sale"} className="product-background" /></SwiperSlide>
+                    <SwiperSlide><Product1 className="product-background" /></SwiperSlide>
+                </Swiper>
+                    <div className="swiper-button-prev" id="swiper-like-button-prev"></div>
+                    <div className="swiper-button-next" id="swiper-like-button-next"></div>
+                <div className="container-pagination mb-5">
+                    <div className="swiper-pagination mb-5" id="swiper-like-pagination"></div>
                 </div>
-
             </div>
+            
+        </div>
     )
 }
