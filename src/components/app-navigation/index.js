@@ -173,21 +173,10 @@ export default function index() {
                     to="/pages"
                     className="custom-nav-link d-flex h-100 align-items-center mr-4"
                   >
-                    <div className="d-flex flex-column flex-lg-row h-100 align-items-lg-center mr-4 position-relative">
-                    <a className="custom-nav-link " href="/#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    
                     Pages
                     <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
-                    </a>
-                  <div className="dropdown-menu custom-dropdown" aria-labelledby="dropdownMenuLink">
-                    <Link to="/shoppingcart" className="dropdown-item">Shopping Cart</Link>
-                    <Link to="/wishlist" className="dropdown-item">Wishlist</Link>
-                    <Link to="/compare" className="dropdown-item">Compare</Link>
-                    <Link to="/about" className="dropdown-item">About</Link>
-                    <Link to="/team" className="dropdown-item">Team</Link>
-                    <Link to="/portfolio" className="dropdown-item">Portfolio</Link>
-                    <Link to="/contact" className="dropdown-item">Contact</Link>
-                  </div>
-                  </div>
+
                   </Link>
                 </li>
                 <li className="nav-item">
