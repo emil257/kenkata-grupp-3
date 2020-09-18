@@ -1,12 +1,12 @@
 import React from 'react'
-import ShoppingCartCurrentStep from '../shopping-cart-current-step/index'
+import ShoppingCartCurrentStep from '../shopping-cart-current-step'
 import ShoppingCartItem from '../shopping-cart-item/index'
 
 export default function index() {
     
     return ( 
         <div>
-            <ShoppingCartCurrentStep step="1"></ShoppingCartCurrentStep>
+            <ShoppingCartCurrentStep step={1}></ShoppingCartCurrentStep>
             <div class="container mt-5">
                 <div class="row">
                 <div class="cart-products col-12 col-lg-8">

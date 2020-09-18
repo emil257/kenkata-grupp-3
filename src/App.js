@@ -7,10 +7,10 @@ import './assets/css/custom.css'
 import Home from '../src/views/Home/index'
 import Products from '../src/views/Products/index'
 import Shop from '../src/views/Shop'
-import CheckoutCart from '../src/components/shoppingcart/checkout-cart'
+import CheckoutCart from '../src/components/shoppingcart/shopping-cart-step-2'
 import AppFooter from '../src/components/app-footer'
 import Account from '../src/views/Account'
-import ShoppingCartView from '../src/views/ShoppingCartView'
+import ShoppingCartView from '../src/components/shoppingcart/shopping-cart-step-1'
 
 
 function App() {
