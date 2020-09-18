@@ -1,3 +1,7 @@
 .product-brand {
     display: none !important;
 }
+
+.app-related-products-header {
+    margin-bottom: 7rem;
+}

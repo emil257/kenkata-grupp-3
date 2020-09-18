@@ -1,5 +1,5 @@
 .product-section{
-  margin: 120px 0;
+  margin: 5rem 0;
 }
 .product-prev{
   display: grid;
@@ -34,13 +34,6 @@
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 }
-
-/* @media (min-width: 992px) {
-  .product-prev{
-
-  }
-} */
-
 
 @media (min-width: 1200px) {
   .product-prev-focus{

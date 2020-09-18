@@ -1,6 +1,19 @@
 .product-desc{
-    margin-bottom: 120px;
+    /* margin-bottom: 120px; */
+    margin-bottom: 4rem;
 }
+
+@media (min-width: 992px ) {
+    .product-desc{
+        margin-bottom: 6rem;
+    }
+}
+@media (min-width: 768px ) {
+    .product-desc{
+        margin-bottom: 4rem;
+    }
+}
+
 .product-desc-hr{
     background-color: var(--theme-color);
     height: 2px;
