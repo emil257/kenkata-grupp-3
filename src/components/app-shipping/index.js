@@ -34,7 +34,7 @@ export default function index() {
                 <img className="theme-color" src={payment} alt="payment" />
                 <span>
                  <p className="app-feature-title text-theme-color">Online payment</p>
-                 <p>You can pay quickly and easily with our online payment system</p>
+                 <p className="online-payment">You can pay quickly and easily with our online payment system</p>
                 </span>
             </div>
             <div className="app-feature d-flex ml-lg-5">
