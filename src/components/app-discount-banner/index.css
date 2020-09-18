@@ -28,3 +28,23 @@
 .sale-info-desc-btn{
   width: 173px !important;
 }
+
+@media (max-width: 576px) {
+  .sale-info-off {
+    display: flex !important;
+    flex-direction: column !important;
+    margin: auto !important;
+  }
+
+  .sale-info-desc {
+    display: none !important;
+  }
+
+  .sale-info {
+    background-color: transparent;
+  }
+
+  .sale-info-off {
+    width: 100%;
+  }
+}

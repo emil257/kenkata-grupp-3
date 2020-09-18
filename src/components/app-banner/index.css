@@ -20,3 +20,13 @@
     display: block;
 }
 
+@media (max-width: 576px) {
+    .banner {
+        margin: auto;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 3.1rem;
+    }
+}

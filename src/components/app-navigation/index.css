@@ -85,6 +85,12 @@
 }
 
 @media (max-width: 576px) {
+
+  .fa-chevron-down {
+    margin-left: 0.75rem;
+    
+  }
+
   .nav-mobile-links {
     position: absolute;
     top: 63px;

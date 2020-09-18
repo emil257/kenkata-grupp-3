@@ -16,6 +16,8 @@ import nextArrow from '../../assets/img/next-arrow.png'
 // Components
 import ProductFilters from '../../components/shop-components/app-shop-filters'
 import Product from '../../components/app-product'
+import Subscribe from '../../components/app-subscribe/index'
+import Brands from '../../components/app-brands/index'
 
 export default function Shop() {
 
@@ -89,6 +91,8 @@ export default function Shop() {
             </span>
           </div>
         </div>
+      <Subscribe></Subscribe>
+      <Brands></Brands>
       </div>
   </div>
   )

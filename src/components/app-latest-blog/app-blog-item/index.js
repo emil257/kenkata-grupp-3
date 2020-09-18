@@ -6,7 +6,7 @@ import React from 'react'
 export default function Index() {
     return (
         <div>
-            <div className="position-relative pl-3">
+            <div className="position-relative pl-3 latest-blog">
                 <div className="c-item-bg col-9 col-md-8"></div>
                 <div className="c-item-info col-9 col-sm-8 col-md-7 col-xl-6 position-absolute">
                     <div className="c-item-date">

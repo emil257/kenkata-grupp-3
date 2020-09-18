@@ -48,3 +48,31 @@
     height: 80px;
   }
 }
+
+@media (max-width: 576px) {
+
+
+  .app-footer {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+
+  .footer-logo {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .brand-info {
+    display: none;
+  }
+
+  .footer-payment-img {
+    display: none;
+  }
+}
