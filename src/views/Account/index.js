@@ -8,7 +8,7 @@ import AppAccountProfile from '../../components/app-account/app-account-profile'
 import AppBrands from '../../components/app-brands'
 
 
-const checkLoggedIn = (loggedIn, user, logout) => {
+const checkLoggedIn = (loggedIn, user) => {
   if(!loggedIn && user !== null){
     return (
       <div className="row pt-5">
@@ -30,9 +30,7 @@ export default function Account() {
   const loggedIn = useSelector(state => state.user.loggedIn)
   
   const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(loadUser())
-  }, [dispatch])
+  
 
 
   return (
