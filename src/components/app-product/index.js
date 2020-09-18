@@ -38,12 +38,8 @@ const tag = (t) => {
 export default function index(props) {
   if(props.product != null){
     return (
-      <div className={props.className}>  
-
+      <div className={props.className}>
         { tag(props.tag) }
-  
-
-
         <img className="product-image" src={props.product.image} alt="" />
         <div className="product-footer">
           <p>Men's denim shirts full</p>

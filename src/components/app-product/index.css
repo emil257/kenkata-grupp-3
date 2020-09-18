@@ -131,3 +131,14 @@
 .rft{
   top: 65px;
 }
+
+@media (max-width: 768px) {
+  .product-image {
+    
+    height: 649px !important;
+    width: 550px;
+    
+   
+    
+  }
+}

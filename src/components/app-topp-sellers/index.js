@@ -13,8 +13,7 @@ export default function index() {
             <div className="product-container">
                 <Product1 className="product-background main-seller"/>    
                 <Product1 tag={'new'} className="product-background"/>    
-                <Product1 tag={'sale'} className="product-background"/>    
-              
+                <Product1 tag={'sale'} className="product-background"/>
             </div>
           </div>
         </div>

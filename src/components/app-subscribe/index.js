@@ -7,12 +7,12 @@ export default function index() {
         <div>
             <div className="app-contact">
                 <div className="container d-flex flex-column flex-xl-row justify-content-between align-items-center h-100">
-                    <div className="col-12 col-md-10 col-lg-5 px-0 mb-xl-0">
+                    <div>
                         <h2>
                             SUBSCRIBE
                             <span className="text-theme-color"> NOW</span>
                         </h2>
-                        <p>
+                        <p className="sign-up">
                             Signup for awesome news about our new products and
                             know our special discounts on products.
                         </p>

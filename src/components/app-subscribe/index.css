@@ -27,6 +27,17 @@
     }
 }
 
+@media (max-width: 768px) {
+     .app-contact {
+         margin: auto;
+         text-align: center;
+     }
+     .contact-img {
+         display: none;
+     }
+
+}
+
 @media (max-width: 576px) {
 
     .app-contact {

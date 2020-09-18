@@ -39,6 +39,12 @@
   min-height: 435px;
 }
 
+@media (max-width: 768px) {
+  .flash-sale-off {
+    margin: auto !important;
+  }
+}
+
 @media (max-width: 576px) {
   .flash-sale-off {
     margin: auto !important;

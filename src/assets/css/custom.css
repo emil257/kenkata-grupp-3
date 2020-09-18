@@ -281,7 +281,20 @@ textarea {
 
 .swiper-button-prev {
   padding-right: 8px;
+  
 }
+
+@media (max-width: 768px) {
+  .swiper-button-next {
+    display: none !important;
+  }
+
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+}
+
 /* CAROUSELL END */
 
 /* STARS START */
