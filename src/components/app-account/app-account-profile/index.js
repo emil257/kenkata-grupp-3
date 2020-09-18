@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
-import { logout, loadUser } from '../../../store/actions/user'
+import { logout } from '../../../store/actions/user'
 
 export default function AccoutProfile(props) {
   const dispatch = useDispatch()
@@ -9,9 +9,6 @@ export default function AccoutProfile(props) {
     dispatch(logout())
   }
 
-  useEffect(() => {
-    dispatch(loadUser())
-  }, [dispatch])
 
   return (
     <div className="row pt-5">

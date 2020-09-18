@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { logout } from '../../store/actions/user'
+import { logout, loadUser } from '../../store/actions/user'
 
 import AppLogin from '../../components/app-account/app-login'
 import AppRegister from '../../components/app-account/app-register'
@@ -32,7 +32,9 @@ export default function Account() {
   
   const dispatch = useDispatch()
   
-
+  useEffect(() => {
+    dispatch(loadUser())
+  }, [dispatch])
 
   return (
     <div>

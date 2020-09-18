@@ -4,9 +4,7 @@ import './index.css'
 
 export default function CurrentPath() {
   let location = useLocation()
-
-  console.log(location)
-
+  
   const toUppercase = (text) => {
     return text.charAt(0).toUpperCase() + text.slice(1)
   }
