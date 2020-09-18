@@ -7,9 +7,10 @@ import './assets/css/custom.css'
 import Home from '../src/views/Home/index'
 import Products from '../src/views/Products/index'
 import Shop from '../src/views/Shop'
-import CheckoutCart from '../src/components/shoppingcart/checkout-cart'
+import CheckoutCart from '../src/components/shoppingcart/shopping-cart-step-2'
 import AppFooter from '../src/components/app-footer'
 import Account from '../src/views/Account'
+import ShoppingCartView from '../src/components/shoppingcart/shopping-cart-step-1'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/products" component={Products} />
         <Route exact path="/account" component={Account} />
         <Route exact path="/shop" component={Shop} />
+        <Route exact path="/shoppingcart" component={ShoppingCartView} />
         <Route exact path="/checkout" component={CheckoutCart} />
         
       </Switch>
