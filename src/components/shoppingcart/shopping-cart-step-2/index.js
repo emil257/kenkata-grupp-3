@@ -2,6 +2,7 @@ import React from "react";
 import './index.css'
 import Brands from '../../app-brands/index'
 import ShoppingCartCurrentStep from '../shopping-cart-current-step'
+import './index.css'
 
 export default function index() {
   return (

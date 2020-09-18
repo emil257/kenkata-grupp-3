@@ -3,8 +3,7 @@ import './index.css'
 import { Link } from "react-router-dom";
 
 export default function index(props) {
-    // props: ['step']
-
+    
     const step = () => {
         if(props.step === 1){
             return (
