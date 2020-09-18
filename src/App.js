@@ -7,6 +7,7 @@ import './assets/css/custom.css'
 import Home from '../src/views/Home/index'
 import Products from '../src/views/Products/index'
 import Shop from '../src/views/Shop'
+import CheckoutCart from '../src/components/shoppingcart/checkout-cart'
 import AppFooter from '../src/components/app-footer'
 
 
@@ -18,6 +19,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/products" component={Products} />
+        <Route exact path="/checkout" component={CheckoutCart} />
+
       </Switch>
       <Switch>
         <Route exact path="/shop" component={Shop} />
