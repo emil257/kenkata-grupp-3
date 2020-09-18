@@ -2,6 +2,8 @@
     display: none !important;
 }
 
-.app-related-products-header {
-    margin-bottom: 7rem;
+@media only screen and (min-width: 990px)  {
+    #swiper-related-button-next, #swiper-related-button-prev {
+        display: none;
+    }
 }
