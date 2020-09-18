@@ -43,3 +43,9 @@
     padding-bottom: 1.5rem;
   }
 }
+
+@media (max-width: 576px) {
+  .app-feature {
+    padding: 1.5rem 1rem;
+  }
+}

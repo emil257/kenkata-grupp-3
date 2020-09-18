@@ -81,3 +81,24 @@
         bottom: 2px;
     }
 }
+
+@media (max-width: 576px) {
+    .latest-blog {
+        text-align: center;
+        
+    }
+
+   .c-item-btn {
+       position: static !important;
+       margin-top: 1rem;
+   }
+
+    .c-item-bg {
+        display: none;
+    }
+
+    .c-item-info {
+      height: 320px !important;
+      position: static !important;
+    }
+}

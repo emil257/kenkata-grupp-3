@@ -13,8 +13,8 @@ export default function index() {
           <div className="container">
             <div className="row">
               <div className="col-md-6 col-xl-3">
-                <img src={footerLogo} alt="footer logo" className="mb-5" />
-                <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent enim quam, ullamcorper vel tellus vitae, tempus fringilla lectus. Donec maximus justo eu nisl convallis iaculis. Aenean laoreet.</p>
+                <img src={footerLogo} alt="footer logo" className="footer-logo mb-5" />
+                <p className="brand-info mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent enim quam, ullamcorper vel tellus vitae, tempus fringilla lectus. Donec maximus justo eu nisl convallis iaculis. Aenean laoreet.</p>
                 <span>Follow us</span>
                 <hr />
                 <div className="text-theme-color mt-2">
@@ -43,7 +43,7 @@ export default function index() {
                   <p>info@website.com</p>
                 </div>
               </div>
-              <div className="col-md-6 mt-4 mt-xl-0 col-xl-2 offset-xl-1">
+              <div className="col-md-6 mt-4 mt-xl-0 col-xl-2 offset-xl-1 footer-links">
                 <h5 className="text-theme-color">USEFUL LINKS</h5>
                 <ul className="useful-links">
                   <li><a href="#policy">Privacy Policy</a></li>
