@@ -24,18 +24,20 @@ export const login = (user) => {
 }
 export const loadUser = () => {
   return function (dispatch) {
-    return axios.get("http://secret-sea-49739.herokuapp.com/api/users/user", { headers: { 'Authorization': 'bearer ' + localStorage.getItem('token') } }).then(res => {
-      dispatch({
-        type: actiontypes().user.loadUser,
-        payload: res.data
+    if(localStorage.getItem('token') !== null) {
+      return axios.get("http://secret-sea-49739.herokuapp.com/api/users/user", { headers: { 'Authorization': 'bearer ' + localStorage.getItem('token') } }).then(res => {
+        dispatch({
+          type: actiontypes().user.loadUser,
+          payload: res.data
+        })
+      }).catch(err => {
+        dispatch({
+          type: actiontypes().user.loadUser,
+          payload: {}
+        })
+        dispatch(logout())
       })
-    }).catch(err => {
-      dispatch({
-        type: actiontypes().user.loadUser,
-        payload: {}
-      })
-      dispatch(logout())
-    })
+    }
   }
 }
 export const logout = () => {

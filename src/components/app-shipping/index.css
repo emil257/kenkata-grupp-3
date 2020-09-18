@@ -4,22 +4,29 @@
   margin-bottom: 5rem;
 }
 
+.app-features {
+  margin-top: 9rem !important;
+
+}
+
 
 .app-features img{
   filter: invert(82%) sepia(47%) saturate(5678%) hue-rotate(126deg) brightness(108%) contrast(75%);
 }
 
-.app-features-container{
-  padding: 7.5rem 2rem;
-  padding-bottom: 1.5rem;
-  max-width: 1850px;
-  margin:auto;
+.icons {
+  width: 80px;
+  height: auto;
 }
+
+
 .app-feature{
   background-color: #EDFCFA;
   border-radius: 6px;
   max-width: 400px;
   padding: 1.5rem;
+  margin-right: 0.8rem;
+  margin-left: 0.8rem;
 }
 .app-feature img {
   margin-right: 1.5rem;
@@ -44,13 +51,21 @@
   }
 }
 
+@media(max-width: 768px) {
+ .app-feature {
+   max-width: 300px;
+   text-align: center;
+ }
+
+.app-feature img {
+  margin-right: 0rem;
+}
+
+}
+
 @media (max-width: 576px) {
   .app-feature {
     padding: 1.5rem 1rem;
     
-  }
-
-  .online-payment {
-    padding-bottom: 1.3rem;
   }
 }
