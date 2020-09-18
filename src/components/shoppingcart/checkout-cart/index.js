@@ -1,5 +1,6 @@
 import React from "react";
 import './index.css'
+import Brands from '../../app-brands/index'
 
 export default function index() {
   return (
@@ -310,6 +311,7 @@ export default function index() {
           </div>
         </div>
       </div>
+      <Brands></Brands>
     </div>
   );
 }
