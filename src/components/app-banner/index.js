@@ -13,7 +13,7 @@ export default function index() {
                             Shopping is
                         <span className="text-theme-color">MORE FUN</span>
                         </h1>
-                        <p className="py-3">Vivamus dignissim a ex eu ornare. Ut fermentum orci vel diam ultricies faucibus. Quisque quis erat sed</p>
+                        <p className="py-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus accusamus ipsa asperiores quam amet quas sapiente praesentium fuga distinctio quidem.</p>
                         <button className="btn custom-cta-btn">SHOP NOW</button>
                     </div>
                     <img className="col-10 col-md-9 col-lg-8 col-xl-7" src={Banner} alt="" />

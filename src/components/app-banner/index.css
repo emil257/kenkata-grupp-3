@@ -20,6 +20,14 @@
     display: block;
 }
 
+@media (max-width: 768px) {
+     .banner {
+         margin: auto;
+         text-align: center;
+     }
+
+}
+
 @media (max-width: 576px) {
     .banner {
         margin: auto;
