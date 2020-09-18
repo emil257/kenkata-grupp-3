@@ -9,6 +9,7 @@ import Products from '../src/views/Products/index'
 import Shop from '../src/views/Shop'
 import CheckoutCart from '../src/components/shoppingcart/checkout-cart'
 import AppFooter from '../src/components/app-footer'
+import Account from '../src/views/Account'
 
 
 function App() {
@@ -19,11 +20,10 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/products" component={Products} />
-        <Route exact path="/checkout" component={CheckoutCart} />
-
-      </Switch>
-      <Switch>
+        <Route exact path="/account" component={Account} />
         <Route exact path="/shop" component={Shop} />
+        <Route exact path="/checkout" component={CheckoutCart} />
+        
       </Switch>
 
       <AppFooter />

@@ -1,7 +1,6 @@
 .app-footer{
   color: white;
   border-top: 6px solid var(--theme-color);
-  margin-top: -5rem;
 }
 .footer-top{
   background-color: var(--secondary-color);
@@ -47,5 +46,33 @@
 @media (min-width: 768px)  { 
   .footer-copy{
     height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+
+
+  .app-footer {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+
+  .footer-logo {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .brand-info {
+    display: none;
+  }
+
+  .footer-payment-img {
+    display: none;
   }
 }
