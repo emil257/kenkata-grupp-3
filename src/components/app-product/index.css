@@ -62,7 +62,6 @@
   display:block;
   margin: auto;
   right: 0; 
-  /* width: 100%; */
 }
 
 .product-background:hover .product-overlay{
@@ -134,11 +133,10 @@
 
 @media (max-width: 768px) {
   .product-image {
-    
-    height: 649px !important;
-    width: 550px;
-    
-   
-    
+    height: 100%;
+    width: 100%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

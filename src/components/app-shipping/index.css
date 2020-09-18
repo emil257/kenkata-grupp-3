@@ -1,14 +1,8 @@
 
 #shipping {
-  margin-top: -5rem;
-  margin-bottom: 5rem;
+  margin-top: 5rem !important;
+  margin-bottom: -5rem;
 }
-
-.app-features {
-  margin-top: 9rem !important;
-
-}
-
 
 .app-features img{
   filter: invert(82%) sepia(47%) saturate(5678%) hue-rotate(126deg) brightness(108%) contrast(75%);

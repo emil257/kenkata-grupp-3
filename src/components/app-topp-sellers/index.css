@@ -1,5 +1,5 @@
 .app-top-sellers{
-  margin-bottom: 8rem;
+  margin-bottom: 14rem;
 }
 .product-container{
   height: 1200px;
@@ -9,15 +9,13 @@
   gap: 1%;
 }
 
-
-
-
 @media(min-width: 768px){
   
   .product-container{
-    height: 650px;
+    height: 500px;
     grid-template-columns: 49.5% 49.5%;
-    grid-template-rows: 49.5% 49.5%;
+    grid-template-rows: 60% 60%;
+    
   }
   .main-seller{
     grid-row: 1/3;
