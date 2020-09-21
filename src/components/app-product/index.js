@@ -3,6 +3,8 @@ import {Link} from "react-router-dom"
 import "./index.css";
 import Boxim from "../../assets/img/brands/Bexim.png";
 import Product1 from "../../assets/img/product-img/product-1.png";
+import ReactTooltip from 'react-tooltip';
+import Ellipses from '../../assets/img/feature-icons/ellipses.png'
 
 const tag = (t) => {
   switch(t){
@@ -33,6 +35,7 @@ const tag = (t) => {
     default:
       return null
   }
+  
 }
 
 export default function index(props) {
@@ -87,12 +90,13 @@ export default function index(props) {
             >
               <i className="fas fa-search"></i>
             </Link>
+          
             <i
-              className="fas fa-cart-plus fix-controll"
+              className="fas fa-cart-plus fix-controll custom-theme"
               data-toggle="tooltip"
               data-placement="left"
               title="Add to cart"
-            ></i>
+            />
           </div>
         </div>
       </div>
@@ -125,8 +129,19 @@ export default function index(props) {
             <i className="far fa-star"></i>
           </div>
           <div className="product-overlay-controller d-flex align-items-center flex-column justify-content-between">
+
+          <a data-tip data-for='color' className="fas fa-circle" data-place='left'></a>
+          <ReactTooltip 
+            id='color' 
+            aria-haspopup='true' 
+            className="light-background"
+            effect='solid'
+            >
+            <img src={Ellipses} alt=""/>
+          </ReactTooltip>
+
             <i
-              className="fas fa-circle text-danger fix-controll"
+              className="text-danger fix-controll"
               data-toggle="tooltip"
               data-placement="left"
               title="Color"
@@ -152,12 +167,14 @@ export default function index(props) {
             >
               <i className="fas fa-search"></i>
             </Link>
-            <i
-              className="fas fa-cart-plus fix-controll"
+
+            <a data-tip='Add to cart' className="fas fa-cart-plus" data-place='left'></a>
+            
+            <ReactTooltip
+              className="fix-controll custom-theme"
               data-toggle="tooltip"
-              data-placement="left"
-              title="Add to cart"
-            ></i>
+              effect='solid'
+            />
           </div>
         </div>
       </div>

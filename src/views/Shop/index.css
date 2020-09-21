@@ -51,6 +51,7 @@
 .product-page{
   margin: 0 7px;
 }
+
 @media(min-width: 450px){
   .product-grid{
     grid-template-columns: 1fr 1fr;
