@@ -3,14 +3,11 @@
   width: 100%;
 }
 
-<<<<<<< HEAD
-=======
 .popup-bg-color{
   background-color: #0e153ed9;
 }
 
 
->>>>>>> b5193cb4a461d6187fc496f2c68426559135037f
 .product-background{
   padding: 25px;
   padding-bottom: 46px;
@@ -165,7 +162,7 @@
 } 
 
 .__react_component_tooltip {
-  margin-left: -17.5px !important;
+  margin-left: -15.5px !important;
 }
 
 .fa-cart-plus:hover {
