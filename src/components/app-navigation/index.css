@@ -77,7 +77,7 @@
 .fa-random {
   font-size: 1.4rem;
 }
-.fa-heart {
+.fa-heart-nav {
   font-size: 1.4rem;
 }
 .fa-user {
@@ -102,7 +102,7 @@
   .fa-random {
     font-size: 1rem;
   }
-  .fa-heart {
+  .fa-heart-nav {
     font-size: 1rem;
   }
   .fa-user {
@@ -134,7 +134,7 @@
   .fa-random {
     font-size: 1.4rem;
   }
-  .fa-heart {
+  .fa-heart-nav {
     font-size: 1.4rem;
     margin-left: -0.7rem;
   }

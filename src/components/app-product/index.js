@@ -96,7 +96,7 @@ export default function Product(props) {
                 title="Compare"
               ></i>
               <Link
-                to="/product"
+                to="/products"
                 data-toggle="tooltip"
                 data-placement="left"
                 title="Quick view"
@@ -164,7 +164,7 @@ export default function Product(props) {
               title="Compare"
             ></i>
             <Link
-              to="/product"
+              to="/products"
               data-toggle="tooltip"
               data-placement="left"
               title="Quick view"
