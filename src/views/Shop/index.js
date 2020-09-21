@@ -1,6 +1,8 @@
-import React, { useEffect }from 'react'
+import React, { useEffect, useState, forwardRef }from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getProducts } from '../../store/actions/products'
+
+import { Modal } from '@material-ui/core'
 
 import './index.css'
 
@@ -18,20 +20,33 @@ import ProductFilters from '../../components/shop-components/app-shop-filters'
 import Product from '../../components/app-product'
 import Subscribe from '../../components/app-subscribe/index'
 import Brands from '../../components/app-brands/index'
+// import AppProductModal from '../../components/app-product-modal'
 
-export default function Shop() {
+export default function Shop({handleOpenModal}) {
 
   const products = useSelector(state => state.products.products)
   const dispatch = useDispatch()
+
+  // const [open, setOpen] = useState(false)
+  // const [modalProduct, setModalProduct] = useState({})
+
+  // const handleOpen = (product) => {
+  //   setModalProduct(product)
+  //   setOpen(true)
+  // }
+  // const handleClose = () => {
+  //   setOpen(false)
+  // }
 
   useEffect(() => {
     dispatch(getProducts())
   }, [dispatch])
 
+
   return (
     <div>
       <div className="shop-banner">
-        <div className="container d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
+        <div className="container d-flex flex-column flex-md-row align-items-lg-center justify-content-between">
           <div className="mt-5 mt-lg-0">
             <h1>
               New Customer
@@ -41,7 +56,11 @@ export default function Shop() {
             </h1>
             <button className="btn custom-cta-btn btn-w-u mt-4">LEARN MORE</button>
           </div>
-          <img className="banner-img" src={bannerShoes} alt="shoes" />
+
+        <div className="">
+          <img className="banner-img " src={bannerShoes} alt="shoes" />
+        </div>
+
         </div>
       </div>
 
@@ -73,7 +92,7 @@ export default function Shop() {
               {
                 products.map(product => {
                   return (
-                    <Product key={product._id} product={product} className="product-background"/>
+                    <Product key={product._id} product={product} className="product-background" handleOpenModal={handleOpenModal}/>
                   )
                 })
               }

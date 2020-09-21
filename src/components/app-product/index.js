@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import {Link} from "react-router-dom"
 import "./index.css";
+import './shop-styles.css'
 import Boxim from "../../assets/img/brands/Bexim.png";
 import Product1 from "../../assets/img/product-img/product-1.png";
-import AppProductModal from '../app-product-modal'
-
-import { Modal } from '@material-ui/core'
+import ReactTooltip from 'react-tooltip';
+import Ellipses from '../../assets/img/feature-icons/ellipses.png'
 
 
 const tag = (t) => {
@@ -37,35 +37,26 @@ const tag = (t) => {
     default:
       return null
   }
+  
 }
 
 export default function Product(props) {
-  const [open, setOpen] = useState(false)
-
-  const handleOpen = () => {
-    setOpen(true)
-  }
-  const handleClose = () => {
-    setOpen(false)
-  }
 
 
-  if(props.product != null){
+  if(props.product !== undefined){
     return (
         <div className={props.className}>
-          <Modal open={open} onClose={handleClose} className="d-flex align-items-center justify-content-center popup-bg-color">
-            <AppProductModal/>
-          </Modal>
+          
           { tag(props.tag) }
           <img className="product-image" src={props.product.image} alt="" />
           <div className="product-footer">
-            <p>Men's denim shirts full</p>
+            <p>{props.product.name}</p>
           </div>
 
           <div className="product-overlay">
             <div className="product-overlay-info">
-              <p className="mb-1">New look men's sneakers</p>
-              <span className="c-item-tag">Travel</span>
+              <p className="mb-1">{props.product.name}</p>
+              <span className="c-item-tag">{props.product.data.tags[0]}</span>
               <p className="old-price">${ props.product.price }.00</p>
               <p className="new-price">${ props.product.price - props.product.discount }.00</p>
             </div>
@@ -109,7 +100,7 @@ export default function Product(props) {
                 data-toggle="tooltip"
                 data-placement="left"
                 title="Add to cart"
-                onClick={handleOpen}
+                onClick={() => props.handleOpenModal(props.product)}
               ></i>
             </div>
           </div>
@@ -118,9 +109,6 @@ export default function Product(props) {
   } else {
     return(
       <div className={props.className}>  
-        <Modal open={open} onClose={handleClose} className="d-flex align-items-center justify-content-center popup-bg-color">
-          <AppProductModal/>
-        </Modal>
         { tag(props.tag) }
   
 
@@ -145,8 +133,19 @@ export default function Product(props) {
             <i className="far fa-star"></i>
           </div>
           <div className="product-overlay-controller d-flex align-items-center flex-column justify-content-between">
+
+          <a data-tip data-for='color' className="fas fa-circle" data-place='left'></a>
+          <ReactTooltip 
+            id='color' 
+            aria-haspopup='true' 
+            className="light-background"
+            effect='solid'
+            >
+            <img src={Ellipses} alt=""/>
+          </ReactTooltip>
+
             <i
-              className="fas fa-circle text-danger fix-controll"
+              className="text-danger fix-controll"
               data-toggle="tooltip"
               data-placement="left"
               title="Color"
@@ -172,13 +171,16 @@ export default function Product(props) {
             >
               <i className="fas fa-search"></i>
             </Link>
-            <i
-              className="fas fa-cart-plus fix-controll"
+
+            <a data-tip='Add to cart' className="fas fa-cart-plus" data-place='left'></a>
+            
+            <ReactTooltip
+              className="fix-controll custom-theme"
               data-toggle="tooltip"
               data-placement="left"
               title="Add to cart"
-              onClick={handleOpen}
-            ></i>
+              onClick={() => props.handleOpenModal(props.product)}
+            />
           </div>
         </div>
       </div>

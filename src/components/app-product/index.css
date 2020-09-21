@@ -3,11 +3,14 @@
   width: 100%;
 }
 
+<<<<<<< HEAD
+=======
 .popup-bg-color{
   background-color: #0e153ed9;
 }
 
 
+>>>>>>> b5193cb4a461d6187fc496f2c68426559135037f
 .product-background{
   padding: 25px;
   padding-bottom: 46px;
@@ -70,6 +73,10 @@
 
 .product-background:hover .product-overlay{
   display: block;
+}
+
+.product-background:hover .product-footer {
+  display: none;
 }
 
 .product-overlay{
@@ -135,6 +142,42 @@
   top: 65px;
 }
 
+.custom-theme {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 1rem !important;
+  background-color: rgb(32, 211, 194) !important;
+  border: 1px solid rgb(32, 211, 194) !important;
+  width: 130px;
+}
+
+.custom-theme.place-left::after {
+  border-color:  transparent rgb(32, 211, 194) !important;
+} 
+
+
+.light-background {
+  background-color: #ffffff !important;
+}
+
+.light-background.place-left::after {
+  border-color: transparent rgb(255, 255, 255) !important;
+} 
+
+.__react_component_tooltip {
+  margin-left: -17.5px !important;
+}
+
+.fa-cart-plus:hover {
+  color: var(--theme-color) !important;
+  cursor: pointer;
+}
+
+.fa-circle:hover {
+  color: red !important;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .product-image {
     height: 100%;
@@ -143,6 +186,7 @@
     margin-left: auto;
     margin-right: auto;
   }
+<<<<<<< HEAD
 
   .product-footer {
     font-size: 1rem;
@@ -155,3 +199,7 @@
     
   }
 }
+=======
+}
+
+>>>>>>> 4e16da56fd42bcf9190005a467c958cd5733aa3a

@@ -11,7 +11,7 @@ import "swiper/swiper.scss";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-export default function index() {
+export default function Featuredproducts({handleOpenModal}) {
     const params = {
         pagination: {
             el: "#swiper-pagination-featured",
@@ -57,22 +57,22 @@ export default function index() {
             <div className="container position-relative">
                 <Swiper {...params}>
                     <SwiperSlide>
-                        <FeaturedProduct tag={"hot"} className="product-background" />
+                        <FeaturedProduct tag={"hot"} className="product-background" handleOpenModal={handleOpenModal}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <FeaturedProduct tag={"hot"} className="product-background" />
+                        <FeaturedProduct tag={"hot"} className="product-background" handleOpenModal={handleOpenModal}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <FeaturedProduct tag={"sale"} className="product-background" />
+                        <FeaturedProduct tag={"sale"} className="product-background" handleOpenModal={handleOpenModal}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <FeaturedProduct tag={"hot"} className="product-background" />
+                        <FeaturedProduct tag={"hot"} className="product-background" handleOpenModal={handleOpenModal}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <FeaturedProduct tag={"hot"} className="product-background" />
+                        <FeaturedProduct tag={"hot"} className="product-background" handleOpenModal={handleOpenModal}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <FeaturedProduct tag={"sale"} className="product-background" />
+                        <FeaturedProduct tag={"sale"} className="product-background" handleOpenModal={handleOpenModal}/>
                     </SwiperSlide>
                 </Swiper>
                 <div
