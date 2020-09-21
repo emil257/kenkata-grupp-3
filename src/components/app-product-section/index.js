@@ -8,7 +8,9 @@ import Compare from "../../assets/img/product-img/product-options/compare.png";
 import AddWishlist from "../../assets/img/product-img/product-options/add-wishlist.png";
 import InStock from "../../assets/img/product-img/in-stock.png";
 
-export default function index() {
+
+
+export default function Product() {
   return (
     <div className="product-section">
       <div className="container">

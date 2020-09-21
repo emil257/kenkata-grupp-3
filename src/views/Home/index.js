@@ -14,17 +14,17 @@ import AppFeaturedProducts from '../../components/app-featured-products/index'
 
 import NewArivalsCarousel from "../../components/app-new-arrivals-carousel";
 
-export default function index() {
+export default function Home({handleOpenModal}) {
   return (
     <div>
       <Banner></Banner>
-      <Shipping />
+      <Shipping/>
       <ShopCategory></ShopCategory>
-      <NewArivalsCarousel></NewArivalsCarousel>
+      <NewArivalsCarousel handleOpenModal={handleOpenModal}></NewArivalsCarousel>
       <DiscountBanner></DiscountBanner>
-      <AppFeaturedProducts></AppFeaturedProducts>
+      <AppFeaturedProducts handleOpenModal={handleOpenModal}></AppFeaturedProducts>
       <FlashSaleBanner />
-      <TopSeller />
+      <TopSeller handleOpenModal={handleOpenModal}/>
       <AppReviews></AppReviews>
       <AppLatestBlog></AppLatestBlog>
       <Subscribe></Subscribe>

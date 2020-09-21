@@ -1,6 +1,7 @@
 .shop-banner{
   background-color: var(--secondary-light-color);
   margin-bottom: 120px;
+  text-align: center;
 }
 .shop-banner h1{
   font-size: 36px;
@@ -13,11 +14,24 @@
 }
 @media(min-width: 768px){
   .banner-img{
-    width: unset;
+    max-width: 24rem;
+  }
+  .shop-banner{
+    margin-bottom: 80px;
+    text-align: left;
   }
 }
 
-.shop{
+@media(min-width: 992px){
+  .banner-img{
+    max-width: 100%;
+  }
+  .shop-banner{
+    margin-bottom: 120px;
+  }
+}
+
+.shop {
   margin-bottom: 120px;
 }
 .shop-header{

@@ -3,6 +3,14 @@
   width: 100%;
 }
 
+<<<<<<< HEAD
+=======
+.popup-bg-color{
+  background-color: #0e153ed9;
+}
+
+
+>>>>>>> b5193cb4a461d6187fc496f2c68426559135037f
 .product-background{
   padding: 25px;
   padding-bottom: 46px;
@@ -65,6 +73,10 @@
 
 .product-background:hover .product-overlay{
   display: block;
+}
+
+.product-background:hover .product-footer {
+  display: none;
 }
 
 .product-overlay{
@@ -175,3 +187,4 @@
     margin-right: auto;
   }
 }
+
