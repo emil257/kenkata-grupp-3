@@ -162,7 +162,7 @@ export default function Product(props) {
               data-toggle="tooltip"
               data-placement="left"
               title="Add to cart"
-              // onClick={() => props.handleOpenModal(props.product)}
+              onClick={() => props.handleOpenModal(props.product)}
             ></i>
           </div>
         </div>

@@ -20,39 +20,31 @@ import ProductFilters from '../../components/shop-components/app-shop-filters'
 import Product from '../../components/app-product'
 import Subscribe from '../../components/app-subscribe/index'
 import Brands from '../../components/app-brands/index'
-import AppProductModal from '../../components/app-product-modal'
+// import AppProductModal from '../../components/app-product-modal'
 
-export default function Shop() {
+export default function Shop({handleOpenModal}) {
 
   const products = useSelector(state => state.products.products)
   const dispatch = useDispatch()
 
-  const [open, setOpen] = useState(false)
-  const [modalProduct, setModalProduct] = useState({})
+  // const [open, setOpen] = useState(false)
+  // const [modalProduct, setModalProduct] = useState({})
 
-  const handleOpen = (product) => {
-    setModalProduct(product)
-    setOpen(true)
-  }
-  const handleClose = () => {
-    setOpen(false)
-  }
+  // const handleOpen = (product) => {
+  //   setModalProduct(product)
+  //   setOpen(true)
+  // }
+  // const handleClose = () => {
+  //   setOpen(false)
+  // }
 
   useEffect(() => {
     dispatch(getProducts())
   }, [dispatch])
 
-  const AppModalWithRef = forwardRef((props, ref) => {
-    return (
-      <AppProductModal {...props} innerRef={ref}/>
-    )
-  })
 
   return (
     <div>
-      <Modal open={open} onClose={handleClose} className="d-flex align-items-center justify-content-center popup-bg-color">
-        <AppModalWithRef product={modalProduct}/>
-      </Modal>
       <div className="shop-banner">
         <div className="container d-flex flex-column flex-md-row align-items-lg-center justify-content-between">
           <div className="mt-5 mt-lg-0">
@@ -100,7 +92,7 @@ export default function Shop() {
               {
                 products.map(product => {
                   return (
-                    <Product key={product._id} product={product} className="product-background" handleOpenModal={handleOpen}/>
+                    <Product key={product._id} product={product} className="product-background" handleOpenModal={handleOpenModal}/>
                   )
                 })
               }
