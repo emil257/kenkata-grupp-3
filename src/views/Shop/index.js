@@ -31,7 +31,7 @@ export default function Shop() {
   return (
     <div>
       <div className="shop-banner">
-        <div className="container d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
+        <div className="container d-flex flex-column flex-md-row align-items-lg-center justify-content-between">
           <div className="mt-5 mt-lg-0">
             <h1>
               New Customer
@@ -41,7 +41,11 @@ export default function Shop() {
             </h1>
             <button className="btn custom-cta-btn btn-w-u mt-4">LEARN MORE</button>
           </div>
-          <img className="banner-img" src={bannerShoes} alt="shoes" />
+
+        <div className="">
+          <img className="banner-img " src={bannerShoes} alt="shoes" />
+        </div>
+
         </div>
       </div>
 

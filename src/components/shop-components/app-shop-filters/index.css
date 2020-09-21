@@ -2,6 +2,23 @@
   width: 16rem;
   margin-bottom: 46px;
 }
+
+@media (min-width: 768px) {
+  .sorting-categories{
+    width: 12rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .sorting-categories{
+    width: 16rem !important;
+  }
+}
+
+.sorting-categories{
+  width: 16rem;
+  margin-bottom: 46px;
+}
 .sorting-option-category{
   margin-top: 10px;
 }
