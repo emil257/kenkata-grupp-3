@@ -72,6 +72,10 @@
   display: block;
 }
 
+.product-background:hover .product-footer {
+  display: none;
+}
+
 .product-overlay{
   display: none;
   background-color: #0e153ed9;
@@ -144,3 +148,4 @@
     margin-right: auto;
   }
 }
+
