@@ -13,7 +13,6 @@
   height: auto;
 }
 
-
 .app-feature{
   background-color: #EDFCFA;
   border-radius: 6px;
@@ -22,6 +21,7 @@
   margin-right: 0.8rem;
   margin-left: 0.8rem;
 }
+
 .app-feature img {
   margin-right: 1.5rem;
 }
@@ -55,6 +55,20 @@
   margin-right: 0rem;
 }
 
+}
+
+@media (max-width: 1280px) {
+ .app-feature {
+   
+   min-width: 500px !important;
+ }
+}
+
+@media (max-width: 768px) {
+   .app-feature {
+
+     min-width: 350px !important;
+   }
 }
 
 @media (max-width: 576px) {

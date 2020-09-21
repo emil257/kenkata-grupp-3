@@ -8,7 +8,8 @@ import Home from '../src/views/Home/index'
 import Products from '../src/views/Products/index'
 import Shop from '../src/views/Shop'
 import CheckoutCart from '../src/components/shoppingcart/shopping-cart-step-2'
-import AppFooter from '../src/components/app-footer'
+// import AppFooter from '../src/components/app-footer'
+import AppFooterNew from '../src/components/app-footer-new/index'
 import Account from '../src/views/Account'
 import ShoppingCartView from '../src/components/shoppingcart/shopping-cart-step-1'
 import NotFound from "./views/NotFound/index"
@@ -31,7 +32,7 @@ function App() {
         
       </Switch>
 
-      <AppFooter />
+      <AppFooterNew />
     </BrowserRouter>
   );
 }

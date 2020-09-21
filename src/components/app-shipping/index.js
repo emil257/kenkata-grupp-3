@@ -13,7 +13,7 @@ export default function index() {
     <div>
       <div className="app-features" id="shipping">
         <div className="container-fluid">
-          <div className="row align-items-center justify-content-center">
+          <div className="row justify-content-center">
             {/* Item 1 */}
             <div className="app-feature col-md-6 col-lg-3 mb-5">
               <div className="d-flex">
