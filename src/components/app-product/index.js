@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom"
 import "./index.css";
+import './shop-styles.css'
 import Boxim from "../../assets/img/brands/Bexim.png";
 import Product1 from "../../assets/img/product-img/product-1.png";
 import AppProductModal from '../app-product-modal'
