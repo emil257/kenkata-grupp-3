@@ -109,6 +109,7 @@
   color: var(--theme-color) !important;
 }
 .product-overlay-rating{
+  font-size: 1.1rem;
   position: absolute;
   margin: 0;
   right: 25px;
