@@ -121,6 +121,16 @@
 }
 
 @media (min-width: 768px) {
+
+  .nav-logo {
+    margin-right: 0.6rem;
+  }
+
+   .fa-chevron-down {
+     margin-left: 0.75rem;
+
+   }
+  
   .nav-middle {
     height: 106px;
   }
