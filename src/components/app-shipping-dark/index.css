@@ -1,39 +1,94 @@
-
-#shipping-product {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    background: rgba(14, 21, 61, 0.8);
-  }
+#shipping-dark {
+  margin-top: 5rem !important;
+  margin-bottom: -3rem;
+  background: #0E153D;
+  padding: 4rem 0;
   
-  .app-features img{
-    filter: invert(82%) sepia(47%) saturate(5678%) hue-rotate(126deg) brightness(108%) contrast(75%);
-  }
   
-  .app-features-container-product{
-    padding: 7.5rem 2rem;
-    max-width: 1650px;
-    margin:auto;
-  }
-  .app-feature-white{
-    background-color: white;
-    border-radius: 6px;
-    max-width: 400px;
-    padding: 1.5rem;
-  }
-  .app-feature-white img {
-    margin-right: 1.5rem;
-  }
-  .app-feature-title{
-    font-weight: 500;
-  }
-  .app-feature-white:hover{
-    background-color: white;
-  }
+}
+
+.app-features img {
+  filter: invert(82%) sepia(47%) saturate(5678%) hue-rotate(126deg) brightness(108%) contrast(75%);
+}
+
+.icons {
+  width: 80px;
+  height: auto;
+}
+
+.top-items {
+  margin-bottom: 1.8rem;
+}
+
+ 
+
+#shipping-dark .app-feature {
+  background-color: #fff;
+  border-radius: 6px;
+  max-width: 400px;
+  padding: 1.5rem;
+}
+
+.app-feature img {
+  margin-right: 1.5rem;
+}
+
+.app-feature-title {
+  font-weight: 500;
+}
+
+#shipping-dark .app-feature:hover {
+  background-color: var(--theme-color);
+}
+
+#shipping-dark .app-feature:hover p {
+  color: white;
+}
+
+.app-feature:hover img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
 
 
-  @media(min-width: 1850px){
-    .app-features-container-product{
-      padding: 7.5rem;
-      padding-bottom: 1.5rem;
-    }
+@media(min-width: 1850px) {
+  .app-features-container {
+    padding: 7.5rem;
+    padding-bottom: 1.5rem;
   }
+}
+
+@media(max-width: 768px) {
+  .app-feature {
+    text-align: center;
+     max-width: 350px !important;
+  }
+
+  .app-feature img {
+    margin-right: 0rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .app-feature {
+    max-width: 300px !important;
+  }
+
+  .top-items {
+    margin-bottom: 1.8rem;
+  }
+
+  .bottom-items {
+    margin-bottom: 1.8rem;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .app-feature {
+    padding: 1.5rem 1rem;
+
+  }
+
+  
+}

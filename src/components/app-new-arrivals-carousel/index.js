@@ -12,7 +12,7 @@ import "swiper/swiper.scss";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-export default function index() {
+export default function Arrivals({handleOpenModal}) {
   const params = {
     pagination: {
       el: "#swiper-pagination-arrivals",
@@ -60,22 +60,22 @@ export default function index() {
       
         <Swiper {...params}>
           <SwiperSlide>
-            <Product1 tag={"sale"} className="product-background" />
+            <Product1 tag={"sale"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product1 tag={"new"} className="product-background" />
+            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product1 tag={"new"} className="product-background" />
+            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product1 tag={"new"} className="product-background" />
+            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product1 tag={"new"} className="product-background" />
+            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product1 tag={"new"} className="product-background" />
+            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
         </Swiper>
         <div

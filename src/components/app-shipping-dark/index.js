@@ -9,43 +9,55 @@ import delivery from '../../assets/img/feature-icons/delivery.svg'
 
 
 export default function index() {
-    return (
-      <div>
-        <div className="app-features" id="shipping-product">
-          <div className="app-features-container-product d-flex flex-column flex-xl-row justify-content-around align-items-center">
-          <div className="d-flex flex-column flex-lg-row">
-            <div className="app-feature-white d-flex mb-5 mb-xl-0">
-              <img className="theme-color" src={shipping} alt="shipping" />
-                <span>
-                 <p className="app-feature-title text-theme-color">Free shipping</p>
-                 <p>For a local customer, we provide free shipping facility</p>
-                </span>
-            </div>
-              <div className="app-feature-white d-flex mb-5 ml-lg-5 mb-xl-0">
-                <img className="theme-color" src={support} alt="support" />
-                 <span>
-                  <p className="app-feature-title text-theme-color">24/7 support</p>
-                  <p>For any inquiry, we are available 24 hours every day</p>
-                 </span>
+  return (
+    <div>
+      <div className="app-features" id="shipping-dark">
+        <div className="container-fluid">
+          <div className="app-features-boxes">
+            <div className="row justify-content-center">
+              {/* Item 1 */}
+              <div className="app-feature col-md-6 col-lg-3 top-items">
+                <div className="d-flex">
+                  <img className="theme-color icons" src={shipping} alt="shipping" />
+                  <span>
+                    <p className="app-feature-title text-theme-color text-left ml-4">Free shipping</p>
+                    <p className="text-left ml-4">For a local customer, we provide free shipping facility</p>
+                  </span>
+                </div>
               </div>
-            </div>        
-            <div className="d-flex flex-column flex-lg-row">
-              <div className="app-feature-white d-flex mb-5 mb-lg-0 ml-xl-5 ">
-                <img className="theme-color" src={payment} alt="payment" />
-                <span>
-                 <p className="app-feature-title text-theme-color">Online payment</p>
-                 <p>You can pay quickly and easily with our online payment system</p>
-                </span>
-            </div>
-            <div className="app-feature-white d-flex ml-lg-5">
-              <img className="theme-color" src={delivery} alt="delivery"/>
-                <span>
-                  <p className="app-feature-title text-theme-color">Fast delivery</p>
-                  <p>We understand your urgency and we deliver in a fast way</p>
-                </span>
+              {/* Item 2 */}
+              <div className="app-feature col-md-6 col-lg-3 top-items">
+                <div className="d-flex">
+                  <img className="theme-color icons" src={support} alt="support" />
+                  <span>
+                    <p className="app-feature-title text-theme-color text-left ml-4">24/7 support</p>
+                    <p className="text-left ml-4">For any inquiry, we are available 24 hours every day</p>
+                  </span>
+                </div>
+              </div>
+              {/* Item 3 */}
+              <div className="app-feature col-md-6 col-lg-3 bottom-items">
+                <div className="d-flex">
+                  <img className="theme-color icons" src={payment} alt="payment" />
+                  <span>
+                    <p className="app-feature-title text-theme-color text-left ml-4">Online payment</p>
+                    <p className="text-left ml-4">You can pay quickly and easily with our online payment system</p>
+                  </span>
+                </div>
+              </div>
+              {/* Item 4 */}
+              <div className="app-feature col-md-6 col-lg-3 bottom-items">
+                <div className="d-flex">
+                  <img className="theme-color icons delivery-fix" src={delivery} alt="delivery" />
+                  <span>
+                    <p className="app-feature-title text-theme-color text-left ml-4">Fast delivery</p>
+                    <p className="text-left ml-4">We understand your urgency and we deliver in a fast way</p>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
   )
