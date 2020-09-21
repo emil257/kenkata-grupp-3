@@ -20,6 +20,9 @@
     width: 178px !important;
     border-radius: 27px !important;
   }
+  .btn-update:hover{
+    color: white !important;
+  }
   
   .cart-total{
     border-radius: 6px;

@@ -12,6 +12,8 @@ import CheckoutCart from '../src/components/shoppingcart/shopping-cart-step-2'
 import AppFooterNew from '../src/components/app-footer-new/index'
 import Account from '../src/views/Account'
 import ShoppingCartView from '../src/components/shoppingcart/shopping-cart-step-1'
+import NotFound from "./views/NotFound/index"
+
 
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
         <Route exact path="/shop" component={Shop} />
         <Route exact path="/shoppingcart" component={ShoppingCartView} />
         <Route exact path="/checkout" component={CheckoutCart} />
+        <Route exact path="*" component={NotFound} />
         
       </Switch>
 
