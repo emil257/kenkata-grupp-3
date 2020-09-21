@@ -86,7 +86,7 @@ export default function index() {
                 <span className=" my-account "> My account </span>
               </Link>
               <Link to="/heart" className="custom-nav-link ml-4">
-                <i className="far fa-heart custom-nav-link-icon"></i>
+                <i className="far fa-heart fa-heart-nav custom-nav-link-icon"></i>
               </Link>
               <Link to="/" className="text-dark ml-3" href="/#">
                 <i className="fas fa-random position-relative">
@@ -95,7 +95,7 @@ export default function index() {
                   </span>
                 </i>
               </Link>
-              <Link to="/" className="text-dark ml-3" href="/#">
+              <Link to="/shoppingcart" className="text-dark ml-3" href="/#">
                 <i className="fas fa-shopping-bag position-relative">
                   <span className="badge badge-pill badge-theme position-absolute">
                     0

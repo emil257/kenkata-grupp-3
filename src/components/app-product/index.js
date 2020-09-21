@@ -79,7 +79,7 @@ export default function index(props) {
               title="Compare"
             ></i>
             <Link
-              to="/product"
+              to="/products"
               data-toggle="tooltip"
               data-placement="left"
               title="Quick view"
@@ -144,7 +144,7 @@ export default function index(props) {
               title="Compare"
             ></i>
             <Link
-              to="/product"
+              to="/products"
               data-toggle="tooltip"
               data-placement="left"
               title="Quick view"
