@@ -1,11 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import {Link} from "react-router-dom"
 import "./index.css";
 import Boxim from "../../assets/img/brands/Bexim.png";
 import Product1 from "../../assets/img/product-img/product-1.png";
-import AppProductModal from '../app-product-modal'
-
-import { Modal } from '@material-ui/core'
 
 
 const tag = (t) => {
@@ -40,32 +37,22 @@ const tag = (t) => {
 }
 
 export default function Product(props) {
-  const [open, setOpen] = useState(false)
-
-  const handleOpen = () => {
-    setOpen(true)
-  }
-  const handleClose = () => {
-    setOpen(false)
-  }
 
 
-  if(props.product != null){
+  if(props.product !== undefined){
     return (
         <div className={props.className}>
-          <Modal open={open} onClose={handleClose} className="d-flex align-items-center justify-content-center popup-bg-color">
-            <AppProductModal/>
-          </Modal>
+          
           { tag(props.tag) }
           <img className="product-image" src={props.product.image} alt="" />
           <div className="product-footer">
-            <p>Men's denim shirts full</p>
+            <p>{props.product.name}</p>
           </div>
 
           <div className="product-overlay">
             <div className="product-overlay-info">
-              <p className="mb-1">New look men's sneakers</p>
-              <span className="c-item-tag">Travel</span>
+              <p className="mb-1">{props.product.name}</p>
+              <span className="c-item-tag">{props.product.data.tags[0]}</span>
               <p className="old-price">${ props.product.price }.00</p>
               <p className="new-price">${ props.product.price - props.product.discount }.00</p>
             </div>
@@ -109,7 +96,7 @@ export default function Product(props) {
                 data-toggle="tooltip"
                 data-placement="left"
                 title="Add to cart"
-                onClick={handleOpen}
+                onClick={() => props.handleOpenModal(props.product)}
               ></i>
             </div>
           </div>
@@ -118,9 +105,6 @@ export default function Product(props) {
   } else {
     return(
       <div className={props.className}>  
-        <Modal open={open} onClose={handleClose} className="d-flex align-items-center justify-content-center popup-bg-color">
-          <AppProductModal/>
-        </Modal>
         { tag(props.tag) }
   
 
@@ -177,7 +161,7 @@ export default function Product(props) {
               data-toggle="tooltip"
               data-placement="left"
               title="Add to cart"
-              onClick={handleOpen}
+              // onClick={() => props.handleOpenModal(props.product)}
             ></i>
           </div>
         </div>
