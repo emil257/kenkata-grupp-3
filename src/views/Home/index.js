@@ -18,7 +18,7 @@ export default function index() {
   return (
     <div>
       <Banner></Banner>
-      <Shipping />
+      <Shipping/>
       <ShopCategory></ShopCategory>
       <NewArivalsCarousel></NewArivalsCarousel>
       <DiscountBanner></DiscountBanner>

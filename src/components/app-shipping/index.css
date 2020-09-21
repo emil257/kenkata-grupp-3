@@ -3,6 +3,11 @@
   margin-top: 5rem !important;
   margin-bottom: -5rem;
 }
+#shipping-dark {
+  margin-top: 5rem !important;
+  margin-bottom: -5rem;
+  background-color: black;
+}
 
 .app-features img{
   filter: invert(82%) sepia(47%) saturate(5678%) hue-rotate(126deg) brightness(108%) contrast(75%);

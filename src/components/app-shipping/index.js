@@ -8,10 +8,10 @@ import delivery from '../../assets/img/feature-icons/delivery.svg'
 
 
 
-export default function index() {
+export default function Shipping({dark}) {
   return (
     <div>
-      <div className="app-features" id="shipping">
+      <div className="app-features" id={"shipping" + (dark ? '-dark' : "")}>
         <div className="container-fluid">
           <div className="row justify-content-center">
             {/* Item 1 */}
