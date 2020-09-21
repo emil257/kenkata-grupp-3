@@ -50,7 +50,7 @@ export default function index() {
         <div className="nav-middle">
           <div className="container h-100 d-flex flex-column flex-md-row py-4 py-md-0 align-items-start align-items-md-center justify-content-between">
             <Link to="/">
-              <img className="mb-4 mb-md-0" src={Logo} alt="Logo" />
+              <img className="mb-4 mb-md-0 nav-logo " src={Logo} alt="Logo" />
             </Link>
 
             <div className="input-group nav-search-grp">

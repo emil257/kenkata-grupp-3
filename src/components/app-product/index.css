@@ -143,4 +143,15 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .product-footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-footer {
+    text-align: center;
+    
+  }
 }
