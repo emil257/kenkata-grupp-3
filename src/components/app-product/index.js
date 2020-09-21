@@ -1,8 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom"
 import "./index.css";
 import Boxim from "../../assets/img/brands/Bexim.png";
 import Product1 from "../../assets/img/product-img/product-1.png";
+import AppProductModal from '../app-product-modal'
+
+import { Modal } from '@material-ui/core'
+
 
 const tag = (t) => {
   switch(t){
@@ -35,72 +39,88 @@ const tag = (t) => {
   }
 }
 
-export default function index(props) {
+export default function Product(props) {
+  const [open, setOpen] = useState(false)
+
+  const handleOpen = () => {
+    setOpen(true)
+  }
+  const handleClose = () => {
+    setOpen(false)
+  }
+
+
   if(props.product != null){
     return (
-      <div className={props.className}>
-        { tag(props.tag) }
-        <img className="product-image" src={props.product.image} alt="" />
-        <div className="product-footer">
-          <p>Men's denim shirts full</p>
-        </div>
+        <div className={props.className}>
+          <Modal open={open} onClose={handleClose} className="d-flex align-items-center justify-content-center popup-bg-color">
+            <AppProductModal/>
+          </Modal>
+          { tag(props.tag) }
+          <img className="product-image" src={props.product.image} alt="" />
+          <div className="product-footer">
+            <p>Men's denim shirts full</p>
+          </div>
 
-        <div className="product-overlay">
-          <div className="product-overlay-info">
-            <p className="mb-1">New look men's sneakers</p>
-            <span className="c-item-tag">Travel</span>
-            <p className="old-price">${ props.product.price }.00</p>
-            <p className="new-price">${ props.product.price - props.product.discount }.00</p>
-          </div>
-          <div className="r-stars product-overlay-rating">
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="far fa-star"></i>
-          </div>
-          <div className="product-overlay-controller d-flex align-items-center flex-column justify-content-between">
-            <i
-              className="fas fa-circle text-danger fix-controll"
-              data-toggle="tooltip"
-              data-placement="left"
-              title="Color"
-            ></i>
-            <i
-              className="far fa-heart fix-controll"
-              data-toggle="tooltip"
-              data-placement="left"
-              title="Add to wishlist"
-            ></i>
-            <i
-              className="fas fa-arrows-alt-h fix-controll"
-              data-toggle="tooltip"
-              data-placement="left"
-              title="Compare"
-            ></i>
-            <Link
-              to="/product"
-              data-toggle="tooltip"
-              data-placement="left"
-              title="Quick view"
-              className="fix-controll"
-            >
-              <i className="fas fa-search"></i>
-            </Link>
-            <i
-              className="fas fa-cart-plus fix-controll"
-              data-toggle="tooltip"
-              data-placement="left"
-              title="Add to cart"
-            ></i>
+          <div className="product-overlay">
+            <div className="product-overlay-info">
+              <p className="mb-1">New look men's sneakers</p>
+              <span className="c-item-tag">Travel</span>
+              <p className="old-price">${ props.product.price }.00</p>
+              <p className="new-price">${ props.product.price - props.product.discount }.00</p>
+            </div>
+            <div className="r-stars product-overlay-rating">
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="far fa-star"></i>
+            </div>
+            <div className="product-overlay-controller d-flex align-items-center flex-column justify-content-between">
+              <i
+                className="fas fa-circle text-danger fix-controll"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Color"
+              ></i>
+              <i
+                className="far fa-heart fix-controll"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Add to wishlist"
+              ></i>
+              <i
+                className="fas fa-arrows-alt-h fix-controll"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Compare"
+              ></i>
+              <Link
+                to="/product"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Quick view"
+                className="fix-controll"
+              >
+                <i className="fas fa-search"></i>
+              </Link>
+              <i
+                className="fas fa-cart-plus fix-controll"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Add to cart"
+                onClick={handleOpen}
+              ></i>
+            </div>
           </div>
         </div>
-      </div>
   );
   } else {
     return(
       <div className={props.className}>  
-
+        <Modal open={open} onClose={handleClose} className="d-flex align-items-center justify-content-center popup-bg-color">
+          <AppProductModal/>
+        </Modal>
         { tag(props.tag) }
   
 
@@ -157,6 +177,7 @@ export default function index(props) {
               data-toggle="tooltip"
               data-placement="left"
               title="Add to cart"
+              onClick={handleOpen}
             ></i>
           </div>
         </div>
