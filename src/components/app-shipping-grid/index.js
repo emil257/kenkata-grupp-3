@@ -13,7 +13,7 @@ export default function index() {
                 <div className="grid-wrapper" id="shipping">
                     {/* Box 1 */}
                     <div className="box-shipping d-flex align-items-center">
-                        <img className="" src={Shipping} alt="/#" />
+                        <img className="box-image" src={Shipping} alt="/#" />
                         <span>
                             <p className="box-title text-theme ml-3">Free Shipping</p>
                             <p className="ml-3 text-title small">For a local customer, we provide free shipping facility</p>
@@ -21,7 +21,7 @@ export default function index() {
                     </div>
                     {/* Box 2 */}
                     <div className="box-shipping d-flex align-items-center">
-                        <img className="" src={Support} alt="/#" />
+                        <img className="box-image" src={Support} alt="/#" />
                         <span>
                             <p className="box-title text-theme ml-3">24/7 support</p>
                             <p className="ml-3 text-title small">For any inquiry, we are available 24 hours every day</p>
@@ -29,7 +29,7 @@ export default function index() {
                     </div>
                     {/* Box 3 */}
                     <div className="box-shipping d-flex align-items-center">
-                        <img className="" src={Payment} alt="/#" />
+                        <img className="box-image" src={Payment} alt="/#" />
                         <span>
                             <p className="box-title text-theme ml-3">Online payment</p>
                             <p className="ml-3 text-title small">You can pay quickly and easily with our online payment system</p>
@@ -37,7 +37,7 @@ export default function index() {
                     </div>
                     {/* Box 4 */}
                     <div className="box-shipping d-flex align-items-center">
-                        <img className="" src={Delivery} alt="/#" />
+                        <img className="box-image" src={Delivery} alt="/#" />
                         <span>
                             <p className="box-title text-theme ml-3">Fast delivery</p>
                             <p className="ml-3 text-title small">We understand your urgency and we deliver in a fast way</p>
