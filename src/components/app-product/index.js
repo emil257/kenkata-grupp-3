@@ -101,7 +101,7 @@ export default function Product(props) {
                 effect="solid"
               />
 
-              <Link to={`/product/${props.product._id}`} data-tip="Read more" data-for='read' event="focus" data-html={true}  className="fas fa-search" data-place='left' />
+              <Link to={`/product/${props.product._id}`} data-tip="Read more" data-for='read' event="focus" data-html={true}  className="fas fa-search search-button" data-place='left' />
 
               <ReactTooltip
                 id="read"
@@ -113,7 +113,7 @@ export default function Product(props) {
               >
               </ReactTooltip>
 
-              <a data-tip='Add to cart' className="fas fa-cart-plus" data-place='left'></a>
+              <a data-tip="Add to cart" onClick={() => props.handleOpenModal(props.product)} className="fas fa-cart-plus" data-place='left'></a>
 
               <ReactTooltip
                 className="fix-controll custom-theme"
@@ -121,8 +121,9 @@ export default function Product(props) {
                 data-placement="left"
                 title="Add to cart"
                 effect='solid'
-                onClick={() => props.handleOpenModal(props.product)}
-              />
+                >
+              </ReactTooltip>
+              
             </div>
           </div>
         </div>
