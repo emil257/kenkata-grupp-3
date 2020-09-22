@@ -219,6 +219,11 @@
   cursor: pointer;
 }
 
+.fa-search {
+  color: rgb(170, 170, 170) !important;
+  cursor: pointer;
+}
+
 .fa-search:hover {
   color: orange !important;
   cursor: pointer;
