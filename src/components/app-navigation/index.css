@@ -1,3 +1,33 @@
+
+a:hover {
+  text-decoration: none;
+}
+
+a.text-light:focus,
+a.text-light:hover {
+  color: #fff !important;
+}
+
+.fa-facebook-f {
+  cursor: pointer;
+}
+
+.fa-twitter {
+  cursor: pointer;
+}
+
+.fa-instagram {
+  cursor: pointer;
+}
+
+.fa-pinterest-p {
+  cursor: pointer;
+}
+
+.fa-youtube {
+  cursor: pointer;
+}
+
 .navbar-toggle {
   color: var(--theme-color) !important;
 }
