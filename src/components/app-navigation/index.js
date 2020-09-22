@@ -136,7 +136,7 @@ export default function index() {
                 <li className="nav-item">
                   <Link
                     to="/"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
                   >
                     Home
                   </Link>
@@ -144,7 +144,7 @@ export default function index() {
                 <li className="nav-item">
                   <Link
                     to="/shop"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
                   >
                     Shop
                     <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
@@ -153,7 +153,7 @@ export default function index() {
                 <li className="nav-item">
                   <Link
                     to="/products"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
                   >
                     Products
                     <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
@@ -162,7 +162,7 @@ export default function index() {
                 <li className="nav-item">
                   <Link
                     to="/categories"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
                   >
                     Categories
                     <i className="fas fa-chevron-down fa-sm pt-1 pl-2 dropdown-icon"></i>

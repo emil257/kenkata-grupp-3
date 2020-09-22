@@ -68,12 +68,16 @@ export default function Product(props) {
               <i className="far fa-star"></i>
             </div>
             <div className="product-overlay-controller d-flex align-items-center flex-column justify-content-between">
-              <i
-                className="fas fa-circle text-danger fix-controll"
-                data-toggle="tooltip"
-                data-placement="left"
-                title="Color"
-              ></i>
+
+            <a data-tip data-for='color' className="fas fa-circle" data-place='left'></a>
+              <ReactTooltip
+                id='color'
+                aria-haspopup='true'
+                className='light-background'
+                effect='solid'
+                >
+                  <img src={Ellipses} alt=""/>
+                </ReactTooltip>
               <i
                 className="far fa-heart fix-controll"
                 data-toggle="tooltip"
@@ -87,7 +91,7 @@ export default function Product(props) {
                 title="Compare"
               ></i>
               <Link
-                to="/products"
+                to={`/product/${props.product._id}`}
                 data-toggle="tooltip"
                 data-placement="left"
                 title="Quick view"
@@ -95,13 +99,17 @@ export default function Product(props) {
               >
                 <i className="fas fa-search"></i>
               </Link>
-              <i
-                className="fas fa-cart-plus fix-controll"
+
+              <a data-tip='Add to cart' className="fas fa-cart-plus" data-place='left'></a>
+
+              <ReactTooltip
+                className="fix-controll custom-theme"
                 data-toggle="tooltip"
                 data-placement="left"
                 title="Add to cart"
+                effect='solid'
                 onClick={() => props.handleOpenModal(props.product)}
-              ></i>
+              />
             </div>
           </div>
         </div>

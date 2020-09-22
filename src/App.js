@@ -48,7 +48,8 @@ function App() {
 
       <Switch>
         <Route exact path="/" component={() => <Home handleOpenModal={handleOpenModal}/>}/>
-        <Route exact path="/products" component={Products} />
+        <Route exact path="/products/" component={Products} />
+        <Route exact path="/product/:id" component={Products} />
         <Route exact path="/account" component={Account} />
         <Route exact path="/shop" component={() => <Shop handleOpenModal={handleOpenModal}/>}/>
         <Route exact path="/shoppingcart" component={ShoppingCartView} />
