@@ -10,7 +10,7 @@ import InStock from "../../assets/img/product-img/in-stock.png";
 
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
-import { getProduct } from "../../store/actions/products";
+import { addToCart, getProduct, loadCartTotalItems } from "../../store/actions/products";
 
 
 export default function Product() {
@@ -23,6 +23,12 @@ export default function Product() {
   useEffect(() => {
     dispatch(getProduct(id))
   }, [dispatch, id])
+
+  // ADD TO CART
+  const add = (product) => {
+    dispatch(addToCart(product))
+    dispatch(loadCartTotalItems())
+  }
 
   return (
     <div className="product-section">
@@ -64,7 +70,7 @@ export default function Product() {
                 <button className="increase-qnt-btn-inc">+</button>
               </div>
 
-              <button className="btn custom-theme-btn btn-add-cart mx-3 my-3 my-md-0">
+              <button onClick={() => add(product)} className="btn custom-theme-btn btn-add-cart mx-3 my-3 my-md-0">
                 <i className="fas fa-cart-plus mr-1"></i>
                 Add to cart
               </button>

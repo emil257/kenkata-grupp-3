@@ -31,6 +31,7 @@ a.text-light:hover {
 .navbar-toggle {
   color: var(--theme-color) !important;
 }
+
 .nav-top {
   background-color: var(--theme-color);
   height: 40px;
