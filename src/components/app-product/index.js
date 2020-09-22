@@ -155,22 +155,15 @@ export default function Product(props) {
           </div>
           <div className="product-overlay-controller d-flex align-items-center flex-column justify-content-between">
 
-          <a data-tip data-for='color' className="fas fa-circle" data-place='left'></a>
-          <ReactTooltip 
-            id='color' 
-            aria-haspopup='true' 
-            className="light-background"
-            effect='solid'
-            >
-            <img src={Ellipses} alt=""/>
-          </ReactTooltip>
-
-            <i
-              className="text-danger fix-controll"
-              data-toggle="tooltip"
-              data-placement="left"
-              title="Color"
-            ></i>
+            <a data-tip data-for='color' className="fas fa-circle" data-place='left'></a>
+            <ReactTooltip 
+              id='color' 
+              aria-haspopup='true' 
+              className="light-background"
+              effect='solid'
+              >
+              <img src={Ellipses} alt=""/>
+            </ReactTooltip>
 
             <a data-tip='Add' data-for='add' className="far fa-heart" data-place='left'></a>
 
@@ -220,6 +213,5 @@ export default function Product(props) {
         </div>
       </div>
     )
-  }
-  
+  } 
 }
