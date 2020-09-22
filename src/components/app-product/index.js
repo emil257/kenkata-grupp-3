@@ -194,7 +194,7 @@ export default function Product(props) {
               effect="solid"
             />
 
-            <a data-tip='Read more' data-for='read' className="fas fa-search" data-place='left'></a>
+            <a data-tip='Read more' data-for='read' className="fas fa-search search-button" data-place='left'></a>
 
             <ReactTooltip
               id='read' 
