@@ -1,8 +1,8 @@
-import React, { useEffect, useState, forwardRef }from 'react'
+import React, { useEffect}from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getProducts } from '../../store/actions/products'
 
-import { Modal } from '@material-ui/core'
+// import { Modal } from '@material-ui/core'
 
 import './index.css'
 
