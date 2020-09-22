@@ -219,12 +219,12 @@
   cursor: pointer;
 }
 
-.fa-search {
+.search-button {
   color: rgb(170, 170, 170) !important;
   cursor: pointer;
 }
 
-.fa-search:hover {
+.search-button:hover {
   color: orange !important;
   cursor: pointer;
 }
