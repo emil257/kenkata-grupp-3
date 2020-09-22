@@ -13,11 +13,11 @@ export default function index() {
       <div className="container mt-5">
         <div className="row">
           <div className="cart-products col-12 col-lg-8">
-            <span className="d-flex justify-content-between weight-bold text-size-18 px-3">
-              <p className="ml-5">Product</p>
+            <span className="d-flex justify-content-center weight-bold text-size-18 px-3">
+              <p className="">Product</p>
               <p>
                 <span>Price</span>
-                <span className="mx-5">Quantity</span>
+                <span className="">Quantity</span>
                 <span>Subtotal</span>
               </p>
             </span>

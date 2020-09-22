@@ -1,8 +1,9 @@
 @import './colors.css';
 
-body {
+body, html {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  
 }
 p, h5{
   margin: 0;

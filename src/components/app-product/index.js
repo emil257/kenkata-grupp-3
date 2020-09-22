@@ -91,7 +91,7 @@ export default function Product(props) {
                 title="Compare"
               ></i>
               <Link
-                to="/products"
+                to={`/product/${props.product._id}`}
                 data-toggle="tooltip"
                 data-placement="left"
                 title="Quick view"
