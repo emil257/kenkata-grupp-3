@@ -164,6 +164,47 @@
   border-color: transparent rgb(255, 255, 255) !important;
 }
 
+.orange-background {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 1rem !important;
+  background-color: rgb(255, 165, 0) !important;
+  border: 1px solid rgb(255, 165, 0) !important;
+  width: 130px;
+  opacity: 1 !important;
+}
+
+.orange-background.place-left::after {
+  border-color: transparent rgb(255, 165, 0) !important;
+}
+
+.green-background {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 1rem !important;
+  background-color: rgb(0, 0, 255) !important;
+  border: 1px solid rgb(0, 0, 255) !important;
+  width: 130px;
+  opacity: 1 !important;
+}
+
+.green-background.place-left::after {
+  border-color: transparent blue !important;
+}
+
+.purple-background {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 1rem !important;
+  background-color: rgb(128, 0, 128) !important;
+  border: 1px solid rgb(128, 0, 128) !important;
+  width: 130px;
+  opacity: 1 !important;
+}
+
+.purple-background.place-left::after {
+  border-color: transparent purple !important;
+}
 .__react_component_tooltip {
   margin-left: -15.5px !important;
 }
@@ -175,6 +216,21 @@
 
 .fa-circle:hover {
   color: red !important;
+  cursor: pointer;
+}
+
+.fa-search:hover {
+  color: orange !important;
+  cursor: pointer;
+}
+
+.fa-arrows-alt-h:hover {
+  color: blue !important;
+  cursor: pointer;
+}
+
+.fa-heart:hover {
+  color: purple !important;
   cursor: pointer;
 }
 

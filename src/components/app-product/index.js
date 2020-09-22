@@ -158,27 +158,40 @@ export default function Product(props) {
               data-placement="left"
               title="Color"
             ></i>
-            <i
-              className="far fa-heart fix-controll"
+
+            <a data-tip='Add' data-for='add' className="far fa-heart" data-place='left'></a>
+
+            <ReactTooltip
+              id="add"
+              className="fix-controll purple-background"
               data-toggle="tooltip"
               data-placement="left"
               title="Add to wishlist"
-            ></i>
-            <i
-              className="fas fa-arrows-alt-h fix-controll"
+              effect="solid"
+            />
+
+            <a data-tip='Compare' data-for='compare' className="fas fa-arrows-alt-h" data-place='left'></a>
+
+            <ReactTooltip
+              id="compare"
+              className="fix-controll green-background"
               data-toggle="tooltip"
               data-placement="left"
               title="Compare"
-            ></i>
-            <Link
+              effect="solid"
+            />
+
+            <a data-tip='Read more' data-for='read' className="fas fa-search" data-place='left'></a>
+
+            <ReactTooltip
+              id='read' 
               to="/products"
               data-toggle="tooltip"
               data-placement="left"
               title="Quick view"
-              className="fix-controll"
-            >
-              <i className="fas fa-search"></i>
-            </Link>
+              className="fix-controll orange-background"
+              effect='solid'
+            />
 
             <a data-tip='Add to cart' className="fas fa-cart-plus" data-place='left'></a>
             
