@@ -15,7 +15,17 @@
     }
   }
 
-  .cart-item {
+  .remove-logo {
+    cursor: pointer !important;
+  }
+
+  #mobile-cart-item .form-control {
+    display: inline-block !important;
+    height:auto !important;
+  }
+
+
+  #mobile-cart-item .cart-item {
     width: 60px;
     height: auto;
   }
