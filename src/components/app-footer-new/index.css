@@ -6,9 +6,9 @@
     color: #20D3C2;
 }
 
-#footer a:hover {
+#footer .socials-footer a:hover {
     text-decoration: none !important;
-    color: #20D3C2 !important;
+    color: #fff !important;
 }
 
 #footer .bg-footer {
