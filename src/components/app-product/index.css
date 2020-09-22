@@ -3,14 +3,11 @@
   width: 100%;
 }
 
-<<<<<<< HEAD
-=======
 .popup-bg-color{
   background-color: #0e153ed9;
 }
 
 
->>>>>>> b5193cb4a461d6187fc496f2c68426559135037f
 .product-background{
   padding: 25px;
   padding-bottom: 46px;
@@ -187,20 +184,5 @@
     margin-left: auto;
     margin-right: auto;
   }
-<<<<<<< HEAD
-
-  .product-footer {
-    font-size: 1rem;
-  }
 }
 
-@media (max-width: 576px) {
-  .product-footer {
-    text-align: center;
-    
-  }
-}
-=======
-}
-
->>>>>>> 4e16da56fd42bcf9190005a467c958cd5733aa3a
