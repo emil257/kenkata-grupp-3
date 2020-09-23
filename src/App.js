@@ -52,7 +52,7 @@ function App() {
         <Route exact path="/products" component={Products} />
         <Route exact path="/account" component={Account} />
         <Route exact path="/shop" component={() => <Shop handleOpenModal={handleOpenModal}/>}/>
-        <Route exact path="/shoppingcart" component={ShoppingCartView} />
+        <Route exact path="/shoppingcart" component={() => <ShoppingCartView handleOpenModal={handleOpenModal}/>} />
         <Route exact path="/checkout" component={CheckoutCart} />
         <Route exact path="*" component={NotFound} />
         

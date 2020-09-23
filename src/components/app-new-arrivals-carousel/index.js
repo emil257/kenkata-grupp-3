@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./index.css";
 import Product1 from "../app-product/";
 import NewArrivals from "../app-section-headers/new-arrivals/index";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import { useDispatch, useSelector } from 'react-redux'
+import { getProducts } from '../../store/actions/products'
+
 
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
@@ -13,6 +16,14 @@ import "swiper/swiper.scss";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export default function Arrivals({handleOpenModal}) {
+
+  const dispatch = useDispatch()
+  const products = useSelector(state => state.products.products)
+
+  useEffect(() => {
+    dispatch(getProducts())
+  }, [dispatch])
+
   const params = {
     pagination: {
       el: "#swiper-pagination-arrivals",
@@ -59,7 +70,7 @@ export default function Arrivals({handleOpenModal}) {
 
       
         <Swiper {...params}>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <Product1 tag={"sale"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
@@ -76,7 +87,16 @@ export default function Arrivals({handleOpenModal}) {
           </SwiperSlide>
           <SwiperSlide>
             <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
-          </SwiperSlide>
+          </SwiperSlide> */}
+          {
+            products.map(p => {
+              return (
+                <SwiperSlide key={p._id}  className={"product-swiper"}>
+                  <Product1 key={p._id} tag={"new"} product={p} className="product-background" handleOpenModal={handleOpenModal}/>
+                </SwiperSlide>
+              )
+            })
+          }
         </Swiper>
         <div
           className="swiper-button-prev"
