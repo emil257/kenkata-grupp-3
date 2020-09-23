@@ -51,7 +51,7 @@ export default function index() {
                 </select>
               </div>
               {/* Price */}
-              <p className="weight-bold text-theme-color ml-auto">$380.00</p>
+              <p className="weight-bold text-theme-color  ml-auto">$380.00</p>
             </div>
           </div>
         </div>
