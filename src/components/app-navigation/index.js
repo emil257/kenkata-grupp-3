@@ -6,9 +6,8 @@ import { useSelector } from "react-redux";
 
 export default function Index() {
 
-  const totalProducts = useSelector(
-    (state) => state.products.cartTotalProducts
-  );
+  const totalProducts = useSelector(state => state.products.cartTotalProducts)
+  const totalPrice = useSelector(state => state.products.cartTotal );
 
   return (
     <div>
@@ -107,7 +106,9 @@ export default function Index() {
                     {totalProducts}
                   </span>
                 </i>
-                <span className="cart-money position-absolute"> $0.00</span>
+                <span className="cart-money position-absolute">
+                  ${totalPrice}.00
+                </span>
               </Link>
             </div>
           </div>
