@@ -14,6 +14,32 @@
     }
 }
 
+
+
+
+@media (max-width: 576px) {
+    .mobile-review-header{
+        text-align: left !important;
+    }
+    .mobile-review-img{        
+        display: block;
+        align-items: left;       
+        text-align: left;      
+    }
+    .mobile-img-size{
+       width: 4rem;
+       margin-right: 1.5rem;
+    }    
+    
+   
+}
+
+
+
+
+
+
+
 .product-desc-hr{
     background-color: var(--theme-color);
     height: 2px;

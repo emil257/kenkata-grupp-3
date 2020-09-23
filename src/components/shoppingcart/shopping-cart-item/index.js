@@ -60,10 +60,14 @@ export default function Cartitem({product}) {
                 </select>
               </div>
               {/* Price */}
+<<<<<<< HEAD
+              <p className="weight-bold text-theme-color  ml-auto">$380.00</p>
+=======
               <p className="text-dark ml-auto">$190.00</p>
             
               {/* Subtotal */}
               <p className="weight-bold text-theme-color ml-auto">$380.00</p>
+>>>>>>> 69c888fbf601a96f65721209331538c9454aac65
             </div>
           </div>
         </div>

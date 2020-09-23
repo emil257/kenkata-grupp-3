@@ -156,6 +156,10 @@ textarea {
   color: var(--theme-color);
   margin: 40px 0;
 }
+
+.badge-nav-font {
+  font-family: 'Roboto', sans-serif;
+}
 /* TEXT HELPERS END */
 
 /* FIX BOOTSTRAP TOOLTIP */

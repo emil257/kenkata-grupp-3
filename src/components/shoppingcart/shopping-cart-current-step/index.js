@@ -31,11 +31,11 @@ export default function index(props) {
               <Link className="text-white current-step-text" to="/shoppingcart">
                 Shopping Cart
               </Link>
+              
               <i className="fas fa-angle-right text-theme-color mx-3"></i>
-              <i className="fas fa-angle-down text-theme-color d-sm-none"></i>
               <span className="text-theme-color current-step-text">Checkout</span>
               <i className="fas fa-angle-right text-theme-color mx-3"></i>
-              <i className="fas fa-angle-down text-theme-color d-none"></i>
+              {/* <i className="fas fa-angle-down text-theme-color d-none"></i> */}
               <span className="current-step-text">Order Complete</span>
             </span>
           </div>

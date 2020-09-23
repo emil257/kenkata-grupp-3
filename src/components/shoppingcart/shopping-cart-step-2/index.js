@@ -11,11 +11,11 @@ export default function index() {
       <div className="container mt-5">
       <div className="row">
         <div className="col-12 col-lg-6">
-          <p>
+          <p className="returning-customer">
             Returning customer?{" "}
             <span className="text-theme-color">Click here to login</span>
           </p>
-          <p className="mt-3">
+            <p className="returning-customer mt-3">
             Have a coupon?{" "}
             <span className="text-theme-color">
               Click here to enter your code

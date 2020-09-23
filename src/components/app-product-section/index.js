@@ -19,7 +19,9 @@ export default function Product() {
 
   const { id } = useParams()
   const dispatch = useDispatch()
+
   const product = useSelector(state => state.products.currentProduct)
+  
 
   // GET PRODUCT BY ID
   useEffect(() => {
