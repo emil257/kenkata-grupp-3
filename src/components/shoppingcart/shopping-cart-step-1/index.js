@@ -5,8 +5,14 @@ import {Link} from 'react-router-dom'
 import "./index.css";
 import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
 
+import {useSelector} from 'react-redux'
 
-export default function index() {
+
+export default function Shoppingcart() {
+
+  const cartItems = useSelector(state => state.products.cart)
+
+  
   return (
     <div>
       <ShoppingCartCurrentStep step={1}></ShoppingCartCurrentStep>
@@ -30,14 +36,19 @@ export default function index() {
         
               </div>
             </span>
-            <hr className="cart-products-hr-top" />
-            <ShoppingCartItem></ShoppingCartItem>
-            <hr className="cart-products-hr-breaker" />
-            <ShoppingCartItem></ShoppingCartItem>
-            <hr className="cart-products-hr-breaker" />
-            <ShoppingCartItem></ShoppingCartItem>
-            <hr className="cart-products-hr-breaker" />
-            <ShoppingCartItem></ShoppingCartItem>
+
+
+            {
+              cartItems.map(i => {
+                return (
+                  <div key={i._id}>
+                    <hr className="cart-products-hr-top" />
+                    <ShoppingCartItem product={i}></ShoppingCartItem>
+                  </div>
+                )
+              })
+            }
+
             <hr className="cart-products-hr-breaker" />
             <div className="cart-footer d-flex flex-column flex-lg-row justify-content-between">
               <div className="coupon">

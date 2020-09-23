@@ -4,24 +4,32 @@ import Product from '../../../assets/img/product-img/product-icon.png'
 import Hoodie from '../../../assets/img/shoppingcart-items/hoodie_item.png'
 import './index.css'
 
-export default function index() {
+import { changeQnt,  removeFromCart } from '../../../store/actions/products'
+import { useDispatch } from 'react-redux'
+
+export default function Cartitem({product}) {
+
+  const dispatch = useDispatch()
+
+
+  console.log(product.product)
   return (
     <div>
       <div id="desktop-cart-item">
         <div className="d-flex class align-items-center justify-content-between">
           <span className="d-flex align-items-center">
-            <img cl src={Remove} alt="remove" className="mr-3 remove-logo" />
-            <img src={Product} alt="remove" className="mr-3 d-none d-sm-block" />
-            <p className="mx-2">Women smart high heel shoe</p>
+            <img src={Remove} alt="remove" className="mr-3 remove-logo" onClick={() => dispatch(removeFromCart(product._id))}/>
+            <img src={Product} alt="remove" className="mr-3 d-none d-sm-block" onClick={() => dispatch(removeFromCart(product._id))}/>
+            <p className="mx-2">{product.product.name}</p>
           </span>
           <span className="d-flex align-items-center">
-            <p>$190.00</p>
+            <p>${product.product.price - product.product.discount}.00</p>
             <div className="increase-qnt-btn-grp d-flex inc-button">
-              <button className="increase-qnt-btn-dec">-</button>
-              <span className="increase-qnt-num d-flex align-items-center">3</span>
-              <button className="increase-qnt-btn-inc">+</button>
+              <button className="increase-qnt-btn-dec" onClick={() => dispatch(changeQnt(product._id, false))}>-</button>
+              <span className="increase-qnt-num d-flex align-items-center">{product.quantity}</span>
+              <button className="increase-qnt-btn-inc" onClick={() => dispatch(changeQnt(product._id, true))}>+</button>
             </div>
-            <p className="weight-bold text-theme-color">$380.00</p>
+            <p className="weight-bold text-theme-color">${(product.product.price - product.product.discount) * product.quantity}.00</p>
           </span>
         </div>
       </div>
@@ -37,7 +45,7 @@ export default function index() {
             <div className="d-flex align-items-center">
               <img className="cart-item" src={Hoodie} alt="" />
               <div>
-                <label for="quantity"></label>
+                <label htmlFor="quantity"></label>
                 <select className="form-control" id="select-quantity">
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -52,14 +60,10 @@ export default function index() {
                 </select>
               </div>
               {/* Price */}
-<<<<<<< HEAD
-              <p className="weight-bold text-theme-color  ml-auto">$380.00</p>
-=======
               <p className="text-dark ml-auto">$190.00</p>
             
               {/* Subtotal */}
               <p className="weight-bold text-theme-color ml-auto">$380.00</p>
->>>>>>> 69c888fbf601a96f65721209331538c9454aac65
             </div>
           </div>
         </div>

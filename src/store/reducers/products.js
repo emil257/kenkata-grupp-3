@@ -45,7 +45,8 @@ export default (state = initState, action) => {
           product: {
             name: action.payload.product.name,
             price: action.payload.product.price,
-            image: action.payload.product.image
+            image: action.payload.product.image,
+            discount: action.payload.product.discount,
           },
           quantity: action.payload.qnt
         })
@@ -101,7 +102,7 @@ export default (state = initState, action) => {
       let total = 0
 
       state.cart.forEach(item => {
-        total += (item.product.price * item.quantity)
+        total += ((item.product.price - item.product.discount) * item.quantity)
       })
 
       return state = {
