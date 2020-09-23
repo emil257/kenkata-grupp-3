@@ -5,18 +5,7 @@
   align-items: center;
 }
 
-.grid-item-2 {
-  grid-column: 3 / 4;
-}
 
-.grid-item-3 {
-  grid-row: 1 / 1;
-  grid-column: 2 / 2;
-}
-
-.grid-item-4 {
-  grid-column: 4 / 4;
-}
 
 .font-size-smaller {
   font-size: 1.1rem;
@@ -145,5 +134,25 @@
   .cart-products {
     margin: 0 !important;
   }
+  /* Price */
+  .grid-item-2 {
+    grid-column: 4 / 4;
+    
+  }
+  /* Quantity */
+  .grid-item-3 {
+    grid-row: 1 / 1;
+    grid-column: 2 / 2;
+    margin-left: 0.5rem;
+  }
+    /* Subtotal */
+  .grid-item-4 {
+    grid-column: 6 / 6;
+    
+  }
+
+   
+
+  
 
 }
