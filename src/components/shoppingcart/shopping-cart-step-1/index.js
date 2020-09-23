@@ -10,11 +10,11 @@ export default function index() {
   return (
     <div>
       <ShoppingCartCurrentStep step={1}></ShoppingCartCurrentStep>
-      <div className="container mt-5">
+      <div className="container cart-products mt-5">
         <div className="row">
-          <div className="cart-products col-lg-8">
+          <div className="col-lg-8">
             <span className="weight-bold text-size-18 px-3">
-              <div className="grid-wrapper">
+              <div className="grid-wrapper-cart-step-1">
                 <div className="grid-item-1">
                   <p className="font-size-smaller">Product</p>
                 </div>

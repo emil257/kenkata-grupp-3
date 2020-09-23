@@ -1,5 +1,5 @@
 
-.grid-wrapper {
+.grid-wrapper-cart-step-1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
@@ -68,4 +68,21 @@
   background-color: var(--secondary-color);
   color: var(--theme-color);
   border-radius: 6px 6px 0 0;
+}
+
+@media (max-width: 576px) {
+  .btn-update {
+    margin: auto;
+    height: 50px !important;
+    width: 160px !important;
+  }
+  .cart-products-hr-top {
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+
+  .cart-products {
+    margin: 0 !important;
+  }
+
 }
