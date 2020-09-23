@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Remove from '../../../assets/img/shop-img/remove-icon.png'
 // import Product from '../../../assets/img/product-img/product-icon.png'
 // import Hoodie from '../../../assets/img/shoppingcart-items/hoodie_item.png'
 import './index.css'
 
-import { changeQnt,  removeFromCart } from '../../../store/actions/products'
+import { changeQnt,  removeFromCart, loadCartTotalItems } from '../../../store/actions/products'
 import { useDispatch } from 'react-redux'
 
 export default function Cartitem({product}) {
 
   const dispatch = useDispatch()
 
+  useEffect(() => {
+    dispatch(loadCartTotalItems())
+  })
 
-  console.log(product.product)
+
   return (
     <div>
       <div id="desktop-cart-item">
