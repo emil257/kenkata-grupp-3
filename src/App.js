@@ -13,6 +13,8 @@ import Account from '../src/views/Account'
 import ShoppingCartView from '../src/components/shoppingcart/shopping-cart-step-1'
 import NotFound from "./views/NotFound/index"
 import AppProductModal from './components/app-product-modal'
+import Contact from './components/app-contact-us'
+
 import { Modal } from '@material-ui/core'
 
 
@@ -54,6 +56,7 @@ function App() {
         <Route exact path="/shop" component={() => <Shop handleOpenModal={handleOpenModal}/>}/>
         <Route exact path="/shoppingcart" component={() => <ShoppingCartView handleOpenModal={handleOpenModal}/>} />
         <Route exact path="/checkout" component={CheckoutCart} />
+        <Route exact path="/contact" component={Contact} />
         <Route exact path="*" component={NotFound} />
         
       </Switch>
