@@ -210,12 +210,12 @@
   margin-left: -15.5px !important;
 }
 
-.fa-cart-plus {
+.cart-button {
   color: rgb(170, 170, 170) !important;
   cursor: pointer;
 }
 
-.fa-cart-plus:hover {
+.cart-button:hover {
   color: var(--theme-color) !important;
   cursor: pointer;
 }
@@ -250,12 +250,12 @@
   cursor: pointer;
 }
 
-.fa-heart {
+.heart-button {
   color: rgb(170, 170, 170) !important;
   cursor: pointer;
 }
 
-.fa-heart:hover {
+.heart-button:hover {
   color: purple !important;
   cursor: pointer;
 }

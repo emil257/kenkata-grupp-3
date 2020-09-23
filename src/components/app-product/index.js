@@ -79,7 +79,7 @@ export default function Product(props) {
                   <img src={Ellipses} alt=""/>
                 </ReactTooltip>
 
-                <Link to="/" data-tip='Add' data-for='add' className="far fa-heart" data-place='left'></Link>
+                <Link to="/" data-tip='Add' data-for='add' className="far fa-heart heart-button" data-place='left'></Link>
 
               <ReactTooltip
                 id="add"
@@ -113,7 +113,7 @@ export default function Product(props) {
               >
               </ReactTooltip>
 
-              <Link to="/shop" data-tip="Add to cart" onClick={() => props.handleOpenModal(props.product)} className="fas fa-cart-plus" data-place='left'></Link>
+              <Link to="/shop" data-tip="Add to cart" onClick={() => props.handleOpenModal(props.product)} className="fas fa-cart-plus cart-button" data-place='left'></Link>
 
               <ReactTooltip
                 className="fix-controll custom-theme"
@@ -166,7 +166,7 @@ export default function Product(props) {
               <img src={Ellipses} alt=""/>
             </ReactTooltip>
 
-            <Link to="/" data-tip='Add' data-for='add' className="far fa-heart" data-place='left'></Link>
+            <Link to="/" data-tip='Add' data-for='add' className="far fa-heart heart-button" data-place='left'></Link>
 
             <ReactTooltip
               id="add"
@@ -200,7 +200,7 @@ export default function Product(props) {
               effect='solid'
             />
 
-            <Link to="/" data-tip='Add to cart' className="fas fa-cart-plus" data-place='left'></Link>
+            <Link to="/" data-tip='Add to cart' className="fas fa-cart-plus cart-button" data-place='left'></Link>
             
             <ReactTooltip
               className="fix-controll custom-theme"
