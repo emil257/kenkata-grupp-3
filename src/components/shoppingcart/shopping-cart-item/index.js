@@ -10,7 +10,7 @@ export default function index() {
       <div id="desktop-cart-item">
         <div className="d-flex class align-items-center justify-content-between">
           <span className="d-flex align-items-center">
-            <img src={Remove} alt="remove" className="mr-3" />
+            <img cl src={Remove} alt="remove" className="mr-3 remove-logo" />
             <img src={Product} alt="remove" className="mr-3 d-none d-sm-block" />
             <p className="mx-2">Women smart high heel shoe</p>
           </span>
@@ -26,18 +26,19 @@ export default function index() {
         </div>
       </div>
      
-
       {/* Mobile Only */}
       <div className="container">
         <div id="mobile-cart-item">
           <div className="d-flex flex-column">
-            <p className="cart-item-title ml-2 text-dark font-weight-bold">Nike Club Hoodie</p>
+            <div className="d-flex">
+              <p className="cart-item-title ml-2 text-dark font-weight-bold">Nike Club Hoodie</p>
+              <span><img className="remove-logo ml-3" src={Remove} alt="remove" /></span>
+            </div>
             <div className="d-flex align-items-center">
               <img className="cart-item" src={Hoodie} alt="" />
-              <div className="form-group">
-                <label for="select"></label>
-                <select class="form-control" id="select-quantity">
-                  <option value="0">1</option>
+              <div>
+                <label for="quantity"></label>
+                <select className="form-control" id="select-quantity">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -51,13 +52,18 @@ export default function index() {
                 </select>
               </div>
               {/* Price */}
+<<<<<<< HEAD
               <p className="weight-bold text-theme-color  ml-auto">$380.00</p>
+=======
+              <p className="text-dark ml-auto">$190.00</p>
+            
+              {/* Subtotal */}
+              <p className="weight-bold text-theme-color ml-auto">$380.00</p>
+>>>>>>> 69c888fbf601a96f65721209331538c9454aac65
             </div>
           </div>
         </div>
-
       </div>
-   
     </div>
   )
 }

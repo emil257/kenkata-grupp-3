@@ -4,20 +4,21 @@ import Product from "../app-product/";
 import NewArrivals from "../app-section-headers/new-arrivals/index";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import { useDispatch, useSelector } from 'react-redux'
+import { getProducts } from '../../store/actions/products'
+
 
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 import "swiper/swiper.scss";
-import { useSelector, useDispatch } from "react-redux";
-import { getProducts } from "../../store/actions/products";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export default function Arrivals({handleOpenModal}) {
 
-  const products = useSelector(state => state.products.products)
   const dispatch = useDispatch()
+  const products = useSelector(state => state.products.products)
 
   useEffect(() => {
     dispatch(getProducts())
@@ -69,9 +70,8 @@ export default function Arrivals({handleOpenModal}) {
 
       
         <Swiper {...params}>
-
-          <SwiperSlide>
-            <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
+          {/* <SwiperSlide>
+            <Product1 tag={"sale"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
             <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
@@ -86,19 +86,17 @@ export default function Arrivals({handleOpenModal}) {
             <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
-          </SwiperSlide>
-
-            {/* {
-              products.map(product => {
-                return (
-                  <SwiperSlide>
-                    <Product key={product._id} tag="new" product={product} className="product-background" handleOpenModal={handleOpenModal}/>
-                  </SwiperSlide>
-                )
-              })
-            } */}
-        
+            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
+          </SwiperSlide> */}
+          {
+            products.map(p => {
+              return (
+                <SwiperSlide key={p._id}  className={"product-swiper"}>
+                  <Product key={p._id} tag={"new"} product={p} className="product-background" handleOpenModal={handleOpenModal}/>
+                </SwiperSlide>
+              )
+            })
+          }
         </Swiper>
         <div
           className="swiper-button-prev"

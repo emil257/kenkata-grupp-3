@@ -24,6 +24,10 @@
     height: 400px;
 }
 
+.product-swiper{
+    height: 430px !important;
+  }
+
 .c-item-info {
     background-color: var(--secondary-color);
     margin: auto;
@@ -41,7 +45,6 @@
     padding: 11px;
     display: inline-block;
     text-align: center;
-
 }
 
 .c-item-date-day {

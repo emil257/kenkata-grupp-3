@@ -96,18 +96,18 @@ export default function Index() {
               </Link>
               <Link to="/" className="text-dark ml-3" href="/#">
                 <i className="fas fa-random position-relative">
-                  <span className="badge badge-pill badge-theme position-absolute">
+                  <span className="badge badge-pill badge-nav-font badge-theme position-absolute">
                     0
                   </span>
                 </i>
               </Link>
               <Link to="/shoppingcart" className="text-dark ml-3" href="/#">
                 <i className="fas fa-shopping-bag position-relative">
-                  <span className="badge badge-pill badge-theme position-absolute">
+                  <span className="badge badge-pill badge-nav-font badge-theme position-absolute">
                     {totalProducts}
                   </span>
                 </i>
-                <span className="cart-money position-absolute "> $0.00</span>
+                <span className="cart-money position-absolute"> $0.00</span>
               </Link>
             </div>
           </div>

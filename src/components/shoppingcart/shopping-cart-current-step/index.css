@@ -5,3 +5,23 @@
     padding: 1rem 0;
     color: white;
   }
+
+   .fa-angle-right {
+     margin-top: 0.19rem;
+   }
+
+  @media (max-width: 576px) {
+    .step-bg {
+      min-height: 100px;
+    }
+
+    .current-step-text {
+      font-size: 0.9rem;
+    }
+     .fa-angle-right {
+       font-size: 1rem;
+       margin-top: 0.1rem;
+     }
+  }
+
+  
