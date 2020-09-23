@@ -14,7 +14,7 @@ export default function index() {
         <div className="row">
           <div className="cart-products col-lg-8">
             <span className="weight-bold text-size-18 px-3">
-              <div className="grid-wrapper">
+              <div className="grid-wrapper-cart-step-1">
                 <div className="grid-item-1">
                   <p className="font-size-smaller">Product</p>
                 </div>

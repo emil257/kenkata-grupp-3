@@ -39,7 +39,6 @@ export default function index() {
               <div>
                 <label for="quantity"></label>
                 <select className="form-control" id="select-quantity">
-                  <option value="0">1</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>

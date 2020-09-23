@@ -1,5 +1,5 @@
 
-.grid-wrapper {
+.grid-wrapper-cart-step-1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
