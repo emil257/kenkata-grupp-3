@@ -51,7 +51,7 @@
 
 .cart-total {
   border-radius: 6px;
-  max-width: 350px;
+  width: 100%;
 }
 
 .cart-total-content {
