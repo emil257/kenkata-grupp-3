@@ -1,6 +1,37 @@
+
+a:hover {
+  text-decoration: none;
+}
+
+a.text-light:focus,
+a.text-light:hover {
+  color: #fff !important;
+}
+
+.fa-facebook-f {
+  cursor: pointer;
+}
+
+.fa-twitter {
+  cursor: pointer;
+}
+
+.fa-instagram {
+  cursor: pointer;
+}
+
+.fa-pinterest-p {
+  cursor: pointer;
+}
+
+.fa-youtube {
+  cursor: pointer;
+}
+
 .navbar-toggle {
   color: var(--theme-color) !important;
 }
+
 .nav-top {
   background-color: var(--theme-color);
   height: 40px;
@@ -121,6 +152,16 @@
 }
 
 @media (min-width: 768px) {
+
+  .nav-logo {
+    margin-right: 0.6rem;
+  }
+
+   .fa-chevron-down {
+     margin-left: 0.75rem;
+
+   }
+  
   .nav-middle {
     height: 106px;
   }

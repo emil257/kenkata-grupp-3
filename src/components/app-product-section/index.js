@@ -1,22 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 
-import ProductPreLarge from "../../assets/img/product-img/product-pre-large.png";
+// import ProductPreLarge from "../../assets/img/product-img/product-pre-large.png";
 import ProductIcon from "../../assets/img/product-img/product-icon.png";
 import ColorPicker from "../../assets/img/product-img/product-options/color-picker.png";
 import Compare from "../../assets/img/product-img/product-options/compare.png";
 import AddWishlist from "../../assets/img/product-img/product-options/add-wishlist.png";
 import InStock from "../../assets/img/product-img/in-stock.png";
 
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux'
+import { addToCart, getProduct, loadCartTotalItems } from "../../store/actions/products";
 
 
 export default function Product() {
+
+  const { id } = useParams()
+  const dispatch = useDispatch()
+  const product = useSelector(state => state.products.currentProduct)
+
+  // GET PRODUCT BY ID
+  useEffect(() => {
+    dispatch(getProduct(id))
+  }, [dispatch, id])
+
+  // ADD TO CART
+  const add = (product) => {
+    dispatch(addToCart(product))
+    dispatch(loadCartTotalItems())
+  }
+
   return (
     <div className="product-section">
       <div className="container">
         <div className="row">
           <div className="product-prev col-12 col-md-10 offset-md-1 offset-lg-0 col-lg-6">
-            <img className="product-prev-focus" src={ProductPreLarge} alt="" />
+            <img className="product-prev-focus" src={product.image} alt="" />
             <img className="product-next-prev" src={ProductIcon} alt="" />
             <img className="product-next-prev" src={ProductIcon} alt="" />
             <img className="product-next-prev" src={ProductIcon} alt="" />
@@ -24,7 +43,7 @@ export default function Product() {
           </div>
           <div className="product-desc col-12 col-md-10 offset-md-1 offset-lg-0 col-lg-6 mt-5 mt-lg-0">
             <h3 className="weight-medium text-theme-color text-size-24 mb-3">
-              Gents Blue Lightweight Trainers
+              {product.name}
             </h3>
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -34,9 +53,9 @@ export default function Product() {
             <hr className="mt-4" />
             <div className="d-flex align-items-center mb-3">
               <span className="weight-medium text-theme-color text-size-24">
-                $190.00
+              ${ product.price - product.discount }.00
               </span>
-              <span className="p-old-price ml-3">$190.00</span>
+              <span className="p-old-price ml-3">${product.price}</span>
               <img className="ml-4" src={InStock} alt="stock" />
               <p className="ml-2">In stock</p>
             </div>
@@ -51,7 +70,7 @@ export default function Product() {
                 <button className="increase-qnt-btn-inc">+</button>
               </div>
 
-              <button className="btn custom-theme-btn btn-add-cart mx-3 my-3 my-md-0">
+              <button onClick={() => add(product)} className="btn custom-theme-btn btn-add-cart mx-3 my-3 my-md-0">
                 <i className="fas fa-cart-plus mr-1"></i>
                 Add to cart
               </button>

@@ -1,44 +1,88 @@
-.cart-products{
-    max-width: 730px;
-  }
-  .cart-products-hr-top{
-    background-color: var(--theme-color);
-    height: 1px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-    border: none;
-  }
-  .cart-products-hr-breaker{
-    background-color: var(--line-bullet);
-    height: 1px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-  }
-  .btn-update{
+
+.grid-wrapper-cart-step-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+
+.grid-item-2 {
+  grid-column: 3 / 4 
+}
+
+.grid-item-3 {
+  grid-row: 1 / 1;
+  grid-column: 2 / 2;
+}
+
+.grid-item-4 {
+  grid-column: 4 / 4;
+}
+
+.font-size-smaller {
+  font-size: 1.1rem;
+}
+
+
+.cart-products-hr-top {
+  background-color: var(--theme-color);
+  height: 1px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: none;
+}
+
+.cart-products-hr-breaker {
+  background-color: var(--line-bullet);
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+}
+
+.btn-update {
+  height: 50px !important;
+  width: 178px !important;
+  border-radius: 27px !important;
+}
+
+.btn-update:hover {
+  color: white !important;
+}
+
+.cart-total {
+  border-radius: 6px;
+  max-width: 350px;
+}
+
+.cart-total-content {
+  border: 2px dashed var(--secondary-color);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  padding: 25px;
+}
+
+.cart-total-header {
+  min-height: 50px;
+  border: 2px solid var(--secondary-color);
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--theme-color);
+  border-radius: 6px 6px 0 0;
+}
+
+@media (max-width: 576px) {
+  .btn-update {
+    margin: auto;
     height: 50px !important;
-    width: 178px !important;
-    border-radius: 27px !important;
+    width: 160px !important;
   }
-  .btn-update:hover{
-    color: white !important;
+  .cart-products-hr-top {
+    margin-top: -15px;
+    margin-bottom: 15px;
   }
-  
-  .cart-total{
-    border-radius: 6px;
-    max-width: 350px;
+
+  .cart-products {
+    margin: 0 !important;
   }
-  .cart-total-content{
-    border: 2px dashed var(--secondary-color);
-    border-top: none;
-    border-radius: 0 0 6px 6px;
-    padding: 25px;
-  }
-  .cart-total-header{
-    min-height: 50px;
-    border: 2px solid var(--secondary-color);
-    width: 100%;
-    background-color: var(--secondary-color);
-    color: var(--theme-color);
-    border-radius: 6px 6px 0 0;
-  }
+
+}

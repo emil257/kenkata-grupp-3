@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import "./index.css";
-import Product1 from "../app-product/";
+import Product from "../app-product/";
 import NewArrivals from "../app-section-headers/new-arrivals/index";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
@@ -74,16 +74,16 @@ export default function Arrivals({handleOpenModal}) {
             <Product1 tag={"sale"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
+            <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
+            <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
+            <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
+            <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
             <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
@@ -92,7 +92,7 @@ export default function Arrivals({handleOpenModal}) {
             products.map(p => {
               return (
                 <SwiperSlide key={p._id}  className={"product-swiper"}>
-                  <Product1 key={p._id} tag={"new"} product={p} className="product-background" handleOpenModal={handleOpenModal}/>
+                  <Product key={p._id} tag={"new"} product={p} className="product-background" handleOpenModal={handleOpenModal}/>
                 </SwiperSlide>
               )
             })

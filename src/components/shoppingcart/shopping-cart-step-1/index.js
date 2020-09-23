@@ -10,16 +10,25 @@ export default function index() {
   return (
     <div>
       <ShoppingCartCurrentStep step={1}></ShoppingCartCurrentStep>
-      <div className="container mt-5">
+      <div className="container cart-products mt-5">
         <div className="row">
-          <div className="cart-products col-12 col-lg-8">
-            <span className="d-flex justify-content-between weight-bold text-size-18 px-3">
-              <p className="ml-5">Product</p>
-              <p>
-                <span>Price</span>
-                <span className="mx-5">Quantity</span>
-                <span>Subtotal</span>
-              </p>
+          <div className="col-lg-8">
+            <span className="weight-bold text-size-18 px-3">
+              <div className="grid-wrapper-cart-step-1">
+                <div className="grid-item-1">
+                  <p className="font-size-smaller">Product</p>
+                </div>
+                <div className="grid-item-2">
+                  <p className="font-size-smaller">Price</p>
+                </div>
+                <div className="grid-item-3">
+                  <p className="font-size-smaller">Quantity</p>
+                </div>
+                <div className="grid-item-4">
+                  <p className="font-size-smaller">Subtotal</p>
+                </div>
+        
+              </div>
             </span>
             <hr className="cart-products-hr-top" />
             <ShoppingCartItem></ShoppingCartItem>

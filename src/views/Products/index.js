@@ -6,7 +6,7 @@ import ProductSection from '../../components/app-product-section/index'
 import AppProductReview from '../../components/app-product-reviews/index'
 import ProductYouMayAlsoLike from '../../components/app-you-may-also-like/index'
 import RelatedProducts from '../../components/app-related-products/index'
-import Shipping from '../../components/app-shipping-dark/index'
+import ShippingDark from '../../components/app-shipping-grid-dark/index'
 
 export default function index() {
     return (
@@ -15,7 +15,7 @@ export default function index() {
             <NavigationProductsView></NavigationProductsView>
             <ProductSection></ProductSection>
             <AppProductReview></AppProductReview>
-            <Shipping></Shipping>
+            <ShippingDark></ShippingDark>
             <ProductYouMayAlsoLike></ProductYouMayAlsoLike>
             <RelatedProducts></RelatedProducts>
             <Subscribe></Subscribe>

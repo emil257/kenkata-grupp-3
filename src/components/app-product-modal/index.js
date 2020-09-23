@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './index.css'
 
 import ProductIcon from '../../assets/img/product-img/product-icon.png'
@@ -9,8 +9,26 @@ import AddToWishlist from '../../assets/img/product-img/product-options/add-wish
 import ColorPicker from '../../assets/img/product-img/product-options/color-picker.png'
 import InStock from '../../assets/img/product-img/in-stock.png'
 
+import { useParams } from "react-router-dom";
+import {addToCart, loadCartTotalItems, getProduct} from '../../store/actions/products'
+import { useDispatch } from 'react-redux'
+
 export default function ProductModal({product}) {
 
+    const dispatch = useDispatch();
+    const { id } = useParams()
+
+    // Get product by id
+    useEffect(() => {
+     dispatch(getProduct(id))
+    }, [dispatch, id])
+
+    // Add product
+    const add = (product) => {
+      dispatch(addToCart(product));
+      dispatch(loadCartTotalItems())
+    }
+    
     return (
         <div className="popup-window">
           <div className="popup-close d-flex align-items-center justify-content-center"><i className="fas fa-times"></i></div>
@@ -51,7 +69,7 @@ export default function ProductModal({product}) {
                   <span className="increase-qnt-num d-flex align-items-center">3</span>
                   <button className="increase-qnt-btn-inc">+</button>
                 </div>
-                <button className="btn custom-theme-btn s-offer-btn btn-add-cart mx-4 position-sticky">
+                <button onClick={() => add(product)} className="btn custom-theme-btn s-offer-btn btn-add-cart mx-4 position-sticky">
                   <i className="fas fa-cart-plus mr-1"></i>
                   Add to cart
                 </button>

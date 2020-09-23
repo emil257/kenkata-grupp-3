@@ -2,8 +2,14 @@ import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/img/Logo.png";
+import { useSelector } from "react-redux";
 
-export default function index() {
+export default function Index() {
+
+  const totalProducts = useSelector(
+    (state) => state.products.cartTotalProducts
+  );
+
   return (
     <div>
       <div>
@@ -50,7 +56,7 @@ export default function index() {
         <div className="nav-middle">
           <div className="container h-100 d-flex flex-column flex-md-row py-4 py-md-0 align-items-start align-items-md-center justify-content-between">
             <Link to="/">
-              <img className="mb-4 mb-md-0" src={Logo} alt="Logo" />
+              <img className="mb-4 mb-md-0 nav-logo " src={Logo} alt="Logo" />
             </Link>
 
             <div className="input-group nav-search-grp">
@@ -98,7 +104,7 @@ export default function index() {
               <Link to="/shoppingcart" className="text-dark ml-3" href="/#">
                 <i className="fas fa-shopping-bag position-relative">
                   <span className="badge badge-pill badge-theme position-absolute">
-                    0
+                    {totalProducts}
                   </span>
                 </i>
                 <span className="cart-money position-absolute "> $0.00</span>
@@ -136,7 +142,7 @@ export default function index() {
                 <li className="nav-item">
                   <Link
                     to="/"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
                   >
                     Home
                   </Link>
@@ -144,7 +150,7 @@ export default function index() {
                 <li className="nav-item">
                   <Link
                     to="/shop"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
                   >
                     Shop
                     <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
@@ -153,7 +159,7 @@ export default function index() {
                 <li className="nav-item">
                   <Link
                     to="/products"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
                   >
                     Products
                     <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
@@ -162,7 +168,7 @@ export default function index() {
                 <li className="nav-item">
                   <Link
                     to="/categories"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
                   >
                     Categories
                     <i className="fas fa-chevron-down fa-sm pt-1 pl-2 dropdown-icon"></i>
@@ -170,19 +176,44 @@ export default function index() {
                 </li>
                 <li className="nav-item">
                   <div className="d-flex flex-column flex-lg-row h-100 align-items-lg-center mr-4 position-relative">
-                  <a className="custom-nav-link " href="/#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Pages
-                    <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
-                  </a>
-                  <div className="dropdown-menu custom-dropdown" aria-labelledby="dropdownMenuLink">
-                    <Link to="/shoppingcart" className="dropdown-item">Shopping Cart</Link>
-                    <Link to="/wishlist" className="dropdown-item">Wishlist</Link>
-                    <Link to="/compare" className="dropdown-item">Compare</Link>
-                    <Link to="/about" className="dropdown-item">About</Link>
-                    <Link to="/team" className="dropdown-item">Team</Link>
-                    <Link to="/portfolio" className="dropdown-item">Portfolio</Link>
-                    <Link to="/contact" className="dropdown-item">Contact</Link>
-                  </div>
+                    <a
+                      className="custom-nav-link "
+                      href="/#"
+                      role="button"
+                      id="dropdownMenuLink"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Pages
+                      <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
+                    </a>
+                    <div
+                      className="dropdown-menu custom-dropdown"
+                      aria-labelledby="dropdownMenuLink"
+                    >
+                      <Link to="/shoppingcart" className="dropdown-item">
+                        Shopping Cart
+                      </Link>
+                      <Link to="/wishlist" className="dropdown-item">
+                        Wishlist
+                      </Link>
+                      <Link to="/compare" className="dropdown-item">
+                        Compare
+                      </Link>
+                      <Link to="/about" className="dropdown-item">
+                        About
+                      </Link>
+                      <Link to="/team" className="dropdown-item">
+                        Team
+                      </Link>
+                      <Link to="/portfolio" className="dropdown-item">
+                        Portfolio
+                      </Link>
+                      <Link to="/contact" className="dropdown-item">
+                        Contact
+                      </Link>
+                    </div>
                   </div>
                 </li>
                 <li className="nav-item">
