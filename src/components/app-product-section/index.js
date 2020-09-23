@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 
 // import ProductPreLarge from "../../assets/img/product-img/product-pre-large.png";
@@ -15,6 +15,8 @@ import { addToCart, getProduct, loadCartTotalItems } from "../../store/actions/p
 
 export default function Product() {
 
+  const [qnt, setQnt] = useState(1)
+
   const { id } = useParams()
   const dispatch = useDispatch()
   const product = useSelector(state => state.products.currentProduct)
@@ -26,9 +28,15 @@ export default function Product() {
 
   // ADD TO CART
   const add = (product) => {
-    dispatch(addToCart(product))
+    dispatch(addToCart({product, qnt}))
     dispatch(loadCartTotalItems())
   }
+
+  const handleDecQnt = () => {
+    if(qnt !== 1)
+      setQnt(qnt - 1)
+  }
+
 
   return (
     <div className="product-section">
@@ -63,11 +71,11 @@ export default function Product() {
             <div className="d-flex flex-column flex-md-row">
 
               <div className="increase-qnt-btn-grp d-flex">
-                <button className="increase-qnt-btn-dec">-</button>
+                <button className="increase-qnt-btn-dec" onClick={() => handleDecQnt()}>-</button>
                 <span className="increase-qnt-num d-flex align-items-center">
-                  3
+                  { qnt }
                 </span>
-                <button className="increase-qnt-btn-inc">+</button>
+                <button className="increase-qnt-btn-inc" onClick={() => setQnt(qnt + 1)}>+</button>
               </div>
 
               <button onClick={() => add(product)} className="btn custom-theme-btn btn-add-cart mx-3 my-3 my-md-0">

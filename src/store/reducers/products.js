@@ -33,21 +33,21 @@ export default (state = initState, action) => {
       let a_cart = [...state.cart]
 
       a_cart.forEach(item => {
-        if (item._id === action.payload._id) {
+        if (item._id === action.payload.product._id) {
           exists = true
-          item.quantity += 1
+          item.quantity += action.payload.qnt
         }
       })
 
       if (!exists) {
         a_cart.push({
-          _id: action.payload._id,
+          _id: action.payload.product._id,
           product: {
-            name: action.payload.name,
-            price: action.payload.price,
-            image: action.payload.image
+            name: action.payload.product.name,
+            price: action.payload.product.price,
+            image: action.payload.product.image
           },
-          quantity: 1
+          quantity: action.payload.qnt
         })
       }
 
