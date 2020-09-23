@@ -3,6 +3,11 @@
     margin-left: 38px;
   }
 
+.image-of-products {
+    width: 90px;
+    height: 95px;
+  }
+
   @media (min-width: 768px) {
     #mobile-cart-item {
       display: none !important;
