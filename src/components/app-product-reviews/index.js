@@ -4,9 +4,9 @@ import ClientThumbImage from "../../assets/img/review-img/review-thumb.png";
 
 export default function index() {
   return (
-    <div className="product-desc">
+    <div className="product-desc review-wrapper">
       <div className="container">
-        <div className="product-desc-tabs d-flex">
+        <div className="product-desc-tabs d-flex ">
           <span className="product-desc-tab">Description</span>
           <span className="product-desc-tab d-none d-md-block">
             Additional Information
@@ -15,19 +15,24 @@ export default function index() {
           <span className="product-desc-tab">About Brand</span>
         </div>
         <hr className="product-desc-hr" />
-        <div className="row">
+
+        <div className="row ">
           <div className="col-lg-6">
-            <p className="text-size-18 text-second-color">
-              <span className="text-theme-color">2 reviews for</span> Gents Blue
-              Lightweight Trainers
+            <p className="text-size-18 text-second-color  mobile-review-header">
+              <span className="text-theme-color ">2 reviews for</span> Gents
+              Blue Lightweight Trainers
             </p>
 
-            <div className="product-desc-review d-flex">
-              <div className="mr-4">
-                <img src={ClientThumbImage} alt="" />
+            <div className="product-desc-review d-flex  mobile-review-img">
+              <div className=" ">
+                <img
+                  className="mobile-img-size"
+                  src={ClientThumbImage}
+                  alt=""
+                />
               </div>
               <div>
-                <div className="d-flex justify-content-between flex-column flex-md-row">
+                <div className="d-flex justify-content-between flex-column flex-md-row ">
                   <p className="mb-2">
                     <span className="weight-bold text-theme-color">
                       John Doe
@@ -45,17 +50,22 @@ export default function index() {
                     <i className="far fa-star"></i>
                   </div>
                 </div>
-                <p className="text-second-color">
+                <p className="text-second-color ">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                  diam nonummy nibh euismod tincidunt ut
                   aliquam erat volutpat. Ut wisi enim.
                 </p>
               </div>
             </div>
             <hr className="product-desc-review-break" />
-            <div className="product-desc-review d-flex">
-              <div className="mr-4">
-                <img src={ClientThumbImage} alt="" />
+
+            <div className="product-desc-review d-flex        mobile-review-img">
+              <div className=" ">
+                <img 
+                  className="mobile-img-size" 
+                  src={ClientThumbImage} 
+                  alt="" 
+                />
               </div>
               <div>
                 <div className="d-flex justify-content-between flex-column flex-md-row">

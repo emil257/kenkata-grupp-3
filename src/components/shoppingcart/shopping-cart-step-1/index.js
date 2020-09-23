@@ -58,11 +58,11 @@ export default function index() {
               </button>
             </div>
           </div>
-
-          <div className="col-12 col-lg-4 mt-4">
+          {/* Cart Total Box */}
+          <div className="col-lg-4 mt-4">
             <div className="cart-total">
               <div className="cart-total-header d-flex align-items-center justify-content-center">
-                <p className="weight-medium text-size-24">CART TOTALS</p>
+                <p className="weight-medium text-size-24">CART TOTAL</p>
               </div>
               <div className="cart-total-content">
                 <span className="d-flex align-items-center justify-content-between">
