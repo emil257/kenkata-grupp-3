@@ -5,7 +5,6 @@
 
 .image-of-products {
     width: 90px;
-    height: 95px;
   }
 
   @media (min-width: 768px) {
@@ -17,6 +16,10 @@
   @media (max-width: 576px) {
     #desktop-cart-item {
       display: none !important;
+    }
+
+    .cart-products-hr-top {
+      margin-top: 15px !important;
     }
   }
 

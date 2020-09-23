@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
 import Remove from '../../../assets/img/shop-img/remove-icon.png'
-// import Product from '../../../assets/img/product-img/product-icon.png'
-// import Hoodie from '../../../assets/img/shoppingcart-items/hoodie_item.png'
 import './index.css'
 
 import { changeQnt,  removeFromCart, loadCartTotalItems } from '../../../store/actions/products'
