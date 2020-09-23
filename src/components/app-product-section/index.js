@@ -17,7 +17,9 @@ export default function Product() {
 
   const { id } = useParams()
   const dispatch = useDispatch()
+
   const product = useSelector(state => state.products.currentProduct)
+  
 
   // GET PRODUCT BY ID
   useEffect(() => {
@@ -65,7 +67,7 @@ export default function Product() {
               <div className="increase-qnt-btn-grp d-flex">
                 <button className="increase-qnt-btn-dec">-</button>
                 <span className="increase-qnt-num d-flex align-items-center">
-                  3
+                 3
                 </span>
                 <button className="increase-qnt-btn-inc">+</button>
               </div>
