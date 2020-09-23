@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import './index.css'
 
 import ProductIcon from '../../assets/img/product-img/product-icon.png'
@@ -15,19 +15,26 @@ import { useDispatch } from 'react-redux'
 
 export default function ProductModal({product}) {
 
-    const dispatch = useDispatch();
-    const { id } = useParams()
+  const [qnt, setQnt] = useState(1)
 
-    // Get product by id
-    useEffect(() => {
-     dispatch(getProduct(id))
-    }, [dispatch, id])
+  const { id } = useParams()
+  const dispatch = useDispatch();
 
-    // Add product
-    const add = (product) => {
-      dispatch(addToCart(product));
-      dispatch(loadCartTotalItems())
-    }
+  // Get product by id
+  useEffect(() => {
+    dispatch(getProduct(id))
+  }, [dispatch, id])
+
+  // Add product
+  const add = (product) => {
+    dispatch(addToCart({product, qnt}));
+    dispatch(loadCartTotalItems())
+  }
+
+  const handleDecQnt = () => {
+    if(qnt !== 1)
+      setQnt(qnt - 1)
+  }
     
     return (
         <div className="popup-window">
@@ -65,9 +72,11 @@ export default function ProductModal({product}) {
   
               <div className="d-flex">
                 <div className="increase-qnt-btn-grp d-flex">
-                  <button className="increase-qnt-btn-dec">-</button>
-                  <span className="increase-qnt-num d-flex align-items-center">3</span>
-                  <button className="increase-qnt-btn-inc">+</button>
+                  <button className="increase-qnt-btn-dec" onClick={() => handleDecQnt()}>-</button>
+                  <span className="increase-qnt-num d-flex align-items-center">
+                    {qnt}
+                  </span>
+                  <button className="increase-qnt-btn-inc" onClick={() => setQnt(qnt + 1)}>+</button>
                 </div>
                 <button onClick={() => add(product)} className="btn custom-theme-btn s-offer-btn btn-add-cart mx-4 position-sticky">
                   <i className="fas fa-cart-plus mr-1"></i>
