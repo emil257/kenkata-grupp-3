@@ -157,15 +157,14 @@ export default function Index() {
                     <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
                   </Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link
                     to="/products"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
-                  >
+                    className="custom-nav-link d-flex h-100 align-items-center mr-3">
                     Products
                     <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
                   </Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <Link
                     to="/categories"
