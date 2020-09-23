@@ -10,7 +10,7 @@ import InStock from "../../assets/img/product-img/in-stock.png";
 
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
-import { addToCart, getProduct, loadCartTotalItems } from "../../store/actions/products";
+import { addToCart, cartTotal, getProduct, loadCartTotalItems } from "../../store/actions/products";
 
 
 export default function Product() {
@@ -32,6 +32,7 @@ export default function Product() {
   const add = (product) => {
     dispatch(addToCart({product, qnt}))
     dispatch(loadCartTotalItems())
+    dispatch(cartTotal())
   }
 
   const handleDecQnt = () => {

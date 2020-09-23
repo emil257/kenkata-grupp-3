@@ -3,6 +3,10 @@
     margin-left: 38px;
   }
 
+.image-of-products {
+    width: 90px;
+  }
+
   @media (min-width: 768px) {
     #mobile-cart-item {
       display: none !important;
@@ -12,6 +16,10 @@
   @media (max-width: 576px) {
     #desktop-cart-item {
       display: none !important;
+    }
+
+    .cart-products-hr-top {
+      margin-top: 15px !important;
     }
   }
 
