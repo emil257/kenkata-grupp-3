@@ -117,12 +117,9 @@ a.text-light:hover {
 }
 
 @media (max-width: 576px) {
-
   .fa-chevron-down {
     margin-left: 0.75rem;
-    
   }
-
   .nav-mobile-links {
     position: absolute;
     top: 63px;
@@ -149,6 +146,9 @@ a.text-light:hover {
   }
   .my-account{
     display: none !important;
+  }
+  .mobile-toggle-btn:focus{
+    outline: none;
   }
 }
 
