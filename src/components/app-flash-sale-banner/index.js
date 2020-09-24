@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css'
 
-export default function index() {
+export default function Index() {
     return (
       <div>
         <div className="flash-sale">

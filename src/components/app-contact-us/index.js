@@ -57,7 +57,7 @@ export default function Index() {
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
-                            
+
                             {/* Form Validation Start */}
 
                             {/* Name Start */}
@@ -109,5 +109,3 @@ export default function Index() {
         </div>
     )
 }
-
-

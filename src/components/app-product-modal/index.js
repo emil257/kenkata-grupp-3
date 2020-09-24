@@ -10,7 +10,7 @@ import ColorPicker from '../../assets/img/product-img/product-options/color-pick
 import InStock from '../../assets/img/product-img/in-stock.png'
 
 import { useParams } from "react-router-dom";
-import {addToCart, loadCartTotalItems, getProduct} from '../../store/actions/products'
+import {addToCart, loadCartTotalItems, getProduct, cartTotal} from '../../store/actions/products'
 import { useDispatch } from 'react-redux'
 
 export default function ProductModal({product}) {
@@ -29,6 +29,7 @@ export default function ProductModal({product}) {
   const add = (product) => {
     dispatch(addToCart({product, qnt}));
     dispatch(loadCartTotalItems())
+    dispatch(cartTotal())
   }
 
   const handleDecQnt = () => {

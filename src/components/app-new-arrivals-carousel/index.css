@@ -25,7 +25,7 @@
 }
 
 .product-swiper{
-    height: 430px !important;
+    height: 405px !important;
   }
 
 .c-item-info {
@@ -88,6 +88,7 @@
 
 .swiper-wrapper .product-image {
     width: 100%;
+    height: auto;
 }
 
 .swiper-button-next {

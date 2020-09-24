@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import ClientThumbImage from "../../assets/img/review-img/review-thumb.png";
 
-export default function index() {
+export default function Index() {
   return (
     <div className="product-desc review-wrapper">
       <div className="container">

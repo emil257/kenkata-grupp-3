@@ -22,7 +22,7 @@ import Visa from '../../assets/img/footer/visa.png'
 import Payoneer from '../../assets/img/footer/payoneer.png'
 import Discover from '../../assets/img/footer/discover.png'
 
-export default function index() {
+export default function Index() {
     return (
         <div>
             <section id="footer">

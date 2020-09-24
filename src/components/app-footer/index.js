@@ -5,7 +5,7 @@ import footerLogo from '../../assets/img/footer-logo.png'
 import recentInstagram from '../../assets/img/recent-instagram.png'
 import paymentSystems from '../../assets/img/payment-systems.png'
 
-export default function index() {
+export default function Index() {
   return (
     <div>
       <div className="app-footer">

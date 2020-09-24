@@ -2,7 +2,7 @@ import React from 'react'
 import ContactImage from '../../assets/img/contact-image.png'
 import './index.css';
 
-export default function index() {
+export default function Index() {
     return (
         <div>
             <div className="app-contact">

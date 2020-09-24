@@ -6,8 +6,8 @@ import { useSelector } from "react-redux";
 
 export default function Index() {
 
-  const totalProducts = useSelector(state => state.products.cartTotalProducts)
-  const totalPrice = useSelector(state => state.products.cartTotal );
+  const totalProducts = useSelector((state) => state.products.cartTotalProducts);
+  const totalPrice = useSelector((state) => state.products.cartTotal);
 
   return (
     <div>
@@ -32,12 +32,12 @@ export default function Index() {
                 >
                   Newsletter
                 </Link>
-                <Link
+                {/* <Link
                   to="/contact"
                   className="pr-3 pl-3 text-light nav-text-item nav-border-r"
                 >
                   Contact us
-                </Link>
+                </Link> */}
                 <Link to="/faq" className="pr-3 pl-3 text-light nav-text-item">
                   FAQs
                 </Link>
@@ -106,9 +106,7 @@ export default function Index() {
                     {totalProducts}
                   </span>
                 </i>
-                <span className="cart-money position-absolute">
-                  ${totalPrice}.00
-                </span>
+                <span className="cart-money position-absolute"> ${totalPrice}.00</span>
               </Link>
             </div>
           </div>
@@ -130,20 +128,20 @@ export default function Index() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav flex-column-reverse flex-lg-row">
-                <li className="nav-item browse-cat px-3 mr-2 mr-xl-4">
+                <li className="nav-item browse-cat px-3 mr-4 mr-xl-4">
                   <Link
                     to="/"
-                    className="custom-nav-link d-flex h-100 align-items-center text-white"
+                    className="custom-nav-link d-flex h-100 align-items-center  text-white"
                   >
                     <i className="fas fa-list mr-2"></i>
                     Browse Categories
-                    <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon text-white ml-4"></i>
+                    <i className="fas fa-chevron-down fa-sm fa-lg pt-1  dropdown-icon text-white ml-4 mr-2"></i>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
                     to="/"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
                   >
                     Home
                   </Link>
@@ -151,29 +149,30 @@ export default function Index() {
                 <li className="nav-item">
                   <Link
                     to="/shop"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-3"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
                   >
                     Shop
-                    <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
+                    <i className="fas fa-chevron-down fa-sm fa-lg pt-1  dropdown-icon"></i>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/products"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                  >
+                    Products
+                    <i className="fas fa-chevron-down fa-sm fa-lg pt-1  dropdown-icon"></i>
                   </Link>
                 </li>
                 {/* <li className="nav-item">
-                  <Link
-                    to="/products"
-                    className="custom-nav-link d-flex h-100 align-items-center mr-3">
-                    Products
-                    <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
-                  </Link>
-                </li> */}
-                <li className="nav-item">
                   <Link
                     to="/categories"
                     className="custom-nav-link d-flex h-100 align-items-center mr-3"
                   >
                     Categories
-                    <i className="fas fa-chevron-down fa-sm pt-1 pl-2 dropdown-icon"></i>
+                    <i className="fas fa-chevron-down fa-sm pt-1  dropdown-icon"></i>
                   </Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <div className="d-flex flex-column flex-lg-row h-100 align-items-lg-center mr-4 position-relative">
                     <a
@@ -186,7 +185,7 @@ export default function Index() {
                       aria-expanded="false"
                     >
                       Pages
-                      <i className="fas fa-chevron-down fa-sm fa-lg pt-1 pl-2 dropdown-icon"></i>
+                      <i className="fas fa-chevron-down fa-sm fa-lg pt-1  dropdown-icon"></i>
                     </a>
                     <div
                       className="dropdown-menu custom-dropdown"
@@ -218,11 +217,19 @@ export default function Index() {
                 </li>
                 <li className="nav-item">
                   <Link
+                    to="/contact"
+                    className="custom-nav-link d-flex h-100 align-items-center mr-4"
+                  >
+                    Contact us
+                    <i className="fas fa-chevron-down fa-sm fa-lg pt-1   dropdown-icon"></i>
+                  </Link>
+
+                  {/*  <Link
                     to="/blog"
                     className="custom-nav-link d-flex h-100 align-items-center mr-4"
                   >
                     Blog
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             </div>
