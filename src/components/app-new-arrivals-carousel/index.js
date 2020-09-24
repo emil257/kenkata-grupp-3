@@ -58,6 +58,10 @@ export default function Arrivals({handleOpenModal}) {
       },
       // when window width is >= 640px
       640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      900: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -70,8 +74,9 @@ export default function Arrivals({handleOpenModal}) {
 
       
         <Swiper {...params}>
+
           {/* <SwiperSlide>
-            <Product1 tag={"sale"} className="product-background" handleOpenModal={handleOpenModal}/>
+            <Product tag={"sale"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
             <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
@@ -86,8 +91,11 @@ export default function Arrivals({handleOpenModal}) {
             <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Product1 tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
+            <Product tag={"new"} className="product-background" handleOpenModal={handleOpenModal}/>
           </SwiperSlide> */}
+
+
+
           {
             products.map(p => {
               return (
@@ -97,6 +105,7 @@ export default function Arrivals({handleOpenModal}) {
               )
             })
           }
+
         </Swiper>
         <div
           className="swiper-button-prev"
