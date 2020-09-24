@@ -13,7 +13,6 @@ export default function Cartitem({product}) {
     dispatch(loadCartTotalItems())
   })
 
-
   return (
     <div>
       <div id="desktop-cart-item">
