@@ -13,16 +13,12 @@
   padding: 25px;
 }
 
- .invalid {
+ .invalid-checkout {
    color: #dc3545;
    display: block;
    margin: 0 !important;
    padding: 0.5rem 0;
  }
-
- /* .custom-r-input {
-   margin-bottom: 15px;
- } */
 
 @media (max-width: 768px) {
   .returning-customer {

@@ -66,39 +66,39 @@ export default function Index() {
                             <input type="text" name="name" ref={register({required: true, minLength: 2, maxLength: 20})} className="form-control custom-r-input" id="name" placeholder="Name" />
                             {/* Name Required*/}
                             {errors.name && errors.name.type === 'required' && (
-                            <small className="invalid">Please enter your name</small> )}
+                            <small className="invalid-contact">Please enter your name</small> )}
                             {/* Min Length */}
                             {errors.name && errors.name.type === 'minLength' && (
-                            <small className="invalid">This is not a real name</small>)}
+                            <small className="invalid-contact">This is not a real name</small>)}
                             {/* Max Length */}
                             {errors.name && errors.name.type === 'maxLength' && (
-                            <small className="invalid">This name is too long</small>)}
+                            <small className="invalid-contact">This name is too long</small>)}
 
                             {/* Email Start */}
                             <input type="text" name="email" ref={register({ required: true, minLength: 7, pattern: { value: /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/ } })} className="form-control custom-r-input" id="email" placeholder="Email" />
                             {/* Email Required */}
                             {errors.email && errors.email.type === 'required' && (
-                            <small className="invalid">Please enter a valid email address</small>)}
+                            <small className="invalid-contact">Please enter a valid email address</small>)}
                             {/* Min Length */}
                             {errors.email && errors.email.type === 'minLength' && (
-                            <small className="invalid">Please enter a valid email address</small>)}
+                            <small className="invalid-contact">Please enter a valid email address</small>)}
                             {/* Valid Characters */}
                             {errors.email && errors.email.type === 'pattern' && (
-                            <small className="invalid">Please enter a valid email address</small>)}
+                            <small className="invalid-contact">Please enter a valid email address</small>)}
 
                             {/* Subject Start */}
                             <input type="text" name="subject" ref={register({ required: true })} className="form-control custom-r-input" id="subject" placeholder="Subject" />
                             {/* Subject Required */}
-                            {errors.subject && <small className="invalid">Please enter a subject</small>}
+                            {errors.subject && <small className="invalid-contact">Please enter a subject</small>}
 
                             {/* Message Start */}
                             <textarea type="text" name="message" ref={register({ required: true, maxLength: 140 })} className="form-control custom-r-input" id="message" rows="7" placeholder="Message"></textarea>
                             {/* Message Required */}
                             {errors.message && errors.message.type === 'required' && (
-                            <small className="invalid">Please enter your message</small>)}
+                            <small className="invalid-contact">Please enter your message</small>)}
                             {/* Max Length */}
                             {errors.message && errors.message.type === 'maxLength' && (
-                            <small className="invalid">Text should not be more than 140 characters</small>)}
+                            <small className="invalid-contact">Text should not be more than 140 characters</small>)}
 
                             {/* Submit */}
                             <button className="btn custom-theme-btn send-btn" type="submit">SEND MESSAGE</button>
