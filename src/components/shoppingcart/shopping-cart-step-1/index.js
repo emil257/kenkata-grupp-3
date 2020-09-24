@@ -143,7 +143,7 @@ export default function Shoppingcart() {
                 <hr />
                 <span className="d-flex align-items-center justify-content-between text-size-18">
                   <p className="weight-bold">TOTAL</p>
-                  <p className="weight-bold text-theme-color">$930.00</p>
+          <p className="weight-bold text-theme-color">${totalPrice}.00</p>
                 </span>
                 <Link to="/checkout">
                   <button className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3">
