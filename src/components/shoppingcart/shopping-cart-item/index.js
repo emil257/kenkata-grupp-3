@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Remove from '../../../assets/img/shop-img/remove-icon.png'
 import './index.css'
 
-import { changeQnt,  removeFromCart, loadCartTotalItems } from '../../../store/actions/products'
+import { changeQnt,  removeFromCart, loadCartTotalItems, cartTotal } from '../../../store/actions/products'
 import { useDispatch } from 'react-redux'
 
 export default function Cartitem({product}) {
@@ -12,6 +12,16 @@ export default function Cartitem({product}) {
   useEffect(() => {
     dispatch(loadCartTotalItems())
   })
+
+  const handleDecQty = () => {
+    dispatch(changeQnt(product._id, false))
+    dispatch(cartTotal())
+  }
+
+  const handleIncQty = () => {
+    dispatch(changeQnt(product._id, true))
+    dispatch(cartTotal())
+  }
 
   return (
     <div>
@@ -25,9 +35,11 @@ export default function Cartitem({product}) {
           <span className="d-flex align-items-center">
             <p>${product.product.price - product.product.discount}.00</p>
             <div className="increase-qnt-btn-grp d-flex inc-button">
-              <button className="increase-qnt-btn-dec" onClick={() => dispatch(changeQnt(product._id, false))}>-</button>
+              {/* <button className="increase-qnt-btn-dec" onClick={() => dispatch(changeQnt(product._id, false))}>-</button> */}
+              <button className="increase-qnt-btn-dec" onClick={() => handleDecQty()}>-</button>
               <span className="increase-qnt-num d-flex align-items-center">{product.quantity}</span>
-              <button className="increase-qnt-btn-inc" onClick={() => dispatch(changeQnt(product._id, true))}>+</button>
+              {/* <button className="increase-qnt-btn-inc" onClick={() => dispatch(changeQnt(product._id, true))}>+</button> */}
+              <button className="increase-qnt-btn-inc" onClick={() => handleIncQty()}>+</button>
             </div>
             <p className="weight-bold text-theme-color">${(product.product.price - product.product.discount) * product.quantity}.00</p>
           </span>
