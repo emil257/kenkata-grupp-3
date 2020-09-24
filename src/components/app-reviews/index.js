@@ -13,7 +13,7 @@ import 'swiper/swiper.scss';
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 
-export default function index() {
+export default function Index() {
     const params = {
         pagination: {
             el: '#swiper-pagenation-reviews',

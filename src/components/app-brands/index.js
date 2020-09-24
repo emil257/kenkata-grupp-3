@@ -7,7 +7,7 @@ import Dismis from "../../assets/img/brands/Dismis.png";
 import Lighton from "../../assets/img/brands/Lighton.png";
 import Rosimo from "../../assets/img/brands/Rosimo.png";
 
-export default function index() {
+export default function Index() {
   return (
     <div className="container">
       <div className="app-brands py-5 d-flex flex-column flex-lg-row justify-content-between align-items-center">

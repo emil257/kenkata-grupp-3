@@ -6,7 +6,7 @@ import "./index.css";
 import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
 
 
-export default function index() {
+export default function Index() {
   return (
     <div>
       <ShoppingCartCurrentStep step={1}></ShoppingCartCurrentStep>

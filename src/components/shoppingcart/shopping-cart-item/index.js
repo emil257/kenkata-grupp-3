@@ -4,7 +4,7 @@ import Product from '../../../assets/img/product-img/product-icon.png'
 import Hoodie from '../../../assets/img/shoppingcart-items/hoodie_item.png'
 import './index.css'
 
-export default function index() {
+export default function Index() {
   return (
     <div>
       <div id="desktop-cart-item">
@@ -52,14 +52,10 @@ export default function index() {
                 </select>
               </div>
               {/* Price */}
-<<<<<<< HEAD
-              <p className="weight-bold text-theme-color  ml-auto">$380.00</p>
-=======
               <p className="text-dark ml-auto">$190.00</p>
             
               {/* Subtotal */}
               <p className="weight-bold text-theme-color ml-auto">$380.00</p>
->>>>>>> 69c888fbf601a96f65721209331538c9454aac65
             </div>
           </div>
         </div>

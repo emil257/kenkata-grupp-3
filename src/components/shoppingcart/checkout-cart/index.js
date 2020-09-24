@@ -2,7 +2,7 @@ import React from "react";
 import './index.css'
 import Brands from '../../app-brands/index'
 
-export default function index() {
+export default function Index() {
   return (
     <div className="container mt-5">
       <div className="row">

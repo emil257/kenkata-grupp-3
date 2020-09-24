@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import NotFound from "../../assets/img/404.png"
 
-export default function index() {
+export default function Index() {
   return (
     <div className="app-not-found">
       <div className="container">

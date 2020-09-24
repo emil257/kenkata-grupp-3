@@ -13,7 +13,7 @@ import BlogHeader from '../app-section-headers/latest-blog'
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 
-export default function index() {
+export default function Index() {
     const params = {
         pagination: {
             el: '#swiper-pagination-blog',
