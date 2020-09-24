@@ -6,16 +6,12 @@ import "./index.css";
 import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
 
 import {useSelector} from 'react-redux'
-import {cartTotal} from '../../../store/actions/products'
-
 
 export default function Shoppingcart() {
 
   const cartItems = useSelector(state => state.products.cart)
-
   const totalPrice = useSelector((state) => state.products.cartTotal);
 
-  
   return (
     <div>
       <ShoppingCartCurrentStep step={1}></ShoppingCartCurrentStep>
@@ -93,7 +89,7 @@ export default function Shoppingcart() {
                         htmlFor="payment2"
                       >
                         Flat rate:{" "}
-                        <span className="text-theme-color">$20.00</span>
+                      <span className="text-theme-color">${totalPrice}</span>
                       </label>
                       <input
                         className="form-check-input custom-shipping-radio"
@@ -143,7 +139,7 @@ export default function Shoppingcart() {
                 <hr />
                 <span className="d-flex align-items-center justify-content-between text-size-18">
                   <p className="weight-bold">TOTAL</p>
-                  <p className="weight-bold text-theme-color">$930.00</p>
+                  <p className="weight-bold text-theme-color">${totalPrice}</p>
                 </span>
                 <Link to="/checkout">
                   <button className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3">
