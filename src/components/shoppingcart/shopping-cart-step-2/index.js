@@ -47,7 +47,7 @@ export default function Index() {
                     <label>
                       First name <span className="text-theme-color">*</span>
                     </label>
-                    <input type="text" name="firstName" ref={register({ required: true, minLength: 2, maxLength: 20 })} className="form-control" />
+                    <input type="text" name="firstName" ref={register({ required: true, minLength: 2, maxLength: 20 })} className="form-control " />
                     {/* First name Required */}
                     {errors.firstName && errors.firstName.type === 'required' && (
                       <small className="invalid">Please enter your name</small>)}
@@ -62,80 +62,134 @@ export default function Index() {
                     <label>
                       Last name <span className="text-theme-color">*</span>
                     </label>
-                    <input type="text" className="form-control" />
+                    <input type="text" name="lastName" ref={register({ required: true, minLength: 2, maxLength: 20 })} className="form-control" />
                     {/* Last name Required */}
-
+                    {errors.lastName && errors.lastName.type === 'required' && (
+                      <small className="invalid">Please enter your last name</small>)}
+                    {/* Min Length */}
+                    {errors.lastName && errors.lastName.type === 'minLength' && (
+                      <small className="invalid">This is not a real last name</small>)}
+                    {/* Max Length */}
+                    {errors.lastName && errors.lastName.type === 'maxLength' && (
+                      <small className="invalid">This name is too long</small>)}
                   </div>
                 </div>
                 <div className="form-group">
                   <label>Company name (optional)</label>
+                  {/* Company name */}
                   <input type="text" className="form-control" />
                 </div>
                 <div className="form-group">
                   <label>
                     Country / Region <span className="text-theme-color">*</span>
                   </label>
-                  <select className="form-control">
-                    <option defaultValue>Choose...</option>
-                    <option>United States</option>
+                  {/* Country */}
+                  <select name="country" ref={register({ required: true })} className="form-control">
+                    <option value="">Choose...</option>
+                    <option value="United States">United States</option>
+                    <option value="Sweden">Sweden</option>
                   </select>
+                  {/* Country Required */}
+                  {errors.country && <small className="invalid">Please select your country</small>}
                 </div>
                 <div className="form-group">
                   <label>
                     Street address <span className="text-theme-color">*</span>
                   </label>
-                  <input type="text" className="form-control" />
+                    {/* Street Address */}
+                  <input type="text" name="address" ref={register({ required: true, minLength: 8 })} className="form-control" />
+                  {/* Address Required */}
+                  {errors.address && errors.address.type === 'required' && (
+                    <small className="invalid">Please enter your street address</small>)}
+                    {/* Min Length */}
+                  {errors.address && errors.address.type === 'minLength' && (
+                    <small className="invalid">This is not a real street address</small>)}
                 </div>
-                <div className="form-group mt-4">
+                {/* <div className="form-group mt-4">
                   <input type="text" className="form-control" />
-                </div>
+                </div> */}
                 <div className="form-group">
                   <label>
                     Town / City <span className="text-theme-color">*</span>
                   </label>
-                  <input type="text" className="form-control" />
+                  {/* Town & City */}
+                  <input type="text" name="city" ref={register({ required: true, minLength: 4 })} className="form-control" />
+                  {/* City Required */}
+                  {errors.city && errors.city.type === 'required' && (
+                    <small className="invalid">Please enter your town/city</small>)}
+                  {/* Min Length */}
+                  {errors.city && errors.city.type === 'minLength' && (
+                    <small className="invalid">This is not a real town or city</small>)}
                 </div>
                 <div className="form-group">
                   <label htmlFor="formGroupExampleInput2">
                     State <span className="text-theme-color">*</span>
                   </label>
-                  <select id="inputState" className="form-control">
-                    <option defaultValue>Alabama</option>
+                  {/* State */}
+                  <select id="state" name="state" ref={register({ required: true, minLength: 4 })} className="form-control">
+                    <option value=""></option>
+                    <option value="Texas">Texas</option>
+                    <option value="Colorado">Colorado</option>
                   </select>
+                  {/* State Required */}
+                  {errors.state && <small className="invalid">Please select your state</small>}
                 </div>
                 <div className="form-group">
                   <label>
                     ZIP <span className="text-theme-color">*</span>
                   </label>
-                  <input type="text" className="form-control" />
+                  {/* ZIP */}
+                  <input type="text" name="zip" ref={register({ required: true, minLength: 4 })} className="form-control" />
+                  {/* Zip Required */}
+                  {errors.zip && errors.zip.type === 'required' && (
+                    <small className="invalid">Please enter your zip code</small>)}
+                  {/* Min Length */}
+                  {errors.zip && errors.zip.type === 'minLength' && (
+                    <small className="invalid">This is not a valid zip code</small>)}
                 </div>
                 <div className="form-group">
                   <label>
                     Phone <span className="text-theme-color">*</span>
                   </label>
-                  <input type="number" className="form-control" />
+                  {/* Phone Number */}
+                  <input type="number" name="phone" ref={register({ required: true, minLength: 6, maxLength: 12 })} className="form-control" />
+                  {/* Phone Required */}
+                  {errors.phone && errors.phone.type === 'required' && (
+                    <small className="invalid">Please enter your phone number</small>)}
+                  {/* Min Length */}
+                  {errors.phone && errors.phone.type === 'minLength' && (
+                    <small className="invalid">This is not a valid phone number</small>)}
+                  {errors.phone && errors.phone.type === 'maxLength' && (
+                    <small className="invalid">This phone number is too long</small>)}
+
                 </div>
                 <div className="form-group">
                   <label>
                     Email adress <span className="text-theme-color">*</span>
                   </label>
-                  <input type="email" className="form-control" />
+                  {/* Email */}
+                  <input type="text" name="email" ref={register({ required: true, minLength: 7, pattern: { value: /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/ } })} className="form-control" />
+                  {/* Email Required */}
+                  {errors.email && errors.email.type === 'required' && (
+                    <small className="invalid">Please enter a valid email address</small>)}
+                  {/* Min Length */}
+                  {errors.email && errors.email.type === 'minLength' && (
+                    <small className="invalid">Please enter a valid email address</small>)}
+                  {/* Valid Characters */}
+                  {errors.email && errors.email.type === 'pattern' && (
+                    <small className="invalid">Please enter a valid email address</small>)}
                 </div>
+                {/* Create an account? */}
                 <div className="form-check mt-5">
-                  <input className="form-check-input" type="checkbox" />
+                  <input className="form-check-input" ref={register({ required: false })} name="account" value={true} type="checkbox"/>
                   <label className="form-check-label">Create an account?</label>
+                  {/* {errors.account && <small className="invalid">Please check or uncheck this input</small>} */}
                 </div>
+                {/* Ship to different address? */}
                 <hr className="my-5" />
                 <div className="form-check mb-4">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="gridCheck1"
-                  />
-                  <label
-                    className="form-check-label text-size-18 weight-bold"
-                    htmlFor="gridCheck1"
-                  >
+                  <input className="form-check-input" ref={register({ required: false })} name="differentAddress" value={true} type="checkbox" />
+                  <label className="form-check-label text-size-18 weight-bold"htmlFor="gridCheck1">
                     SHIP TO DIFFERENT ADRESS?
                 </label>
                 </div>
@@ -152,7 +206,6 @@ export default function Index() {
                 </div>
               </div>
             </div>
-
             {/* Box Left */}
             <div className="col-lg-6">
               <div className="order-summary">
