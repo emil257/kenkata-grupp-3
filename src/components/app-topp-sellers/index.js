@@ -7,7 +7,9 @@ import { useSelector } from 'react-redux';
 
 export default function Topsellers({handleOpenModal}) {
 
-  const product1 = useSelector(state => state.products.products[0])
+  const productMain = useSelector(state => state.products.products[7])
+  const product2 = useSelector(state => state.products.products[1])
+  const product3 = useSelector(state => state.products.products[8])
 
 
     return (
@@ -16,9 +18,14 @@ export default function Topsellers({handleOpenModal}) {
           <div className="container">
             <AppTopSellers />
             <div className="product-container">
-                <Product className="product-background main-seller" handleOpenModal={handleOpenModal}/>    
+
+              <Product product={productMain} className="main-seller product-background" handleOpenModal={handleOpenModal}/>
+              <Product product={product2} className="product-background" handleOpenModal={handleOpenModal}/>
+              <Product product={product3} className="product-background" handleOpenModal={handleOpenModal}/>
+
+                {/* <Product className="product-background main-seller" handleOpenModal={handleOpenModal}/>    
                 <Product tag={'new'} className="product-background" handleOpenModal={handleOpenModal}/>    
-                <Product tag={'sale'} className="product-background" handleOpenModal={handleOpenModal}/>
+                <Product tag={'sale'} className="product-background" handleOpenModal={handleOpenModal}/> */}
             </div>
           </div>
         </div>
