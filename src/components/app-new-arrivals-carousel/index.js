@@ -61,7 +61,7 @@ export default function Arrivals({handleOpenModal}) {
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      900: {
+      1000: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
