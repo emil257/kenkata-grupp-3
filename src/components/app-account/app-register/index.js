@@ -16,8 +16,6 @@ export default function Register() {
   const [email, set_email] = useState("")
   const [password, set_password] = useState("")
 
-
-
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     const user = {
@@ -32,6 +30,7 @@ export default function Register() {
     }
     dispatch(login(l_user))
   }
+
   
   return (
     <div className="col-12 col-lg-6 mt-4 mt-lg-0">

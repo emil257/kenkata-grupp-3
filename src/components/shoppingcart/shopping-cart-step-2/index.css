@@ -13,6 +13,13 @@
   padding: 25px;
 }
 
+ .invalid {
+   color: #dc3545;
+   display: block;
+   margin-top: -15px;
+   padding: 0.5rem 0;
+ }
+
 @media (max-width: 768px) {
   .returning-customer {
     text-align: center;
