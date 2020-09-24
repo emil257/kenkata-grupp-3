@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import ShoppingCartCurrentStep from "../shopping-cart-current-step";
 import ShoppingCartItem from "../shopping-cart-item/index";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import "./index.css";
 import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
 
@@ -16,11 +16,7 @@ export default function Shoppingcart() {
   const handleChange = event => {
       const shipping = event.target.value;
       console.log(shipping + totalPrice)
-    }
-
-  
-  
-
+  }
 
   return (
     <div>
@@ -42,21 +38,17 @@ export default function Shoppingcart() {
                 <div className="grid-item-4">
                   <p className="font-size-smaller">Subtotal</p>
                 </div>
-        
               </div>
             </span>
 
-
-            {
-              cartItems.map(i => {
-                return (
-                  <div key={i._id}>
-                    <hr className="cart-products-hr-top" />
-                    <ShoppingCartItem product={i}></ShoppingCartItem>
-                  </div>
-                )
-              })
-            }
+            {cartItems.map((i) => {
+              return (
+                <div key={i._id}>
+                  <hr className="cart-products-hr-top" />
+                  <ShoppingCartItem product={i}></ShoppingCartItem>
+                </div>
+              );
+            })}
 
             <hr className="cart-products-hr-breaker" />
             <div className="cart-footer d-flex flex-column flex-lg-row justify-content-between">
@@ -87,7 +79,9 @@ export default function Shoppingcart() {
               <div className="cart-total-content">
                 <span className="d-flex align-items-center justify-content-between">
                   <p className="weight-bold">Subtotal</p>
-                  <p className="weight-bold text-theme-color">${totalPrice}.00</p>
+                  <p className="weight-bold text-theme-color">
+                    ${totalPrice}.00
+                  </p>
                 </span>
                 <hr />
                 <span className="d-flex align-items-center justify-content-between">
@@ -106,8 +100,7 @@ export default function Shoppingcart() {
                         type="radio"
                         name="cost"
                         id="payment2"
-                        value="50"
-                        // onChange={handleChange}
+                        value="20"
                       />
                     </div>
                     <div className="form-check mb-1">
