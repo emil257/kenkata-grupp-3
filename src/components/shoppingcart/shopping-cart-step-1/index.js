@@ -6,11 +6,14 @@ import "./index.css";
 import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
 
 import {useSelector} from 'react-redux'
+import {cartTotal} from '../../../store/actions/products'
 
 
 export default function Shoppingcart() {
 
   const cartItems = useSelector(state => state.products.cart)
+
+  const totalPrice = useSelector((state) => state.products.cartTotal);
 
   
   return (
@@ -78,7 +81,7 @@ export default function Shoppingcart() {
               <div className="cart-total-content">
                 <span className="d-flex align-items-center justify-content-between">
                   <p className="weight-bold">Subtotal</p>
-                  <p className="weight-bold text-theme-color">$910.00</p>
+                  <p className="weight-bold text-theme-color">${totalPrice}.00</p>
                 </span>
                 <hr />
                 <span className="d-flex align-items-center justify-content-between">
