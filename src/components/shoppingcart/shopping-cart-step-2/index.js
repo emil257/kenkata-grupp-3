@@ -6,7 +6,9 @@ import { useForm } from "react-hook-form";
 
 export default function Index() {
 
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm({
+    mode: 'onBlur',
+  });
   const onSubmit = (data) => {
     console.log(data)
   }
