@@ -13,7 +13,7 @@ import Dallas from '../../../assets/img/brands/Dallas.png'
 import ProductIcon from '../../../assets/img/product-img/product-icon.png'
 
 
-export default function index() {
+export default function Index() {
   return (
       <div className="mr-5">
       <div className="sorting-categories">

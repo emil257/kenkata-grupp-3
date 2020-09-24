@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 
-export default function index(props) {
+export default function Index(props) {
   const step = () => {
     if (props.step === 1) {
       return (

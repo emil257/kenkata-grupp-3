@@ -95,7 +95,7 @@ export default function Index() {
               </SwiperSlide>
             );
           })}
-          
+
         </Swiper>
 
         <div className="swiper-button-prev" id="swiper-like-button-prev"></div>

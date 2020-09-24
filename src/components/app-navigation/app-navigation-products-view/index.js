@@ -5,7 +5,7 @@ import Brand from '../../../assets/img/brands/Bexim.png'
 import ShopImage from '../../../assets/img/shop-img/1x1.png'
 
 
-export default function index() {
+export default function Index() {
     return (
         <div>
             <div className="shop-current-path">

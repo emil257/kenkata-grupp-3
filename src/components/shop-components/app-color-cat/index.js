@@ -2,7 +2,7 @@ import React from 'react'
 
 import './index.css'
 
-export default function index(props) {
+export default function Index(props) {
   const capitalizeFirstLetter = (string)  => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }

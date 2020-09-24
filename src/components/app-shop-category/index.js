@@ -2,7 +2,7 @@ import React from 'react'
 import './index.css'
 import ShopByCategory from '../app-section-headers/shop-by-category/index.js'
 
-export default function index() {
+export default function Index() {
     return (
 <div className="shop-category">
     <div className="container">
