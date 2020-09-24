@@ -12,6 +12,12 @@ export default function Shoppingcart() {
   const cartItems = useSelector(state => state.products.cart)
   const totalPrice = useSelector((state) => state.products.cartTotal);
 
+
+  const handleChange = event => {
+      const shipping = event.target.value;
+      console.log(shipping + totalPrice)
+  }
+
   return (
     <div>
       <ShoppingCartCurrentStep step={1}></ShoppingCartCurrentStep>
@@ -87,12 +93,12 @@ export default function Shoppingcart() {
                         htmlFor="payment2"
                       >
                         Flat rate:{" "}
-                      <span className="text-theme-color">${totalPrice}</span>
+                      <span className="text-theme-color">50$</span>
                       </label>
                       <input
                         className="form-check-input custom-shipping-radio"
                         type="radio"
-                        name="payment"
+                        name="cost"
                         id="payment2"
                         value="20"
                       />
@@ -107,9 +113,10 @@ export default function Shoppingcart() {
                       <input
                         className="form-check-input custom-shipping-radio"
                         type="radio"
-                        name="payment"
+                        name="cost"
                         id="payment2"
-                        value="p2"
+                        value="0"
+                        // onChange={handleChange}
                       />
                     </div>
                     <div className="form-check mb-1">
@@ -118,14 +125,15 @@ export default function Shoppingcart() {
                         htmlFor="payment2"
                       >
                         Local pickup:{" "}
-                        <span className="text-theme-color">$25.00</span>
+                      <span className="text-theme-color">25$</span>
                       </label>
                       <input
                         className="form-check-input custom-shipping-radio"
                         type="radio"
-                        name="payment"
+                        name="cost"
                         id="payment2"
-                        value="p2"
+                        value={25}
+                        onChange={handleChange}
                       />
                     </div>
                     <p className="mb-1">
