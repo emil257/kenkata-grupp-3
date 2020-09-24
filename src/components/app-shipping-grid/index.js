@@ -6,7 +6,7 @@ import Support from '../../assets/img/feature-icons/support.svg';
 import Payment from '../../assets/img/feature-icons/payment.svg';
 import Delivery from '../../assets/img/feature-icons/delivery.svg';
 
-export default function index() {
+export default function Index() {
     return (
         <div>
             <div id="shipping-boxes">

@@ -8,7 +8,7 @@ import ProductYouMayAlsoLike from '../../components/app-you-may-also-like/index'
 import RelatedProducts from '../../components/app-related-products/index'
 import ShippingDark from '../../components/app-shipping-grid-dark/index'
 
-export default function index() {
+export default function Index() {
     return (
         <div>
 

@@ -3,7 +3,7 @@ import Banner from "../../assets/img/Pexels-banner.png";
 import "./index.css";
 import { Link } from "react-router-dom";
 
-export default function index() {
+export default function Index() {
   return (
     
     <div>
