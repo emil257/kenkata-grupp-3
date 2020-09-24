@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "../../assets/img/Banner-thumb.png";
+import Banner from "../../assets/img/Pexels-banner.png";
 import "./index.css";
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,7 @@ export default function index() {
             </Link>
           </div>
           <img
-            className="col-10 col-md-9 col-lg-8 col-xl-7"
+            className="col-12 col-md-9 col-lg-8 col-xl-7"
             src={Banner}
             alt=""
           />
