@@ -189,15 +189,15 @@ export default function Index() {
                 </div>
                 {/* Create an account? */}
                 <div className="form-check mt-5">
-                  <input className="form-check-input" ref={register({ required: false })} name="account" value={true} type="checkbox"/>
-                  <label className="form-check-label">Create an account?</label>
+                  <input className="form-check-input" ref={register({ required: false })} name="account" value={true} type="checkbox" id="create-account"/>
+                  <label className="form-check-label" htmlFor="create-account">Create an account?</label>
                   {/* {errors.account && <small className="invalid-checkout">Please check or uncheck this input</small>} */}
                 </div>
                 {/* Ship to different address? */}
                 <hr className="my-5" />
                 <div className="form-check mb-4">
-                  <input className="form-check-input" ref={register({ required: false })} name="differentAddress" value={true} type="checkbox" />
-                  <label className="form-check-label text-size-18 weight-bold"htmlFor="gridCheck1">
+                  <input className="form-check-input" ref={register({ required: false })} name="differentAddress" id="differentAddress" value={true} type="checkbox" />
+                  <label className="form-check-label text-size-18 weight-bold" htmlFor="differentAddress">
                     SHIP TO DIFFERENT ADRESS?
                 </label>
                 </div>
