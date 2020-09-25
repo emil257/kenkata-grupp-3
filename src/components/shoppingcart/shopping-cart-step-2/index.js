@@ -1,8 +1,8 @@
-import React from "react";
-import './index.css';
-import Brands from '../../app-brands/index';
-import ShoppingCartCurrentStep from '../shopping-cart-current-step';
+import React, { useState } from "react";
 import PaypalLogo from '../../../assets/img/shop-img/paypal-logo.png'
+import "./index.css";
+import Brands from "../../app-brands/index";
+import ShoppingCartCurrentStep from "../shopping-cart-current-step";
 import { useForm } from "react-hook-form";
 
 export default function Index() {
@@ -160,10 +160,16 @@ export default function Index() {
                   {errors.phone && errors.phone.type === 'required' && (
                     <small className="invalid-checkout">Please enter your phone number</small>)}
                   {/* Min Length */}
-                  {errors.phone && errors.phone.type === 'minLength' && (
-                    <small className="invalid-checkout">This is not a valid phone number</small>)}
-                  {errors.phone && errors.phone.type === 'maxLength' && (
-                    <small className="invalid-checkout">This phone number is too long</small>)}
+                  {errors.phone && errors.phone.type === "minLength" && (
+                    <small className="invalid-checkout">
+                      This is not a valid phone number
+                    </small>
+                  )}
+                  {errors.phone && errors.phone.type === "maxLength" && (
+                    <small className="invalid-checkout">
+                      This phone number is too long
+                    </small>
+                  )}
                 </div>
                 <div className="form-group">
                   <label>
@@ -208,7 +214,7 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            {/* Box Left */}
+            {/* Box Left Cart Totals */}
             <div className="col-lg-6">
               <div className="order-summary">
                 <div className="order-header d-flex align-items-center justify-content-center">
@@ -245,62 +251,48 @@ export default function Index() {
                     <p className=" text-theme-color">$930.00</p>
                   </span>
                   <hr />
+                  {/* Shipping Payments */}
                   <span className="d-flex align-items-center justify-content-between">
                     <p>Shipping</p>
                     <span className="text-right">
                       <div className="form-check mb-1">
                         <label
                           className="form-check-label custom-shipping-label"
-                          htmlFor="payment2"
-                        >
+                          htmlFor="shippingPayment1">
                           Flat rate:{" "}
                           <span className="text-theme-color">$20.00</span>
                         </label>
-                        <input className="form-check-input custom-shipping-radio" type="radio"
-                          name="payment"
-                          id="payment2"
-                          value="p2"
-                        />
+                        <input className="form-check-input custom-shipping-radio" type="radio" name="shippingPayment" id="shippingPayment1" value=""/>
                       </div>
                       <div className="form-check mb-1">
-                        <label
-                          className="form-check-label custom-shipping-label"
-                          htmlFor="payment2"
-                        >
+                        <label className="form-check-label custom-shipping-label" htmlFor="shippingPayment2">
                           Free shipping
                     </label>
                         <input
-                          className="form-check-input custom-shipping-radio"
-                          type="radio"
-                          name="payment"
-                          id="payment2"
-                          value="p2"
-                        />
+                          className="form-check-input custom-shipping-radio" type="radio" name="shippingPayment" id="shippingPayment2" value=""/>
                       </div>
                       <div className="form-check mb-1">
                         <label
                           className="form-check-label custom-shipping-label"
-                          htmlFor="payment2"
+                          htmlFor="shippingPayment3"
                         >
                           Local pickup:{" "}
                           <span className="text-theme-color">$25.00</span>
                         </label>
-                        <input
-                          className="form-check-input custom-shipping-radio"
-                          type="radio"
-                          name="payment"
-                          id="payment2"
-                          value="p2"
-                        />
+                        <input ref={register({ required: true })} name="shippingPayment" value={true} className="form-check-input custom-shipping-radio" type="radio" id="shippingPayment3"/>
                       </div>
                     </span>
                   </span>
+                  {/* Shipping Payments error */}
+                  {errors.shippingPayment && <small className="invalid-checkout">Please select shipping payment</small>}
+
                   <hr />
                   <span className="d-flex align-items-center justify-content-between weight-bold text-size-18">
                     <p className=" text-theme-color">TOTAL</p>
                     <p className=" text-theme-color">$930.00</p>
                   </span>
                   <hr />
+                  {/* Payments Options */}
                   <div className="form-check">
                     <input
                       className="form-check-input"
@@ -312,8 +304,7 @@ export default function Index() {
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input" type="radio" name="payment" id="payment2" value=""
-                    />
+                      className="form-check-input" type="radio" name="payment" id="payment2" value=""/>
                     <label className="form-check-label" htmlFor="payment2">
                       Check Payment
                 </label>
@@ -321,13 +312,12 @@ export default function Index() {
                   <div className="form-check">
                     <input className="form-check-input" type="radio" name="payment" id="payment3" value=""/>
                     <label className="form-check-label" htmlFor="payment3">
-                      Cash on delivery
-                </label>
+                      Cah on delivery
+                    </label>
                   </div>
                   <div className="form-check">
                     {/* Choose Payments */}
                     <input ref={register({ required: true })} name="payment" value={true} className="form-check-input" type="radio" id="payment4"/>
-                    
                     <label className="form-check-label d-flex align-items-center" htmlFor="payment4">
                       PayPal
                   <img className="mx-2" src={PaypalLogo} alt=""/>

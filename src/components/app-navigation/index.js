@@ -157,7 +157,7 @@ export default function Index() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/products"
+                    to="/"
                     className="custom-nav-link d-flex h-100 align-items-center mr-4"
                   >
                     Products
