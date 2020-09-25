@@ -14,6 +14,7 @@ import ShoppingCartView from '../src/components/shoppingcart/shopping-cart-step-
 import NotFound from "./views/NotFound/index"
 import AppProductModal from './components/app-product-modal'
 import Contact from './components/app-contact-us'
+import ThanksForRegistring from './views/ThanksForRegistring'
 
 import { Modal } from '@material-ui/core'
 
@@ -41,24 +42,45 @@ function App() {
 
   return (
     <BrowserRouter>
-    
-      <Modal open={open} onClose={handleClose} className="d-flex align-items-center justify-content-center popup-bg-color">
-        <AppModalWithRef product={modalProduct}/>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        className="d-flex align-items-center justify-content-center popup-bg-color"
+      >
+        <AppModalWithRef product={modalProduct} />
       </Modal>
 
       <Navigation />
 
       <Switch>
-        <Route exact path="/" component={() => <Home handleOpenModal={handleOpenModal}/>}/>
+        <Route
+          exact
+          path="/"
+          component={() => <Home handleOpenModal={handleOpenModal} />}
+        />
         <Route exact path="/products/" component={Products} />
         <Route exact path="/product/:id" component={Products} />
         <Route exact path="/account" component={Account} />
-        <Route exact path="/shop" component={() => <Shop handleOpenModal={handleOpenModal}/>}/>
-        <Route exact path="/shoppingcart" component={() => <ShoppingCartView handleOpenModal={handleOpenModal}/>} />
+        <Route
+          exact
+          path="/shop"
+          component={() => <Shop handleOpenModal={handleOpenModal} />}
+        />
+        <Route
+          exact
+          path="/shoppingcart"
+          component={() => (
+            <ShoppingCartView handleOpenModal={handleOpenModal} />
+          )}
+        />
         <Route exact path="/checkout" component={CheckoutCart} />
         <Route exact path="/contact" component={Contact} />
+        <Route
+          exact
+          path="/thanksforregistring"
+          component={ThanksForRegistring}
+        />
         <Route exact path="*" component={NotFound} />
-        
       </Switch>
 
       <AppFooterNew />
