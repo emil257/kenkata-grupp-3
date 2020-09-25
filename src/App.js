@@ -14,6 +14,7 @@ import ShoppingCartView from '../src/components/shoppingcart/shopping-cart-step-
 import NotFound from "./views/NotFound/index"
 import AppProductModal from './components/app-product-modal'
 import Contact from './components/app-contact-us'
+import BackToTopArrow from './components/app-back-to-top/index'
 
 import { Modal } from '@material-ui/core'
 
@@ -62,6 +63,7 @@ function App() {
       </Switch>
 
       <AppFooterNew />
+      <BackToTopArrow />
     </BrowserRouter>
   );
 }

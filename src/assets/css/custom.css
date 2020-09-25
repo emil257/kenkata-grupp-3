@@ -380,35 +380,3 @@ textarea {
 .remove-icon{
   font-size: 20px;
 }
-
-/* Back To Top Arrow */
-
-.back-to-top {
-position: fixed;
-bottom: 20px;
-right: 20px;
-font-size: 18px;
-width: 40px;
-height: 40px;
-line-height: 40px;
-border-radius: 5px;
-z-index: 99;
-text-align: center;
-border: 2px solid #fff;
-display: none;
--webkit-box-shadow: 0px 0px 30px 0px rgba(156, 156, 156, 0.25);
--moz-box-shadow: 0px 0px 30px 0px rgba(156, 156, 156, 0.25);
-box-shadow: 0px 0px 30px 0px rgba(156, 156, 156, 0.25);
--webkit-transition: all 0.4s linear;
--moz-transition: all 0.4s linear;
--ms-transition: all 0.4s linear;
--o-transition: all 0.4s linear;
-transition: all 0.4s linear;
-color: #fff;
-background-color: #2891fd;
-}
-
-.back-to-top:hover {
-color: #fff;
-background-color: #FFBB00;
-}
