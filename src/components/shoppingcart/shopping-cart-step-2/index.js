@@ -4,8 +4,20 @@ import "./index.css";
 import Brands from "../../app-brands/index";
 import ShoppingCartCurrentStep from "../shopping-cart-current-step";
 import { useForm } from "react-hook-form";
+import { useSelector } from "react-redux";
 
 export default function Index() {
+
+  const cartProducts = useSelector((state) => state.products.cart);
+  const totalPrice = useSelector((state) => state.products.cartTotal);
+  const [shipping, setshipping] = useState(Number);
+
+  const handleRadioChange = (e) => {
+    const cost = e.target.value;
+    if (e.target.checked) {
+      setshipping(Number(cost));
+    }
+  };
 
   const { register, handleSubmit, errors } = useForm({
     mode: 'onBlur',
@@ -221,36 +233,35 @@ export default function Index() {
                   <p className="weight-medium text-size-24">CART TOTALS</p>
                 </div>
                 <div className="order-content">
-                  <span className="d-flex align-items-center justify-content-between weight-bold">
+                  <span className="d-flex align-items-center justify-content-between weight-bold mb-2">
                     <p className=" text-theme-color">PRODUCT</p>
                     <p className=" text-theme-color">SUBTOTAL</p>
                   </span>
-                  <hr />
-                  <span className="d-flex align-items-center justify-content-between">
-                    <p>Women smart high heel shoe</p>
-                    <p>$380.00</p>
-                  </span>
-                  <hr />
-                  <span className="d-flex align-items-center justify-content-between">
-                    <p>Gents half t-shirt</p>
-                    <p>$380.00</p>
-                  </span>
-                  <hr />
-                  <span className="d-flex align-items-center justify-content-between">
-                    <p>Gents winter yellow jacket</p>
-                    <p>$380.00</p>
-                  </span>
-                  <hr />
-                  <span className="d-flex align-items-center justify-content-between">
-                    <p>Men's Watches Brown Leather</p>
-                    <p>$380.00</p>
-                  </span>
-                  <hr />
-                  <span className="d-flex align-items-center justify-content-between weight-medium">
-                    <p className=" text-theme-color">Subtotal</p>
-                    <p className=" text-theme-color">$930.00</p>
-                  </span>
-                  <hr />
+
+
+                  {cartProducts.map((cartProduct) => {
+                    return (
+                      <div key={cartProduct._id}>
+                        <span
+                          className="d-flex align-items-center justify-content-between"
+                          key={cartProduct._id}
+                        >
+                          <p>{cartProduct.product.name}</p>
+                          <p>
+                            $
+                            {(cartProduct.product.price -
+                              cartProduct.product.discount) *
+                              cartProduct.quantity}
+                            .00
+                          </p>
+                        </span>
+                        <hr />
+                      </div>
+                    );
+                  })}
+
+
+   
                   {/* Shipping Payments */}
                   <span className="d-flex align-items-center justify-content-between">
                     <p>Shipping</p>
@@ -262,14 +273,27 @@ export default function Index() {
                           Flat rate:{" "}
                           <span className="text-theme-color">$20.00</span>
                         </label>
-                        <input ref={register({ required: true })} className="form-check-input custom-shipping-radio" type="radio" name="shippingPayment" id="shippingPayment1" value="flat"/>
+                        <input
+                        ref={register({ required: true })}
+                        className="form-check-input custom-shipping-radio"
+                        type="radio" name="shippingPayment"
+                        id="shippingPayment1"
+                        value={'flat', 20}
+                        onChange={handleRadioChange}
+                        />
                       </div>
                       <div className="form-check mb-1">
                         <label className="form-check-label custom-shipping-label" htmlFor="shippingPayment2">
                           Free shipping
                     </label>
                         <input ref={register({ required: true })}
-                          className="form-check-input custom-shipping-radio" type="radio" name="shippingPayment" id="shippingPayment2" value="free"/>
+                          className="form-check-input custom-shipping-radio"
+                          type="radio"
+                          name="shippingPayment"
+                          id="shippingPayment2"
+                          value={'free', 0}
+                          onChange={handleRadioChange}
+                          />
                       </div>
                       <div className="form-check mb-1">
                         <label
@@ -279,7 +303,15 @@ export default function Index() {
                           Local pickup:{" "}
                           <span className="text-theme-color">$25.00</span>
                         </label>
-                        <input ref={register({ required: true })} name="shippingPayment" value="local" className="form-check-input custom-shipping-radio" type="radio" id="shippingPayment3"/>
+                        <input
+                        ref={register({ required: true })}
+                        name="shippingPayment"
+                        value={'local', 25}
+                        className="form-check-input custom-shipping-radio"
+                        type="radio"
+                        id="shippingPayment3"
+                        onChange={handleRadioChange}
+                        />
                       </div>
                     </span>
                   </span>
@@ -289,7 +321,7 @@ export default function Index() {
                   <hr />
                   <span className="d-flex align-items-center justify-content-between weight-bold text-size-18">
                     <p className=" text-theme-color">TOTAL</p>
-                    <p className=" text-theme-color">$930.00</p>
+                    <p className=" text-theme-color">${totalPrice + shipping}.00</p>
                   </span>
                   <hr />
                   {/* Payments Options */}
