@@ -8,23 +8,16 @@ import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
 import { useSelector } from "react-redux";
 
 export default function Shoppingcart() {
-
   const cartItems = useSelector((state) => state.products.cart);
   const totalPrice = useSelector((state) => state.products.cartTotal);
-
   const [shipping, setshipping] = useState(Number);
-
-
 
   const handleChange = (e) => {
     const cost = e.target.value;
-
     if (e.target.checked) {
       setshipping(Number(cost));
     }
   };
-
-  
 
   return (
     <div>
@@ -153,7 +146,7 @@ export default function Shoppingcart() {
                 <span className="d-flex align-items-center justify-content-between text-size-18">
                   <p className="weight-bold">TOTAL</p>
                   <p className="weight-bold text-theme-color">
-                    ${totalPrice + shipping}.00 
+                    ${totalPrice + shipping}.00
                   </p>
                 </span>
                 <Link to="/checkout">
