@@ -3,7 +3,8 @@ import actiontypes from '../actiontypes'
 let initState = {
   user: {},
   token: null,
-  loggedIn: false
+  loggedIn: false,
+  loginStatusCode: null
 }
 
 export default (state = initState, action) => {
@@ -35,6 +36,22 @@ export default (state = initState, action) => {
       }
       return state
     case actiontypes().user.updateUserShippingDetails:
+      return state
+    case actiontypes().user.loginStatusCode:
+      state = {
+        user: state.user,
+        token: state.token,
+        loggedIn: false,
+        loginStatusCode: action.payload
+      }
+      return state
+    case actiontypes().user.resetStatusCode:
+      state = {
+        user: state.user,
+        token: state.token,
+        loggedIn: state.loggedIn,
+        loginStatusCode: null
+      }
       return state
     default:
       return state

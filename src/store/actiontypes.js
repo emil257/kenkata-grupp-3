@@ -14,6 +14,8 @@ export default () => {
       registerUser: 'REGISTER_USER',
       loginUser: 'LOGIN_USER',
       logoutUser: 'LOGOUT_USER',
+      loginStatusCode: 'USER_STATUSCODE',
+      resetStatusCode: 'RESET_STATUS_CODE',
       updateUserShippingDetails: 'UPDATE_USER_SHIPPING_DETAILS',
       loadUser: 'LOAD_USER',
       placeOrder: 'PLACE_ORDER'

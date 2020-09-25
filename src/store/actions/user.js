@@ -8,6 +8,15 @@ export const register = (user) => {
         type: actiontypes().user.registerUser,
         payload: res.data
       })
+      dispatch({
+        type: actiontypes().user.loginStatusCode,
+        payload: res.status
+      })
+    }).catch(err => {
+      dispatch({
+        type: actiontypes().user.loginStatusCode,
+        payload: err.response.status
+      })
     })
   }
 }
@@ -19,6 +28,12 @@ export const login = (user) => {
         payload: res.data
       })
       dispatch(loadUser())
+    }).catch(err => {
+      dispatch({
+        type: actiontypes().user.loginStatusCode,
+        payload: err.response.status
+      })
+      console.log(err.response.status)
     })
   }
 }
@@ -43,6 +58,11 @@ export const loadUser = () => {
 export const logout = () => {
   return {
     type: actiontypes().user.logoutUser
+  }
+}
+export const resetStatusCode = () => {
+  return {
+    type: actiontypes().user.resetStatusCode
   }
 }
 export const updateDetails = (shipping) => {
