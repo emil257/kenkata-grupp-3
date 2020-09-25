@@ -12,7 +12,7 @@ export default function Shoppingcart() {
   const totalPrice = useSelector((state) => state.products.cartTotal);
   const [shipping, setshipping] = useState(Number);
 
-  const handleChange = (e) => {
+  const handleRadioChange = (e) => {
     const cost = e.target.value;
     if (e.target.checked) {
       setshipping(Number(cost));
@@ -101,7 +101,7 @@ export default function Shoppingcart() {
                         name="cost"
                         id="payment2"
                         value={50}
-                        onChange={handleChange}
+                        onChange={handleRadioChange}
                       />
                     </div>
                     <div className="form-check mb-1">
@@ -133,7 +133,7 @@ export default function Shoppingcart() {
                         name="cost"
                         id="payment2"
                         value={25}
-                        onChange={handleChange}
+                        onChange={handleRadioChange}
                       />
                     </div>
                     <p className="mb-1">
