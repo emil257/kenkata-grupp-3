@@ -1,3 +1,10 @@
+.invalid-contact {
+color: #dc3545;
+display: block;
+margin-top: -15px;
+padding: 0.5rem 0;
+}
+
 .map {
     width: 100%;
     height: 624px;
