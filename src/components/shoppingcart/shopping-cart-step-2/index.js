@@ -154,7 +154,7 @@ export default function Index() {
                     Phone <span className="text-theme-color">*</span>
                   </label>
                   {/* Phone Number */}
-                  <input type="number" name="phone" ref={register({ required: true, minLength: 6, maxLength: 12 })} className="form-control" />
+                  <input type="text" name="phone" ref={register({ required: true, minLength: 6, maxLength: 12 })} className="form-control" />
                   {/* Phone Required */}
                   {errors.phone && errors.phone.type === 'required' && (
                     <small className="invalid-checkout">Please enter your phone number</small>)}
