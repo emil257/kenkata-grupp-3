@@ -262,14 +262,14 @@ export default function Index() {
                           Flat rate:{" "}
                           <span className="text-theme-color">$20.00</span>
                         </label>
-                        <input className="form-check-input custom-shipping-radio" type="radio" name="shippingPayment" id="shippingPayment1" value=""/>
+                        <input ref={register({ required: true })} className="form-check-input custom-shipping-radio" type="radio" name="shippingPayment" id="shippingPayment1" value="flat"/>
                       </div>
                       <div className="form-check mb-1">
                         <label className="form-check-label custom-shipping-label" htmlFor="shippingPayment2">
                           Free shipping
                     </label>
-                        <input
-                          className="form-check-input custom-shipping-radio" type="radio" name="shippingPayment" id="shippingPayment2" value=""/>
+                        <input ref={register({ required: true })}
+                          className="form-check-input custom-shipping-radio" type="radio" name="shippingPayment" id="shippingPayment2" value="free"/>
                       </div>
                       <div className="form-check mb-1">
                         <label
@@ -279,7 +279,7 @@ export default function Index() {
                           Local pickup:{" "}
                           <span className="text-theme-color">$25.00</span>
                         </label>
-                        <input ref={register({ required: true })} name="shippingPayment" value={true} className="form-check-input custom-shipping-radio" type="radio" id="shippingPayment3"/>
+                        <input ref={register({ required: true })} name="shippingPayment" value="local" className="form-check-input custom-shipping-radio" type="radio" id="shippingPayment3"/>
                       </div>
                     </span>
                   </span>
@@ -294,30 +294,31 @@ export default function Index() {
                   <hr />
                   {/* Payments Options */}
                   <div className="form-check">
-                    <input
+                    <input 
+                      ref={register({ required: true })}
                       className="form-check-input"
-                      type="radio" name="payment" id="payment1" value=""
+                      type="radio" name="payment" id="payment1" value="direct"
                     />
                     <label className="form-check-label" htmlFor="payment1">
                       Direct bank transfer
                 </label>
                   </div>
                   <div className="form-check">
-                    <input
-                      className="form-check-input" type="radio" name="payment" id="payment2" value=""/>
+                    <input ref={register({ required: true })}
+                      className="form-check-input" type="radio" name="payment" id="payment2" value="check"/>
                     <label className="form-check-label" htmlFor="payment2">
                       Check Payment
                 </label>
                   </div>
                   <div className="form-check">
-                    <input className="form-check-input" type="radio" name="payment" id="payment3" value=""/>
+                    <input ref={register({ required: true })} className="form-check-input" type="radio" name="payment" id="payment3" value="cash"/>
                     <label className="form-check-label" htmlFor="payment3">
-                      Cah on delivery
+                      Cash on delivery
                     </label>
                   </div>
                   <div className="form-check">
                     {/* Choose Payments */}
-                    <input ref={register({ required: true })} name="payment" value={true} className="form-check-input" type="radio" id="payment4"/>
+                    <input ref={register({ required: true })} name="payment" value="paypal" className="form-check-input" type="radio" id="payment4"/>
                     <label className="form-check-label d-flex align-items-center" htmlFor="payment4">
                       PayPal
                   <img className="mx-2" src={PaypalLogo} alt=""/>
