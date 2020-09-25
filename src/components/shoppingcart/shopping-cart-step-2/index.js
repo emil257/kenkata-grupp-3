@@ -233,7 +233,7 @@ export default function Index() {
                   <p className="weight-medium text-size-24">CART TOTALS</p>
                 </div>
                 <div className="order-content">
-                  <span className="d-flex align-items-center justify-content-between weight-bold">
+                  <span className="d-flex align-items-center justify-content-between weight-bold mb-2">
                     <p className=" text-theme-color">PRODUCT</p>
                     <p className=" text-theme-color">SUBTOTAL</p>
                   </span>
