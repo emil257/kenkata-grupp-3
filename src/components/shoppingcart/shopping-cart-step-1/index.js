@@ -1,22 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import ShoppingCartCurrentStep from "../shopping-cart-current-step";
 import ShoppingCartItem from "../shopping-cart-item/index";
 import { Link } from "react-router-dom";
 import "./index.css";
 import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
 
-import {useSelector} from 'react-redux'
+import { useSelector } from "react-redux";
 
 export default function Shoppingcart() {
 
-  const cartItems = useSelector(state => state.products.cart)
+  const cartItems = useSelector((state) => state.products.cart);
   const totalPrice = useSelector((state) => state.products.cartTotal);
 
+  const [shipping, setshipping] = useState(Number);
 
-  const handleChange = event => {
-      const shipping = event.target.value;
-      console.log(shipping + totalPrice)
-  }
+
+
+  const handleChange = (e) => {
+    const cost = e.target.value;
+
+    if (e.target.checked) {
+      setshipping(Number(cost));
+    }
+  };
+
+  
 
   return (
     <div>
@@ -92,15 +100,15 @@ export default function Shoppingcart() {
                         className="form-check-label custom-shipping-label"
                         htmlFor="payment2"
                       >
-                        Flat rate:{" "}
-                      <span className="text-theme-color">50$</span>
+                        Flat rate: <span className="text-theme-color">50$</span>
                       </label>
                       <input
                         className="form-check-input custom-shipping-radio"
                         type="radio"
                         name="cost"
                         id="payment2"
-                        value="20"
+                        value={50}
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="form-check mb-1">
@@ -116,7 +124,6 @@ export default function Shoppingcart() {
                         name="cost"
                         id="payment2"
                         value="0"
-                        // onChange={handleChange}
                       />
                     </div>
                     <div className="form-check mb-1">
@@ -125,7 +132,7 @@ export default function Shoppingcart() {
                         htmlFor="payment2"
                       >
                         Local pickup:{" "}
-                      <span className="text-theme-color">25$</span>
+                        <span className="text-theme-color">25$</span>
                       </label>
                       <input
                         className="form-check-input custom-shipping-radio"
@@ -145,7 +152,9 @@ export default function Shoppingcart() {
                 <hr />
                 <span className="d-flex align-items-center justify-content-between text-size-18">
                   <p className="weight-bold">TOTAL</p>
-                  <p className="weight-bold text-theme-color">${totalPrice}</p>
+                  <p className="weight-bold text-theme-color">
+                    ${totalPrice + shipping}.00 
+                  </p>
                 </span>
                 <Link to="/checkout">
                   <button className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3">
