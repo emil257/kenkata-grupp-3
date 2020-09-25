@@ -30,9 +30,10 @@ export default function Login() {
   }
 
   const handleLoginError = () => {
-    if(loginErrorCode !== null && loginErrorCode === 400)
-      return (<small className="invalid-login">Wrong credentials!</small>)
-    // dispatch(resetStatusCode())
+    if(loginErrorCode === 404)
+      return (<small className="invalid-login">This user does not exist!</small>)
+    if(loginErrorCode === 400)
+      return (<small className="invalid-login">Wrong password!</small>)
   }
 
   return (

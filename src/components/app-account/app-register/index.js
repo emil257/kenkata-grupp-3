@@ -2,7 +2,7 @@ import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import React, {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { register, login, resetStatusCode } from '../../../store/actions/user'
+import { register, login } from '../../../store/actions/user'
 // import validator from 'validator'
 
 
@@ -26,20 +26,58 @@ export default function Register() {
   const [email, set_email] = useState("")
   const [password, set_password] = useState("")
 
+  const [uNameError, setNameError] = useState("")
+  const [emailError, setEmailError] = useState("")
+
+  const emailRe = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   const handleSubmit = async (evt) => {
     evt.preventDefault();
-    const user = {
-      userName: u_name,
-      email: email,
-      password: password
+    let unameError = ""
+    let emailError = ""
+    
+    if(evt.target[0].value.length < 3)
+      unameError = 'Too short username!'
+    
+    if(!emailRe.test(evt.target[1].value))
+      emailError = "Invalid email!"
+
+    if(emailError === "" && unameError === ""){
+      const user = {
+        userName: u_name,
+        email: email,
+        password: password
+      }
+      await dispatch(register(user))
     }
-    await dispatch(register(user))
+    setNameError(unameError)
+    setEmailError(emailError)
   }
 
   const handleRegisterError = () => {
+    if(emailError !== "")
+      return (<small className="invalid-login">Invalid email!</small>)
     if(registerErrorCode !== null && registerErrorCode === 409)
       return (<small className="invalid-login">Email already exists!</small>)
-    // dispatch(resetStatusCode())
+  }
+
+  const handleUsernameError = () => {
+    if(uNameError !== "")
+      return (<small className="invalid-login">Too short username!</small>)
+  }
+
+  const validateUsername = (e) => {
+    if(e.target.value.length < 3)
+      setNameError('Too short username!')
+    else
+      setNameError("")
+  }
+
+  const validateEmail = (e) => {
+    if(!emailRe.test(e.target.value))
+      setEmailError('Invalid email!')
+    else
+      setEmailError("")
   }
 
   
@@ -50,11 +88,12 @@ export default function Register() {
         <p className="text-dark-grey-color font-size-14 my-3">Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
         <div className="form-group">
           <label htmlFor="username" className="text-size-14 font-montserrat">Username<span className="text-theme-color">*</span></label>
-          <Input type="text" className="form-control custom-r-input" id="username" value={u_name} onChange={e => set_u_name(e.target.value)}/>
+          <Input type="text" className="form-control custom-r-input" id="username" value={u_name} onChange={e => set_u_name(e.target.value)} onBlur={validateUsername}/>
         </div>
+        {handleUsernameError()}
         <div className="form-group">
           <label htmlFor="email" className="text-size-14 font-montserrat">Email adress<span className="text-theme-color">*</span></label>
-          <Input type="email" className="form-control custom-r-input" id="email" value={email} onChange={e => set_email(e.target.value)}/>
+          <Input type="email" className="form-control custom-r-input" id="email" value={email} onChange={e => set_email(e.target.value)} onBlur={validateEmail}/>
         </div>
         {handleRegisterError()}
         <div className="form-group">
