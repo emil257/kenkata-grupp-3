@@ -145,7 +145,7 @@ a.text-light:hover {
     margin-left: 0.8rem;
   }
   .my-account{
-    display: none !important;
+    display: none !important;    
   }
   .mobile-toggle-btn:focus{
     outline: none;
@@ -158,10 +158,9 @@ a.text-light:hover {
     margin-right: 0.6rem;
   }
 
-   .fa-chevron-down {
-     margin-left: 0.75rem;
-
-   }
+  .fa-chevron-down {
+    margin-left: 0.75rem;
+  }
   
   .nav-middle {
     height: 106px;
