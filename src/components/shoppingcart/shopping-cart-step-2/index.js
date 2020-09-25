@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import React from "react";
-import './index.css';
-import Brands from '../../app-brands/index';
-import ShoppingCartCurrentStep from '../shopping-cart-current-step';
-import PaypalLogo from '../../../assets/img/shop-img/paypal-logo.png'
-=======
 import React, { useState } from "react";
+import PaypalLogo from '../../../assets/img/shop-img/paypal-logo.png'
 import "./index.css";
 import Brands from "../../app-brands/index";
 import ShoppingCartCurrentStep from "../shopping-cart-current-step";
->>>>>>> f9fc5edb363cb4765cd930a70e2e69adb746f468
 import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
 
@@ -284,12 +277,6 @@ export default function Index() {
                     </small>
                   )}
                   {/* Min Length */}
-<<<<<<< HEAD
-                  {errors.phone && errors.phone.type === 'minLength' && (
-                    <small className="invalid-checkout">This is not a valid phone number</small>)}
-                  {errors.phone && errors.phone.type === 'maxLength' && (
-                    <small className="invalid-checkout">This phone number is too long</small>)}
-=======
                   {errors.phone && errors.phone.type === "minLength" && (
                     <small className="invalid-checkout">
                       This is not a valid phone number
@@ -300,7 +287,6 @@ export default function Index() {
                       This phone number is too long
                     </small>
                   )}
->>>>>>> f9fc5edb363cb4765cd930a70e2e69adb746f468
                 </div>
                 <div className="form-group">
                   <label>
@@ -517,12 +503,6 @@ export default function Index() {
                     </label>
                   </div>
                   <div className="form-check">
-<<<<<<< HEAD
-                    <input className="form-check-input" type="radio" name="payment" id="payment3" value=""/>
-                    <label className="form-check-label" htmlFor="payment3">
-                      Cash on delivery
-                </label>
-=======
                     <input
                       className="form-check-input"
                       type="radio"
@@ -533,7 +513,6 @@ export default function Index() {
                     <label className="form-check-label" htmlFor="payment2">
                       Cah on delivery
                     </label>
->>>>>>> f9fc5edb363cb4765cd930a70e2e69adb746f468
                   </div>
                   <div className="form-check">
                     {/* Choose Payments */}
@@ -541,15 +520,7 @@ export default function Index() {
                     
                     <label className="form-check-label d-flex align-items-center" htmlFor="payment4">
                       PayPal
-<<<<<<< HEAD
                   <img className="mx-2" src={PaypalLogo} alt=""/>
-=======
-                      <img
-                        className="mx-2"
-                        src="@/assets/img/shop-img/paypal-logo.png"
-                        alt=""
-                      />
->>>>>>> f9fc5edb363cb4765cd930a70e2e69adb746f468
                       <span className="text-grey-color">What is PayPal?</span>
                     </label>
                   </div>
