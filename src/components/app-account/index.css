@@ -32,3 +32,10 @@
 .opt-login-google{
   background-color: #4285F4;
 }
+
+.invalid-login {
+  color: #dc3545;
+  display: block;
+  margin-top: -15px;
+  padding: 0.5rem 0;
+  }

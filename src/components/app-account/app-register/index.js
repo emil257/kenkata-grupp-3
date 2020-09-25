@@ -1,8 +1,8 @@
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
-import React, {useState} from 'react'
-import { useDispatch } from 'react-redux'
-import { register, login } from '../../../store/actions/user'
+import React, {useState, useEffect} from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { register, login, resetStatusCode } from '../../../store/actions/user'
 // import validator from 'validator'
 
 
@@ -11,6 +11,16 @@ import '../index.css'
 export default function Register() {
 
   const dispatch = useDispatch()
+  const registerErrorCode = useSelector(state => state.user.loginStatusCode)
+
+  useEffect(()=> {
+    if(registerErrorCode === 201)
+      dispatch(login({
+        email: email,
+        password: password
+      }))
+  }, [registerErrorCode])
+  
 
   const [u_name, set_u_name] = useState("")
   const [email, set_email] = useState("")
@@ -24,11 +34,12 @@ export default function Register() {
       password: password
     }
     await dispatch(register(user))
-    const l_user = {
-      email: email,
-      password: password
-    }
-    dispatch(login(l_user))
+  }
+
+  const handleRegisterError = () => {
+    if(registerErrorCode !== null && registerErrorCode === 409)
+      return (<small className="invalid-login">Email already exists!</small>)
+    // dispatch(resetStatusCode())
   }
 
   
@@ -45,6 +56,7 @@ export default function Register() {
           <label htmlFor="email" className="text-size-14 font-montserrat">Email adress<span className="text-theme-color">*</span></label>
           <Input type="email" className="form-control custom-r-input" id="email" value={email} onChange={e => set_email(e.target.value)}/>
         </div>
+        {handleRegisterError()}
         <div className="form-group">
           <label htmlFor="password" className="text-size-14 font-montserrat">Password <span className="text-theme-color">*</span></label>
           <Input  type="password" className="form-control custom-r-input" id="password" value={password} onChange={e => set_password(e.target.value)}/>
