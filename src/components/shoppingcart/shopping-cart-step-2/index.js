@@ -2,6 +2,7 @@ import React from "react";
 import './index.css';
 import Brands from '../../app-brands/index';
 import ShoppingCartCurrentStep from '../shopping-cart-current-step';
+import PaypalLogo from '../../../assets/img/shop-img/paypal-logo.png'
 import { useForm } from "react-hook-form";
 
 export default function Index() {
@@ -163,7 +164,6 @@ export default function Index() {
                     <small className="invalid-checkout">This is not a valid phone number</small>)}
                   {errors.phone && errors.phone.type === 'maxLength' && (
                     <small className="invalid-checkout">This phone number is too long</small>)}
-
                 </div>
                 <div className="form-group">
                   <label>
@@ -306,10 +306,7 @@ export default function Index() {
                   <div className="form-check">
                     <input
                       className="form-check-input"
-                      type="radio"
-                      name="payment"
-                      id="payment1"
-                      value="p1"
+                      type="radio" name="payment" id="payment1" value=""
                     />
                     <label className="form-check-label" htmlFor="payment1">
                       Direct bank transfer
@@ -317,49 +314,30 @@ export default function Index() {
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
-                      type="radio"
-                      name="payment"
-                      id="payment2"
-                      value="p2"
+                      className="form-check-input" type="radio" name="payment" id="payment2" value=""
                     />
                     <label className="form-check-label" htmlFor="payment2">
                       Check Payment
                 </label>
                   </div>
                   <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="payment"
-                      id="payment2"
-                      value="p2"
-                    />
-                    <label className="form-check-label" htmlFor="payment2">
-                      Cah on delivery
+                    <input className="form-check-input" type="radio" name="payment" id="payment3" value=""/>
+                    <label className="form-check-label" htmlFor="payment3">
+                      Cash on delivery
                 </label>
                   </div>
                   <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="payment"
-                      id="payment2"
-                      value="p2"
-                    />
-                    <label
-                      className="form-check-label d-flex align-items-center"
-                      htmlFor="payment2"
-                    >
+                    {/* Choose Payments */}
+                    <input ref={register({ required: true })} name="payment" value={true} className="form-check-input" type="radio" id="payment4"/>
+                    
+                    <label className="form-check-label d-flex align-items-center" htmlFor="payment4">
                       PayPal
-                  <img
-                        className="mx-2"
-                        src="@/assets/img/shop-img/paypal-logo.png"
-                        alt=""
-                      />
+                  <img className="mx-2" src={PaypalLogo} alt=""/>
                       <span className="text-grey-color">What is PayPal?</span>
                     </label>
                   </div>
+                  {/* Payments Message */}
+                  {errors.payment && <small className="invalid-checkout">Please choose payments options</small>}
                   <hr />
                   <p>
                     Your personal data will be used to process your order, support
@@ -369,18 +347,16 @@ export default function Index() {
                   </p>
                   <hr />
                   <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="accept-terms"
-                    />
+                    {/* Accept Terms */}
+                    <input ref={register({ required: true })} name="acceptTerms" value={true} className="form-check-input" type="radio" id="accept-terms"/>
                     <label className="form-check-label" htmlFor="accept-terms">
                       I have read and agree to the website{" "}
                       <span className="text-theme-color">
                         terms and conditions *
                   </span>
                     </label>
+                    {/* Accept Terms Message */}
+                    {errors.acceptTerms && <small className="invalid-checkout">Please accept our terms and conditions</small>}
                   </div>
                   <button type="submit" className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3">
                     PLACE ORDER
