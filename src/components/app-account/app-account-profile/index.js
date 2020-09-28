@@ -81,7 +81,7 @@ export default function AccoutProfile(props) {
             <div className="collapse-content mt-3 mb-3">
               <p>{props.user.userName}</p>
               <p>{props.user.email}</p>
-              <Link className="btn btn btn-outline-info mt-1" to="/#">Change Password</Link>
+              <Link className="btn btn-outline-info mt-1" to="/#">Change Password</Link>
             </div>
           </div>
           <button onClick={handleLogout} className="mx-auto btn btn-logout btn-theme text-center mt-5">Logout</button>
