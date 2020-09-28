@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout, loadUser } from '../../store/actions/user'
+import "./index.css";
 
 import AppLogin from '../../components/app-account/app-login'
 import AppRegister from '../../components/app-account/app-register'
@@ -12,7 +13,7 @@ import AppCurrentPath from '../../components/app-navigation/app-current-path'
 const checkLoggedIn = (loggedIn, user) => {
   if(!loggedIn && user !== null){
     return (
-      <div className="row pt-5">
+      <div>
         <AppLogin/>
         <AppRegister/>
       </div>
@@ -39,8 +40,10 @@ export default function Account() {
   return (
     <div>
       <AppCurrentPath/>
-      <div className="container">
+      <div className="user-bg">
+        <div className="container">
           {checkLoggedIn(loggedIn, user, () => dispatch(logout()))}
+        </div>
       </div>
       <AppBrands/>
     </div>
