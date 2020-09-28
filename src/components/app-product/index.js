@@ -65,6 +65,7 @@ export default function Product(props) {
             <i className="fas fa-star"></i>
             <i className="far fa-star"></i>
           </div>
+  
           <div className="product-overlay-controller d-flex align-items-center flex-column justify-content-between">
             <Link
               data-tip
@@ -148,6 +149,7 @@ export default function Product(props) {
             ></ReactTooltip>
           </div>
         </div>
+        
       </div>
     );
   } else {

@@ -62,8 +62,6 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/complete" component={OrderComplete} />
         <Route exact path="*" component={NotFound} />
-
-        
       </Switch>
 
       <AppFooterNew />

@@ -3,27 +3,30 @@ position: fixed;
 bottom: 20px;
 right: 20px;
 font-size: 18px;
-width: 40px;
-height: 40px;
-line-height: 40px;
+/* width: 40px;
+height: 40px; */
+padding: .8rem;
+/* line-height: 40px; */
 border-radius: 5px;
 z-index: 99;
 text-align: center;
 border: 2px solid #fff;
-display: none;
+align-items: center;
+justify-content: center;
+/* display: none; */
 -webkit-box-shadow: 0px 0px 30px 0px rgba(156, 156, 156, 0.25);
 -moz-box-shadow: 0px 0px 30px 0px rgba(156, 156, 156, 0.25);
 box-shadow: 0px 0px 30px 0px rgba(156, 156, 156, 0.25);
--webkit-transition: all 0.4s linear;
--moz-transition: all 0.4s linear;
--ms-transition: all 0.4s linear;
--o-transition: all 0.4s linear;
-transition: all 0.4s linear;
+-webkit-transition: all 0.3s linear;
+-moz-transition: all 0.3s linear;
+-ms-transition: all 0.3s linear;
+-o-transition: all 0.3s linear;
+transition: all 0.3s linear;
 color: #fff;
-background-color: #2891fd;
+background-color: var(--theme-color);
 }
 
 .back-to-top:hover {
 color: #fff;
-background-color: #FFBB00;
+background-color: rgba(14, 21, 61, 0.85);
 }
