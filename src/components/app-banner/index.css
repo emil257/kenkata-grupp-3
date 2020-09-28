@@ -7,6 +7,11 @@
     filter: brightness(90%);
 }
 
+.banner-content p,
+.banner-content h1{
+    text-shadow: 3px 3px 6px rgba(150, 150, 150, 0.3);
+}
+
 #color-overlay {
     position: absolute;
     top: 0;
