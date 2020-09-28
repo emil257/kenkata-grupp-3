@@ -5,7 +5,7 @@ export default function Index() {
     return (
         <div>
             {/* Back To Top Arrow */}
-            <a href="/#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+            <a href="/#" className="back-to-top"><i className="fas fa-chevron-up"></i></a>
         </div>
     )
 }

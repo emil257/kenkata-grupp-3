@@ -13,7 +13,14 @@ export default function Index() {
   const [shipping, setshipping] = useState(Number);
 
   const handleRadioChange = (e) => {
-    const cost = e.target.value;
+    let cost = e.target.value;
+    if(cost === 'flat') {
+      cost = 20
+    } else if(cost === 'local') {
+      cost = 25
+    } else {
+      cost = 0
+    }
     if (e.target.checked) {
       setshipping(Number(cost));
     }
@@ -24,6 +31,7 @@ export default function Index() {
   });
   const onSubmit = (data) => {
     console.log(data)
+    window.location = "/complete";
   }
 
   return (
@@ -278,7 +286,7 @@ export default function Index() {
                         className="form-check-input custom-shipping-radio"
                         type="radio" name="shippingPayment"
                         id="shippingPayment1"
-                        value={'flat', 20}
+                        value={'flat'}
                         onChange={handleRadioChange}
                         />
                       </div>
@@ -291,7 +299,7 @@ export default function Index() {
                           type="radio"
                           name="shippingPayment"
                           id="shippingPayment2"
-                          value={'free', 0}
+                          value={'free'}
                           onChange={handleRadioChange}
                           />
                       </div>
@@ -306,7 +314,7 @@ export default function Index() {
                         <input
                         ref={register({ required: true })}
                         name="shippingPayment"
-                        value={'local', 25}
+                        value={'local'}
                         className="form-check-input custom-shipping-radio"
                         type="radio"
                         id="shippingPayment3"
@@ -379,9 +387,12 @@ export default function Index() {
                     {/* Accept Terms Message */}
                     {errors.acceptTerms && <small className="invalid-checkout">Please accept our terms and conditions</small>}
                   </div>
+
+
                   <button type="submit" className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3">
                     PLACE ORDER
                   </button>
+
                 </div>
               </div>
             </div>
