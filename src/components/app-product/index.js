@@ -53,7 +53,7 @@ export default function Product(props) {
             <p>{props.product.name}</p>
           </div>
 
-          <div className="product-overlay">
+          <div className="product-overlay" >
             <div className="product-overlay-info">
               <p className="mb-1">{props.product.name}</p>
               <span className="c-item-tag">{props.product.data.tags[0]}</span>

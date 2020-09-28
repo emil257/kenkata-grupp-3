@@ -31,6 +31,7 @@ export default function Index() {
   });
   const onSubmit = (data) => {
     console.log(data)
+    window.location = "/complete";
   }
 
   return (

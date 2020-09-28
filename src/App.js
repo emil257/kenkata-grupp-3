@@ -16,6 +16,8 @@ import AppProductModal from './components/app-product-modal'
 import Contact from './components/app-contact-us'
 import BackToTopArrow from './components/app-back-to-top/index'
 
+import OrderComplete from './components/shoppingcart/shopping-cart-step-3/'
+
 import { Modal } from '@material-ui/core'
 
 
@@ -58,7 +60,9 @@ function App() {
         <Route exact path="/shoppingcart" component={() => <ShoppingCartView handleOpenModal={handleOpenModal}/>} />
         <Route exact path="/checkout" component={CheckoutCart} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/complete" component={OrderComplete} />
         <Route exact path="*" component={NotFound} />
+
         
       </Switch>
 
