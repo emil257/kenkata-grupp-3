@@ -21,7 +21,6 @@ export default function Index() {
 
     return (
         <div>
-            {/* Back To Top Arrow */}
             <i className="fas fa-chevron-up back-to-top" onClick={scrollTop} style={{display: showScroll ? 'flex' : 'none'}}></i>
         </div>
     )
