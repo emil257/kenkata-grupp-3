@@ -14,8 +14,10 @@ const checkLoggedIn = (loggedIn, user) => {
   if(!loggedIn && user !== null){
     return (
       <div>
-        <AppLogin/>
-        <AppRegister/>
+        <div className="row">
+            <AppLogin/>
+            <AppRegister />
+        </div>
       </div>
     )
   } else {

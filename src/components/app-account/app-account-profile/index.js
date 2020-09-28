@@ -11,7 +11,6 @@ export default function AccoutProfile(props) {
   const handleLogout = () => {
     dispatch(logout())
   }
-
   return (
     <div>
       <div className="container" id="user-style">
@@ -25,8 +24,6 @@ export default function AccoutProfile(props) {
             <h3>Bonus</h3>
             <h1 className="text-theme">$0</h1>
             <Link className="text-dark" to="/#">Read more</Link>
-
-
           </div>
           {/* My Orders */}
           <div className="collapse-box mx-auto mt-5 mb-1">
@@ -84,7 +81,7 @@ export default function AccoutProfile(props) {
             <div className="collapse-content mt-3 mb-3">
               <p>{props.user.userName}</p>
               <p>{props.user.email}</p>
-              <Link className="btn btn btn-outline-info mt-1" to="/#">Change Password</Link>
+              <Link className="btn btn-outline-info mt-1" to="/#">Change Password</Link>
             </div>
           </div>
           <button onClick={handleLogout} className="mx-auto btn btn-logout btn-theme text-center mt-5">Logout</button>
