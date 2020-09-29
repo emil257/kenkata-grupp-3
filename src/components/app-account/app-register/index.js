@@ -19,6 +19,7 @@ export default function Register() {
 
   const [uNameError, setNameError] = useState("")
   const [emailError, setEmailError] = useState("")
+
   
   const emailRe = /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/;
 
