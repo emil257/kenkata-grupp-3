@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./index.css";
 import "./shop-styles.css";
 import Boxim from "../../assets/img/brands/Bexim.png";
@@ -40,6 +40,15 @@ const tag = (t) => {
 
 
 export default function Product(props) {
+
+  let history = useHistory();
+
+  const handleClick = (e) => {
+    if(!e.target.classList.contains('add-to-cart')){
+      history.push(`/product/${props.product._id}`)
+    }
+  }
+
   if (props.product !== undefined) {
     return (
       <div className={props.className}>
@@ -49,7 +58,7 @@ export default function Product(props) {
           <p>{props.product.name}</p>
         </div>
 
-        <div className="product-overlay">
+        <div className="product-overlay" onClick={handleClick}>
           <div className="product-overlay-info">
             <p className="mb-1">{props.product.name}</p>
             <span className="c-item-tag">{props.product.data.tags[0]}</span>
@@ -139,7 +148,7 @@ export default function Product(props) {
             <a
               data-tip="Add to cart"
               onClick={() => props.handleOpenModal(props.product)}
-              className="fas fa-cart-plus link-color"
+              className="fas fa-cart-plus link-color add-to-cart"
               data-place="left"
               href="#"
             > </a>

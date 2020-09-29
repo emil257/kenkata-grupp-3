@@ -87,6 +87,7 @@ color: #aaa;
 }
 
 .product-overlay {
+  cursor: pointer;
   display: none;
   background-color: #0e153ed9;
   height: 100%;
