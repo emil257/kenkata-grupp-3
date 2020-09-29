@@ -45,27 +45,13 @@ export default function AccoutProfile(props) {
             </div>
           </div>
           <div className="collapse" id="collapseExample1">
-            <div className="collapse-content mt-3 mb-3">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Recipe ID</th>
-                    <th scope="col">Total amount</th>
-                  </tr>
-                </thead>
-                <tbody>
+              
                   {
                     orders.map((o, index)=> {
                       return (
                         <Order key={o._id} order={o} number={index}/>)
                     })
                   }
-                </tbody>
-              </table>
-            </div>
           </div>
           {/* Account Details */}
           <div className="collapse-box mx-auto mt-1">
