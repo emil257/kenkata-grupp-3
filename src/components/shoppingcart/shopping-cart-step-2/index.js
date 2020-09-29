@@ -11,13 +11,45 @@ import { loadUser } from '../../../store/actions/user'
 import { removeAllItemsFromCart } from '../../../store/actions/products'
 
 export default function Index() {
+  
+  const dispatch = useDispatch()
 
   const cartProducts = useSelector((state) => state.products.cart);
   const totalPrice = useSelector((state) => state.products.cartTotal);
   const user = useSelector((state) => state.user.user)
   const [shipping, setshipping] = useState(Number);
-  const dispatch = useDispatch()
+  const [showDiv, setShowDiv] = useState(false);
 
+  const [payDesc, setPayDesc] = useState([false, false, false, false])
+
+
+  const renderDesc = (show, text) => {
+    if(show){
+      return (
+      <div className="card" style={{width: '25rem', left: '-5%'}}>
+        <div className="card-body">
+          <p className="card-text">{text}</p>
+        </div>
+      </div>
+      )
+    }
+  }
+
+  const handlePaymentDesc = (i) => {
+    let newPayDesc = []
+
+    payDesc.map((p, index)=> {
+      if(index == i){
+        newPayDesc.push(true)
+      }
+      else
+        newPayDesc.push(false)
+    })
+
+    setPayDesc(newPayDesc)
+  }
+
+  
   const handleRadioChange = (e) => {
     let cost = e.target.value;
     if(cost === 'flat') {
@@ -32,9 +64,11 @@ export default function Index() {
     }
   };
 
+  
   const { register, handleSubmit, errors } = useForm({
     mode: 'onBlur',
   });
+
   const onSubmit = (data) => {
 
     if(cartProducts.length !== 0 && user !== {}) {
@@ -354,36 +388,58 @@ export default function Index() {
                   <hr />
                   {/* Payments Options */}
                   <div className="form-check">
+                  
+                     
                     <input 
+                      name="payment"
                       ref={register({ required: true })}
                       className="form-check-input"
-                      type="radio" name="payment" id="payment1" value="direct"
+                      type="radio" 
+                      id="payment1" 
+                      value="direct"
+                      // onChange={}
+                      onChange={() => handlePaymentDesc(0)}
                     />
+                    
+
                     <label className="form-check-label" htmlFor="payment1">
                       Direct bank transfer
                 </label>
+                  {
+                    renderDesc(payDesc[0], "Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account. ")
+                  }
+
                   </div>
                   <div className="form-check">
                     <input ref={register({ required: true })}
-                      className="form-check-input" type="radio" name="payment" id="payment2" value="check"/>
+                      className="form-check-input" type="radio" name="payment" id="payment2" value="check" onChange={() => handlePaymentDesc(1)}/>
                     <label className="form-check-label" htmlFor="payment2">
                       Check Payment
                 </label>
+                {
+                    renderDesc(payDesc[1], "Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account. ")
+                  }
                   </div>
                   <div className="form-check">
-                    <input ref={register({ required: true })} className="form-check-input" type="radio" name="payment" id="payment3" value="cash"/>
+                    <input ref={register({ required: true })} className="form-check-input" type="radio" name="payment" id="payment3" value="cash" onChange={() => handlePaymentDesc(2)}/>
                     <label className="form-check-label" htmlFor="payment3">
                       Cash on delivery
                     </label>
+                    {
+                    renderDesc(payDesc[2], "Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account. ")
+                  }
                   </div>
                   <div className="form-check">
                     {/* Choose Payments */}
-                    <input ref={register({ required: true })} name="payment" value="paypal" className="form-check-input" type="radio" id="payment4"/>
+                    <input ref={register({ required: true })} name="payment" value="paypal" className="form-check-input" type="radio" id="payment4" onChange={() => handlePaymentDesc(3)}/>
                     <label className="form-check-label d-flex align-items-center" htmlFor="payment4">
                       PayPal
                   <img className="mx-2" src={PaypalLogo} alt=""/>
                       <span className="text-grey-color">What is PayPal?</span>
                     </label>
+                    {
+                    renderDesc(payDesc[3], "Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account. ")
+                  }
                   </div>
                   {/* Payments Message */}
                   {errors.payment && <small className="invalid-checkout">Please choose payments options</small>}
