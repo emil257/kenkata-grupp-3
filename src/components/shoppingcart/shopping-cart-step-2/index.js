@@ -7,11 +7,24 @@ import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
 
 export default function Index() {
-
+  
   const cartProducts = useSelector((state) => state.products.cart);
   const totalPrice = useSelector((state) => state.products.cartTotal);
   const [shipping, setshipping] = useState(Number);
+  const [showDiv, setShowDiv] = useState(false);
 
+  let div1
+
+  if(showDiv) {
+    div1 =                 
+    <div class="card" style={{width: '27rem', left: '-5%'}}>
+      <div class="card-body">
+        <p class="card-text">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+      </div>
+    </div>
+  }
+
+  
   const handleRadioChange = (e) => {
     let cost = e.target.value;
     if(cost === 'flat') {
@@ -26,9 +39,11 @@ export default function Index() {
     }
   };
 
+  
   const { register, handleSubmit, errors } = useForm({
     mode: 'onBlur',
   });
+
   const onSubmit = (data) => {
     console.log(data)
     window.location = "/complete";
@@ -334,14 +349,23 @@ export default function Index() {
                   <hr />
                   {/* Payments Options */}
                   <div className="form-check">
+                  
+                     
                     <input 
+                      
                       ref={register({ required: true })}
                       className="form-check-input"
-                      type="radio" name="payment" id="payment1" value="direct"
+                      type="radio" name="method" id="payment1" value={'bank'}
+                      // onChange={}
+                      onChange={() => setShowDiv(!showDiv)}
                     />
+                    
+
                     <label className="form-check-label" htmlFor="payment1">
                       Direct bank transfer
                 </label>
+                  {div1}
+
                   </div>
                   <div className="form-check">
                     <input ref={register({ required: true })}
