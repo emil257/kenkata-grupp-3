@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./index.css";
 import "./shop-styles.css";
 import Boxim from "../../assets/img/brands/Bexim.png";
@@ -44,10 +44,12 @@ export default function Product(props) {
   let history = useHistory();
 
   const handleClick = (e) => {
-    if(!e.target.classList.contains('add-to-cart')){
+    if(!e.target.classList.contains('quick-view')){
       history.push(`/product/${props.product._id}`)
     }
   }
+
+
 
   if (props.product !== undefined) {
     return (
@@ -126,15 +128,15 @@ export default function Product(props) {
               effect="solid"
             />
 
-            <Link
-              to={`/product/${props.product._id}`}
-              data-tip="Read more"
+            <a
+              onClick={() => props.handleOpenModal(props.product)}
+              data-tip="Quick view"
               data-for="read"
               event="focus"
               data-html={true}
-              className="fas fa-search search-button link-color"
+              className="fas fa-search search-button link-color quick-view"
               data-place="left"
-            />
+            > </a>
 
             <ReactTooltip
               id="read"
@@ -147,8 +149,9 @@ export default function Product(props) {
 
             <a
               data-tip="Add to cart"
-              onClick={() => props.handleOpenModal(props.product)}
-              className="fas fa-cart-plus link-color add-to-cart"
+              // onClick={() => props.handleOpenModal(props.product)}
+              // onClick={() => add(props.product)}
+              className="fas fa-cart-plus link-color"
               data-place="left"
               href="#"
             > </a>

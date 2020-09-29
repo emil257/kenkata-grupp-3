@@ -15,7 +15,7 @@ const checkLoggedIn = (loggedIn, user) => {
     return (
       <div>
         <div className="row">
-            <AppLogin/>
+            <AppLogin />
             <AppRegister />
         </div>
       </div>
