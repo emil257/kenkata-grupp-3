@@ -1,5 +1,6 @@
 .back-to-top {
 position: fixed;
+cursor: pointer;
 bottom: 20px;
 right: 20px;
 font-size: 18px;
