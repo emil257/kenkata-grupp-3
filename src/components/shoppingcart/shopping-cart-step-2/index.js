@@ -1,10 +1,23 @@
-import React from "react";
-import './index.css';
-import Brands from '../../app-brands/index';
-import ShoppingCartCurrentStep from '../shopping-cart-current-step';
+import React, { useState } from "react";
+import PaypalLogo from '../../../assets/img/shop-img/paypal-logo.png'
+import "./index.css";
+import Brands from "../../app-brands/index";
+import ShoppingCartCurrentStep from "../shopping-cart-current-step";
 import { useForm } from "react-hook-form";
+import { useSelector } from "react-redux";
 
 export default function Index() {
+
+  const cartProducts = useSelector((state) => state.products.cart);
+  const totalPrice = useSelector((state) => state.products.cartTotal);
+  const [shipping, setshipping] = useState(Number);
+
+  const handleRadioChange = (e) => {
+    const cost = e.target.value;
+    if (e.target.checked) {
+      setshipping(Number(cost));
+    }
+  };
 
   const { register, handleSubmit, errors } = useForm({
     mode: 'onBlur',
@@ -159,11 +172,16 @@ export default function Index() {
                   {errors.phone && errors.phone.type === 'required' && (
                     <small className="invalid-checkout">Please enter your phone number</small>)}
                   {/* Min Length */}
-                  {errors.phone && errors.phone.type === 'minLength' && (
-                    <small className="invalid-checkout">This is not a valid phone number</small>)}
-                  {errors.phone && errors.phone.type === 'maxLength' && (
-                    <small className="invalid-checkout">This phone number is too long</small>)}
-
+                  {errors.phone && errors.phone.type === "minLength" && (
+                    <small className="invalid-checkout">
+                      This is not a valid phone number
+                    </small>
+                  )}
+                  {errors.phone && errors.phone.type === "maxLength" && (
+                    <small className="invalid-checkout">
+                      This phone number is too long
+                    </small>
+                  )}
                 </div>
                 <div className="form-group">
                   <label>
@@ -183,15 +201,15 @@ export default function Index() {
                 </div>
                 {/* Create an account? */}
                 <div className="form-check mt-5">
-                  <input className="form-check-input" ref={register({ required: false })} name="account" value={true} type="checkbox"/>
-                  <label className="form-check-label">Create an account?</label>
+                  <input className="form-check-input" ref={register({ required: false })} name="account" value={true} type="checkbox" id="create-account"/>
+                  <label className="form-check-label" htmlFor="create-account">Create an account?</label>
                   {/* {errors.account && <small className="invalid-checkout">Please check or uncheck this input</small>} */}
                 </div>
                 {/* Ship to different address? */}
                 <hr className="my-5" />
                 <div className="form-check mb-4">
-                  <input className="form-check-input" ref={register({ required: false })} name="differentAddress" value={true} type="checkbox" />
-                  <label className="form-check-label text-size-18 weight-bold"htmlFor="gridCheck1">
+                  <input className="form-check-input" ref={register({ required: false })} name="differentAddress" id="differentAddress" value={true} type="checkbox" />
+                  <label className="form-check-label text-size-18 weight-bold" htmlFor="differentAddress">
                     SHIP TO DIFFERENT ADRESS?
                 </label>
                 </div>
@@ -208,158 +226,139 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            {/* Box Left */}
+            {/* Box Left Cart Totals */}
             <div className="col-lg-6">
               <div className="order-summary">
                 <div className="order-header d-flex align-items-center justify-content-center">
                   <p className="weight-medium text-size-24">CART TOTALS</p>
                 </div>
                 <div className="order-content">
-                  <span className="d-flex align-items-center justify-content-between weight-bold">
+                  <span className="d-flex align-items-center justify-content-between weight-bold mb-2">
                     <p className=" text-theme-color">PRODUCT</p>
                     <p className=" text-theme-color">SUBTOTAL</p>
                   </span>
-                  <hr />
-                  <span className="d-flex align-items-center justify-content-between">
-                    <p>Women smart high heel shoe</p>
-                    <p>$380.00</p>
-                  </span>
-                  <hr />
-                  <span className="d-flex align-items-center justify-content-between">
-                    <p>Gents half t-shirt</p>
-                    <p>$380.00</p>
-                  </span>
-                  <hr />
-                  <span className="d-flex align-items-center justify-content-between">
-                    <p>Gents winter yellow jacket</p>
-                    <p>$380.00</p>
-                  </span>
-                  <hr />
-                  <span className="d-flex align-items-center justify-content-between">
-                    <p>Men's Watches Brown Leather</p>
-                    <p>$380.00</p>
-                  </span>
-                  <hr />
-                  <span className="d-flex align-items-center justify-content-between weight-medium">
-                    <p className=" text-theme-color">Subtotal</p>
-                    <p className=" text-theme-color">$930.00</p>
-                  </span>
-                  <hr />
+
+
+                  {cartProducts.map((cartProduct) => {
+                    return (
+                      <div key={cartProduct._id}>
+                        <span
+                          className="d-flex align-items-center justify-content-between"
+                          key={cartProduct._id}
+                        >
+                          <p>{cartProduct.product.name}</p>
+                          <p>
+                            $
+                            {(cartProduct.product.price -
+                              cartProduct.product.discount) *
+                              cartProduct.quantity}
+                            .00
+                          </p>
+                        </span>
+                        <hr />
+                      </div>
+                    );
+                  })}
+
+
+   
+                  {/* Shipping Payments */}
                   <span className="d-flex align-items-center justify-content-between">
                     <p>Shipping</p>
                     <span className="text-right">
                       <div className="form-check mb-1">
                         <label
                           className="form-check-label custom-shipping-label"
-                          htmlFor="payment2"
-                        >
+                          htmlFor="shippingPayment1">
                           Flat rate:{" "}
                           <span className="text-theme-color">$20.00</span>
                         </label>
                         <input
-                          className="form-check-input custom-shipping-radio"
-                          type="radio"
-                          name="payment"
-                          id="payment2"
-                          value="p2"
+                        ref={register({ required: true })}
+                        className="form-check-input custom-shipping-radio"
+                        type="radio" name="shippingPayment"
+                        id="shippingPayment1"
+                        value={'flat', 20}
+                        onChange={handleRadioChange}
                         />
                       </div>
                       <div className="form-check mb-1">
-                        <label
-                          className="form-check-label custom-shipping-label"
-                          htmlFor="payment2"
-                        >
+                        <label className="form-check-label custom-shipping-label" htmlFor="shippingPayment2">
                           Free shipping
                     </label>
-                        <input
+                        <input ref={register({ required: true })}
                           className="form-check-input custom-shipping-radio"
                           type="radio"
-                          name="payment"
-                          id="payment2"
-                          value="p2"
-                        />
+                          name="shippingPayment"
+                          id="shippingPayment2"
+                          value={'free', 0}
+                          onChange={handleRadioChange}
+                          />
                       </div>
                       <div className="form-check mb-1">
                         <label
                           className="form-check-label custom-shipping-label"
-                          htmlFor="payment2"
+                          htmlFor="shippingPayment3"
                         >
                           Local pickup:{" "}
                           <span className="text-theme-color">$25.00</span>
                         </label>
                         <input
-                          className="form-check-input custom-shipping-radio"
-                          type="radio"
-                          name="payment"
-                          id="payment2"
-                          value="p2"
+                        ref={register({ required: true })}
+                        name="shippingPayment"
+                        value={'local', 25}
+                        className="form-check-input custom-shipping-radio"
+                        type="radio"
+                        id="shippingPayment3"
+                        onChange={handleRadioChange}
                         />
                       </div>
                     </span>
                   </span>
+                  {/* Shipping Payments error */}
+                  {errors.shippingPayment && <small className="invalid-checkout">Please select shipping payment</small>}
+
                   <hr />
                   <span className="d-flex align-items-center justify-content-between weight-bold text-size-18">
                     <p className=" text-theme-color">TOTAL</p>
-                    <p className=" text-theme-color">$930.00</p>
+                    <p className=" text-theme-color">${totalPrice + shipping}.00</p>
                   </span>
                   <hr />
+                  {/* Payments Options */}
                   <div className="form-check">
-                    <input
+                    <input 
+                      ref={register({ required: true })}
                       className="form-check-input"
-                      type="radio"
-                      name="payment"
-                      id="payment1"
-                      value="p1"
+                      type="radio" name="payment" id="payment1" value="direct"
                     />
                     <label className="form-check-label" htmlFor="payment1">
                       Direct bank transfer
                 </label>
                   </div>
                   <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="payment"
-                      id="payment2"
-                      value="p2"
-                    />
+                    <input ref={register({ required: true })}
+                      className="form-check-input" type="radio" name="payment" id="payment2" value="check"/>
                     <label className="form-check-label" htmlFor="payment2">
                       Check Payment
                 </label>
                   </div>
                   <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="payment"
-                      id="payment2"
-                      value="p2"
-                    />
-                    <label className="form-check-label" htmlFor="payment2">
-                      Cah on delivery
-                </label>
+                    <input ref={register({ required: true })} className="form-check-input" type="radio" name="payment" id="payment3" value="cash"/>
+                    <label className="form-check-label" htmlFor="payment3">
+                      Cash on delivery
+                    </label>
                   </div>
                   <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="payment"
-                      id="payment2"
-                      value="p2"
-                    />
-                    <label
-                      className="form-check-label d-flex align-items-center"
-                      htmlFor="payment2"
-                    >
+                    {/* Choose Payments */}
+                    <input ref={register({ required: true })} name="payment" value="paypal" className="form-check-input" type="radio" id="payment4"/>
+                    <label className="form-check-label d-flex align-items-center" htmlFor="payment4">
                       PayPal
-                  <img
-                        className="mx-2"
-                        src="@/assets/img/shop-img/paypal-logo.png"
-                        alt=""
-                      />
+                  <img className="mx-2" src={PaypalLogo} alt=""/>
                       <span className="text-grey-color">What is PayPal?</span>
                     </label>
                   </div>
+                  {/* Payments Message */}
+                  {errors.payment && <small className="invalid-checkout">Please choose payments options</small>}
                   <hr />
                   <p>
                     Your personal data will be used to process your order, support
@@ -369,18 +368,16 @@ export default function Index() {
                   </p>
                   <hr />
                   <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="accept-terms"
-                    />
+                    {/* Accept Terms */}
+                    <input ref={register({ required: true })} name="acceptTerms" value={true} className="form-check-input" type="radio" id="accept-terms"/>
                     <label className="form-check-label" htmlFor="accept-terms">
                       I have read and agree to the website{" "}
                       <span className="text-theme-color">
                         terms and conditions *
                   </span>
                     </label>
+                    {/* Accept Terms Message */}
+                    {errors.acceptTerms && <small className="invalid-checkout">Please accept our terms and conditions</small>}
                   </div>
                   <button type="submit" className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3">
                     PLACE ORDER
