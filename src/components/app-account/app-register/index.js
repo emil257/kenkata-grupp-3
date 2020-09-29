@@ -13,23 +13,25 @@ export default function Register() {
   const dispatch = useDispatch()
   const registerErrorCode = useSelector(state => state.user.loginStatusCode)
 
+  const [email, set_email] = useState("")
+  const [password, set_password] = useState("")
+  const [u_name, set_u_name] = useState("")
+
+  const [uNameError, setNameError] = useState("")
+  const [emailError, setEmailError] = useState("")
+
+  
+  const emailRe = /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/;
+
   useEffect(()=> {
     if(registerErrorCode === 201)
       dispatch(login({
         email: email,
         password: password
       }))
-  }, [registerErrorCode])
+  }, [registerErrorCode, email, dispatch, password])
   
 
-  const [u_name, set_u_name] = useState("")
-  const [email, set_email] = useState("")
-  const [password, set_password] = useState("")
-
-  const [uNameError, setNameError] = useState("")
-  const [emailError, setEmailError] = useState("")
-
-  const emailRe = /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/;
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();

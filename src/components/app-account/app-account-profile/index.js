@@ -1,16 +1,28 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
+import React, {useEffect} from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../../store/actions/user'
 import { Link } from "react-router-dom";
 import "./index.css";
 import nike_hoodie from '../../../assets/img/nike_hoodie.jpg' 
+import Order from './order' 
+
+import { loadOrders } from '../../../store/actions/order'
 
 export default function AccoutProfile(props) {
+
+  const orders = useSelector(state => state.order.orders)
+  
+
   const dispatch = useDispatch()
 
   const handleLogout = () => {
     dispatch(logout())
   }
+
+  useEffect(() => {
+    dispatch(loadOrders(props.user._id))
+  })
+
   return (
     <div>
       <div className="container" id="user-style">
@@ -39,33 +51,18 @@ export default function AccoutProfile(props) {
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Date</th>
-                    <th scope="col">Type</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Recipe ID</th>
                     <th scope="col">Total amount</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td className="date">2020-06-03</td>
-                    <td><p className="product-name">Nike Hoodie 347</p><img className="product-img" src={nike_hoodie} alt="/#"/></td>
-                    <td className="receipe-id">5f632fe51f09924310a290c8</td>
-                    <td className="total-amount text-theme">＄300.00</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td className="date">2020-03-03</td>
-                    <td><p className="product-name">Nike Hoodie 347</p><img className="product-img" src={nike_hoodie} alt="/#" /></td>
-                    <td className="receipe-id">5f632fe51f09924310a290c8</td>
-                    <td className="total-amount text-theme">＄300.00</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td className="date">2020-03-03</td>
-                    <td><p className="product-name">Nike Hoodie 347</p><img className="product-img" src={nike_hoodie} alt="/#" /></td>
-                    <td className="receipe-id">5f632fe51f09924310a290c8</td>
-                    <td className="total-amount text-theme">＄300.00</td>
-                  </tr>
+                  {
+                    orders.map((o, index)=> {
+                      return (
+                        <Order key={o._id} order={o} number={index}/>)
+                    })
+                  }
                 </tbody>
               </table>
             </div>

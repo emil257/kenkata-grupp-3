@@ -22,7 +22,8 @@ export default function ProductModal({product}) {
 
   // Get product by id
   useEffect(() => {
-    dispatch(getProduct(id))
+    if(id !== undefined)
+      dispatch(getProduct(id))
   }, [dispatch, id])
 
   // Add product

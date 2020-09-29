@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./index.css";
 import "./shop-styles.css";
 import Boxim from "../../assets/img/brands/Bexim.png";
@@ -40,6 +40,17 @@ const tag = (t) => {
 
 
 export default function Product(props) {
+
+  let history = useHistory();
+
+  const handleClick = (e) => {
+    if(!e.target.classList.contains('quick-view')){
+      history.push(`/product/${props.product._id}`)
+    }
+  }
+
+
+
   if (props.product !== undefined) {
     return (
       <div className={props.className}>
@@ -49,7 +60,7 @@ export default function Product(props) {
           <p>{props.product.name}</p>
         </div>
 
-        <div className="product-overlay">
+        <div className="product-overlay" onClick={handleClick}>
           <div className="product-overlay-info">
             <p className="mb-1">{props.product.name}</p>
             <span className="c-item-tag">{props.product.data.tags[0]}</span>
@@ -67,12 +78,13 @@ export default function Product(props) {
           </div>
           
           <div className="product-overlay-controller d-flex align-items-center flex-column justify-content-between">
-            <Link
+            <a
               data-tip
               data-for="color"
               className="fas fa-circle link-color"
               data-place="left"
-            ></Link>
+              href="#"
+            > </a>
             <ReactTooltip
               id="color"
               aria-haspopup="true"
@@ -82,12 +94,13 @@ export default function Product(props) {
               <img src={Ellipses} alt="" />
             </ReactTooltip>
 
-            <Link
+            <a
               data-tip="Add"
               data-for="add"
               className="far fa-heart link-color"
               data-place="left"
-            ></Link>
+              href="#"
+            > </a>
 
             <ReactTooltip
               id="add"
@@ -98,12 +111,13 @@ export default function Product(props) {
               effect="solid"
             />
 
-            <Link
+            <a
               data-tip="Compare"
               data-for="compare"
               className="fas fa-arrows-alt-h link-color"
               data-place="left"
-            ></Link>
+              href="#"
+            > </a>
 
             <ReactTooltip
               id="compare"
@@ -114,15 +128,15 @@ export default function Product(props) {
               effect="solid"
             />
 
-            <Link
-              to={`/product/${props.product._id}`}
-              data-tip="Read more"
+            <a
+              onClick={() => props.handleOpenModal(props.product)}
+              data-tip="Quick view"
               data-for="read"
               event="focus"
               data-html={true}
-              className="fas fa-search search-button link-color"
+              className="fas fa-search search-button link-color quick-view"
               data-place="left"
-            />
+            > </a>
 
             <ReactTooltip
               id="read"
@@ -133,12 +147,14 @@ export default function Product(props) {
               effect="solid"
             ></ReactTooltip>
 
-            <Link
+            <a
               data-tip="Add to cart"
-              onClick={() => props.handleOpenModal(props.product)}
+              // onClick={() => props.handleOpenModal(props.product)}
+              // onClick={() => add(props.product)}
               className="fas fa-cart-plus link-color"
               data-place="left"
-            ></Link>
+              href="#"
+            > </a>
 
             <ReactTooltip
               className="fix-controll custom-theme"
@@ -177,12 +193,13 @@ export default function Product(props) {
             <i className="far fa-star"></i>
           </div>
           <div className="product-overlay-controller d-flex align-items-center flex-column justify-content-between">
-            <Link
+            <a
               data-tip
               data-for="color"
               className="fas fa-circle link-color"
               data-place="left"
-            ></Link>
+              href="#"
+            > </a>
             <ReactTooltip
               id="color"
               aria-haspopup="true"
@@ -192,12 +209,13 @@ export default function Product(props) {
               <img src={Ellipses} alt="" />
             </ReactTooltip>
 
-            <Link
+            <a
               data-tip="Add"
               data-for="add"
               className="far fa-heart link-color"
               data-place="left"
-            ></Link>
+              href="#"
+            ></a>
 
             <ReactTooltip
               id="add"
@@ -208,12 +226,13 @@ export default function Product(props) {
               effect="solid"
             />
 
-            <Link
+            <a
               data-tip="Compare"
               data-for="compare"
               className="fas fa-arrows-alt-h link-color"
               data-place="left"
-            ></Link>
+              href="#"
+            ></a>
 
             <ReactTooltip
               id="compare"
@@ -224,12 +243,13 @@ export default function Product(props) {
               effect="solid"
             />
 
-            <Link
+            <a
               data-tip="Read more"
               data-for="read"
               className="fas fa-search search-button link-color"
               data-place="left"
-            ></Link>
+              href="#"
+            ></a>
 
             <ReactTooltip
               id="read"
@@ -241,11 +261,13 @@ export default function Product(props) {
               effect="solid"
             />
 
-            <Link
+            <a
               data-tip="Add to cart"
               className="fas fa-cart-plus link-color"
               data-place="left"
-            ></Link>
+              href="#"
+              onClick={() => props.handleOpenModal(props.product)}
+            ></a>
 
             <ReactTooltip
               className="fix-controll custom-theme"
@@ -253,7 +275,6 @@ export default function Product(props) {
               data-placement="left"
               title="Add to cart"
               effect="solid"
-              onClick={() => props.handleOpenModal(props.product)}
             />
           </div>
         </div>
