@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PaypalLogo from '../../../assets/img/shop-img/paypal-logo.png'
 import "./index.css";
 import Brands from "../../app-brands/index";
 import ShoppingCartCurrentStep from "../shopping-cart-current-step";
 import { useForm } from "react-hook-form";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
+import { placeOrder } from '../../../store/actions/order'
+import { loadUser } from '../../../store/actions/user'
+import { removeAllItemsFromCart } from '../../../store/actions/products'
 
 export default function Index() {
 
   const cartProducts = useSelector((state) => state.products.cart);
   const totalPrice = useSelector((state) => state.products.cartTotal);
+  const user = useSelector((state) => state.user.user)
   const [shipping, setshipping] = useState(Number);
+  const dispatch = useDispatch()
 
   const handleRadioChange = (e) => {
     let cost = e.target.value;
@@ -30,9 +36,23 @@ export default function Index() {
     mode: 'onBlur',
   });
   const onSubmit = (data) => {
+
+    if(cartProducts.length !== 0 && user !== {}) {
+      dispatch(placeOrder(user._id, cartProducts, totalPrice))
+      dispatch(removeAllItemsFromCart())
+      console.log('Order sent!')
+    } else {
+      console.log('No items!')
+    }
+
     console.log(data)
     window.location = "/complete";
   }
+
+  useEffect(() => {
+    dispatch(loadUser())
+  }, [dispatch])
+
 
   return (
     <div>
