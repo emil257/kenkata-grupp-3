@@ -8,7 +8,8 @@ export default () => {
       changeQnt: 'CHANGE_QNT_IN_CART',
       cartTotal: 'GET_CART_TOTAL',
       cartTotalItems: 'GET_CART_TOTAL_ITEMS',
-      emptyCart: 'EMPTY_CART'
+      emptyCart: 'EMPTY_CART',
+      filterProducts: 'FILTER_PRODUCTS'
     },
     user: {
       registerUser: 'REGISTER_USER',
