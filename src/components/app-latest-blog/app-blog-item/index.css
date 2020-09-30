@@ -1,7 +1,10 @@
 .c-item-bg {
-    background-color: #cccccc;
+    /* background-color: #cccccc; */
+    background: url('../../../assets/img/blog-img/blog-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 6px;
-    height: 400px;
+    /* height: 400px; */
 }
 
 .c-item-info {
