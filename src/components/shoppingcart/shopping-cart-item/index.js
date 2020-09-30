@@ -29,7 +29,9 @@ export default function Cartitem({product}) {
 
   const handleChangeQntMobile = (e) => {
     // console.log(e.target.value)
-    dispatch(changeQnt(product._id, e.target.value))
+    let newNumber = Number(e.target.value) 
+
+    dispatch(changeQnt(product._id, newNumber))
     dispatch(cartTotal())
   }
 
