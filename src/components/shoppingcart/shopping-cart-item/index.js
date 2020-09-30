@@ -14,12 +14,24 @@ export default function Cartitem({product}) {
   })
 
   const handleDecQty = () => {
-    dispatch(changeQnt(product._id, false))
+    let newNumber = Number(product.quantity)
+
+    dispatch(changeQnt(product._id, newNumber -= 1 ))
     dispatch(cartTotal())
   }
 
   const handleIncQty = () => {
-    dispatch(changeQnt(product._id, true))
+    let newNumber = Number(product.quantity)
+
+    dispatch(changeQnt(product._id, newNumber += 1 ))
+    dispatch(cartTotal())
+  }
+
+  const handleChangeQntMobile = (e) => {
+    // console.log(e.target.value)
+    let newNumber = Number(e.target.value) 
+
+    dispatch(changeQnt(product._id, newNumber))
     dispatch(cartTotal())
   }
 
@@ -58,24 +70,34 @@ export default function Cartitem({product}) {
               <img className="cart-item" src={product.product.image} alt="" />
               <div>
                 <label htmlFor="quantity"></label>
-                <select className="form-control" id="select-quantity">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
+                <select className="form-control" id="select-quantity" onChange={(e) => handleChangeQntMobile(e)} value={product.quantity}>
+                  <option value={1}>1</option>
+                  <option value={2}>2</option>
+                  <option value={3}>3</option>
+                  <option value={4}>4</option>
+                  <option value={5}>5</option>
+                  <option value={6}>6</option>
+                  <option value={7}>7</option>
+                  <option value={8}>8</option>
+                  <option value={9}>9</option>
+                  <option value={10}>10</option>
+                  <option value={11}>11</option>
+                  <option value={12}>12</option>
+                  <option value={13}>13</option>
+                  <option value={14}>14</option>
+                  <option value={15}>15</option>
+                  <option value={16}>16</option>
+                  <option value={17}>17</option>
+                  <option value={18}>18</option>
+                  <option value={19}>19</option>
+                  <option value={20}>20</option>
                 </select>
               </div>
               {/* Price */}
-              <p className="text-dark ml-auto">$190.00</p>
+              <p className="text-dark ml-auto">${product.product.price - product.product.discount}.00</p>
             
               {/* Subtotal */}
-              <p className="weight-bold text-theme-color ml-auto">$380.00</p>
+              <p className="weight-bold text-theme-color ml-auto">${(product.product.price - product.product.discount) * product.quantity}.00</p>
             </div>
           </div>
         </div>

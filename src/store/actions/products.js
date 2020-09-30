@@ -37,10 +37,10 @@ export const removeFromCart = (id) => {
   }
 }
 
-export const changeQnt = (id, incdec) => {
+export const changeQnt = (id, qnt) => {
   return {
     type: actiontypes().products.changeQnt,
-    payload: { id, incdec }
+    payload: { id, qnt }
   }
 }
 

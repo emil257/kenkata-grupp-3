@@ -18,7 +18,6 @@ export default function Index() {
   const totalPrice = useSelector((state) => state.products.cartTotal);
   const user = useSelector((state) => state.user.user)
   const [shipping, setshipping] = useState(Number);
-  const [showDiv, setShowDiv] = useState(false);
 
   const [payDesc, setPayDesc] = useState([false, false, false, false])
 
@@ -39,7 +38,7 @@ export default function Index() {
     let newPayDesc = []
 
     payDesc.map((p, index)=> {
-      if(index == i){
+      if(index === i){
         newPayDesc.push(true)
       }
       else
