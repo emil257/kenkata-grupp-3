@@ -1,7 +1,12 @@
 .app-contact {
-    min-height: 313px;
+    /* min-height: 313px; */
     background-color: var(--light-grey);
-    padding: 3rem 1rem;
+    /* padding: 3rem 1rem; */
+    padding: 5rem 0;
+    background: url('../../assets/img/subscribe-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
 }
 
 .app-contact h2 {
@@ -17,13 +22,13 @@
 
 
 .contact-img {
-    width: 100%;
-    max-width: 540px;
+    /* width: 100%;
+    max-width: 540px; */
 }
 
 @media (min-width: 1200px) {
     .app-contact {
-        padding: 0;
+        /* padding: 0; */
     }
 }
 

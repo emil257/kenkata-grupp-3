@@ -4,7 +4,6 @@ import './index.css'
 export default function Index() {
 
     return (
-      <div>
         <div className="sale-info">
           <div className="container h-100 d-flex justify-content-between">
             <div className="sale-info-off d-none align-items-center justify-content-center flex-column d-md-flex">
@@ -29,6 +28,5 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </div>
     );
 }

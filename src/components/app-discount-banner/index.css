@@ -1,6 +1,10 @@
 .sale-info{
   height: 418px;
-  background-color: #CCCCCC;
+  background-color: #000;
+  background: url('../../assets//img/discount-banner-bg.jpg');
+  background-repeat: no-repeat;
+  background-position-x: 20%;
+  background-position-y: 20%;
   margin-bottom: 5rem;
 }
 .sale-info-off{
