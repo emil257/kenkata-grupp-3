@@ -78,16 +78,16 @@ export default (state = initState, action) => {
       }
     case actiontypes().products.changeQnt:
       let q_cart = [...state.cart]
+
       q_cart.forEach((item, i = 0) => {
         if (item._id === action.payload.id) {
-          if (action.payload.incdec) {
-            item.quantity += 1
-          } else {
-            item.quantity -= 1
+
+            item.quantity = action.payload.qnt
+
             if (item.quantity === 0) {
               q_cart.splice(i, 1)
             }
-          }
+          
         }
         i++
       })
