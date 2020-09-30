@@ -13,4 +13,25 @@
     padding: 25px;
   }
 
+.header-justify{
+  text-align: center;
+  margin: auto;
+  margin-top: 6rem;
+
+}
+.card-margin{
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.margin-button{
+  margin-bottom: 5rem;
+}
+
+@media(max-width: 576px) {
+  .header-justify h2{
+    font-size: 0,2rem !important;
+  }
+}
+
  
