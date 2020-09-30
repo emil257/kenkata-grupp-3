@@ -21,17 +21,6 @@
 }
 
 
-.contact-img {
-    /* width: 100%;
-    max-width: 540px; */
-}
-
-@media (min-width: 1200px) {
-    .app-contact {
-        /* padding: 0; */
-    }
-}
-
 @media (max-width: 768px) {
      .app-contact {
          margin: auto;
