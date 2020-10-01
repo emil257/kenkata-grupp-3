@@ -163,7 +163,6 @@
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
         text-align: left;
-
     }
 
     #user-style .total-amount {
@@ -237,6 +236,302 @@
     /* Product price */
     #user-style .order-item-3 {
         grid-column: 3;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    #user-style .grid-wrapper > div {
+        padding: 0 !important;
+        margin: 0 !important;
+        line-height: 0 !important;
+    }
+
+     #user-style .grid-wrapper > p {
+         padding: 0 !important;
+         margin: 0 !important;
+         line-height: 0 !important;
+     }
+
+
+
+    #user-style .user-name {
+        font-size: 2.2rem;
+    }
+
+    #user-style .bonus-box {
+        width: 250px;
+
+    }
+
+    #user-style .bg-trans {
+        background: transparent;
+        width: 250px;
+        padding: 0.8rem 1rem;
+        border-radius: 5px;
+    }
+
+    #user-style .grid-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        text-align: left;
+
+    }
+
+    #user-style .total-amount {
+        margin-left: 0rem
+    }
+
+    #user-style .product-price {
+        margin-left: 0rem
+    }
+
+    #user-style .custom-hr-1 {
+        grid-row: 1;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-2 {
+        grid-row: 3;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-3 {
+        grid-row: 5;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-4 {
+        grid-row: 7;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-5 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 9;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-6 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 11;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-7 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 13;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-8 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 15;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-9 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 17;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-10 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 19;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-11 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 21;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-12 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 23;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-13 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 25;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-14 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 27;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-15 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 29;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #user-style .custom-hr-16 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: inline-block !important;
+        grid-row: 31;
+        grid-column: auto;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    /* Top titles */
+    /* Order number */
+    #user-style .order-item-top-1 {
+        grid-column: auto;
+        grid-row: 4;
+    }
+
+    /* Date text */
+    #user-style .order-item-top-2 {
+        grid-column: auto;
+        grid-row: 8;
+    }
+
+    /* Processing */
+    #user-style .order-item-top-3 {
+        grid-column: auto;
+        grid-row: 12;
+    }
+
+    /* Receipe id */
+    #user-style .order-item-top-4 {
+        grid-column: auto;
+        grid-row: 16;
+    }
+
+    #user-style .order-item-top-5 {
+        grid-column: auto;
+    }
+
+    /* Top Items */
+    /* Total amount title */
+    #user-style .item-top-title-5 {
+        grid-column: auto;
+    }
+
+    /* Items Middle */
+    /* Product id title */
+    #user-style .item-middle-title-1 {
+        grid-row: 22;
+    }
+
+
+    /* Product name title */
+    #user-style .item-middle-title-2 {
+        grid-column: auto;
+        grid-row: 18;
+
+    }
+
+    /* Product price title */
+    #user-style .item-middle-title-3 {
+        grid-row: 26;
+        grid-column: auto;
+    }
+
+    /* Order-Items */
+    /* Product id */
+    #user-style .order-item-1 {
+        grid-row: 24;
+    }
+
+    /* Product name */
+    #user-style .order-item-2 {
+        grid-row: 20;
+        grid-column: auto;
+
+    }
+
+    /* Product price */
+    #user-style .order-item-3 {
+        grid-row: 28;
+        grid-column: auto;
     }
 
 }
