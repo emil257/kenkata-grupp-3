@@ -50,7 +50,7 @@ export default function Register() {
       };
       await dispatch(register(user));
 
-      window.location = "/thanksforregistring";
+      // window.location = "/thanksforregistring";
     }
     setNameError(unameError);
     setEmailError(emailError);
