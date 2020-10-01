@@ -55,3 +55,7 @@
 .brand-filter-span img{
   width: 70px;
 }
+
+.active-brand{
+  border: 1px solid var(--theme-color);
+}

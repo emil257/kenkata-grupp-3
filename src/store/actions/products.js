@@ -23,6 +23,14 @@ export const getProducts = () => {
   }
 }
 
+export const filterProducts = (filter) => {
+  return {
+    type: actiontypes().products.filterProducts,
+    payload: filter
+  }
+}
+
+
 export const addToCart = (product) => {
   return {
     type: actiontypes().products.addToCart,

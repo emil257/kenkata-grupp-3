@@ -1,6 +1,6 @@
-import React, { useEffect }from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getProducts } from '../../store/actions/products'
+import { getProducts, filterProducts } from '../../store/actions/products'
 
 
 import './index.css'
@@ -10,7 +10,6 @@ import twoXthree from '../../assets/img/shop-img/2x3.png'
 import oneXone from '../../assets/img/shop-img/1x1.png'
 import threeXthree from '../../assets/img/shop-img/3x3.png'
 import nextArrow from '../../assets/img/next-arrow.png'
-// import prevArrow from '../../assets/img/prev-arrow.png'
 
 
 
@@ -19,29 +18,24 @@ import ProductFilters from '../../components/shop-components/app-shop-filters'
 import Product from '../../components/app-product'
 import Subscribe from '../../components/app-subscribe/index'
 import Brands from '../../components/app-brands/index'
-// import AppProductModal from '../../components/app-product-modal'
 
 export default function Shop({handleOpenModal}) {
 
-  const products = useSelector(state => state.products.products)
+  let products = useSelector(state => state.products.filteredProducts)
   const dispatch = useDispatch()
 
-  // const [open, setOpen] = useState(false)
-  // const [modalProduct, setModalProduct] = useState({})
-
-  // const handleOpen = (product) => {
-  //   setModalProduct(product)
-  //   setOpen(true)
-  // }
-  // const handleClose = () => {
-  //   setOpen(false)
-  // }
 
   useEffect(() => {
     dispatch(getProducts())
+    console.log("got products")
   }, [dispatch])
 
 
+
+  const handleFilter = (filter) => {
+    dispatch(filterProducts(filter))
+  }
+ 
   return (
     <div>
       <div className="shop-banner">
@@ -84,7 +78,7 @@ export default function Shop({handleOpenModal}) {
           </div>
         </div>
         <div className="mt-5 container d-flex flex-column flex-md-row align-items-center align-items-sm-start">
-          <ProductFilters/>
+          <ProductFilters products={products} handleFilter={handleFilter}/>
           <div className="d-flex flex-column align-items-center">
             <div className="product-grid">
               
