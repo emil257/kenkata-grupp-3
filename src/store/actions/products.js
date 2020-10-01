@@ -23,6 +23,14 @@ export const getProducts = () => {
   }
 }
 
+export const filterProducts = (filter) => {
+  return {
+    type: actiontypes().products.filterProducts,
+    payload: filter
+  }
+}
+
+
 export const addToCart = (product) => {
   return {
     type: actiontypes().products.addToCart,
@@ -37,10 +45,10 @@ export const removeFromCart = (id) => {
   }
 }
 
-export const changeQnt = (id, incdec) => {
+export const changeQnt = (id, qnt) => {
   return {
     type: actiontypes().products.changeQnt,
-    payload: { id, incdec }
+    payload: { id, qnt }
   }
 }
 

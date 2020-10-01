@@ -2,6 +2,7 @@ import actiontypes from '../actiontypes'
 
 let initState = {
   products: [],
+  filteredProducts: [],
   currentProduct: {},
   cart: [],
   cartTotal: 0,
@@ -13,6 +14,7 @@ export default (state = initState, action) => {
     case actiontypes().products.getProducts:
       return state = {
         products: action.payload,
+        filteredProducts: action.payload,
         currentProduct: state.currentProduct,
         cart: state.cart,
         cartTotal: state.cartTotal,
@@ -22,12 +24,32 @@ export default (state = initState, action) => {
     case actiontypes().products.getProductById:
       return state = {
         products: state.products,
+        filteredProducts: state.filteredProducts,
         currentProduct: action.payload,
         cart: state.cart,
         cartTotal: state.cartTotal,
         cartTotalProducts: state.cartTotalProducts
       }
+    case actiontypes().products.filterProducts:
+      console.log("Filtered")
+      let filteredProducts = []
+      let filter = action.payload
 
+      state.products.map((p) => {
+        if(
+          (filter.category.includes(p.data.category.toLowerCase()) || 
+          filter.brand.includes(p.data.brand.toLowerCase()) || 
+          filter.color.includes(p.data.color.toLowerCase())) &&
+          ((filter.priceRange[0] < (p.price - p.discount)) && (filter.priceRange[1] > (p.price - p.discount)))
+          ){
+          filteredProducts.push(p)
+        }
+      })
+
+      return {
+        ...state, 
+        filteredProducts: filteredProducts
+      }
     case actiontypes().products.addToCart:
       let exists = false
       let a_cart = [...state.cart]
@@ -78,16 +100,16 @@ export default (state = initState, action) => {
       }
     case actiontypes().products.changeQnt:
       let q_cart = [...state.cart]
+
       q_cart.forEach((item, i = 0) => {
         if (item._id === action.payload.id) {
-          if (action.payload.incdec) {
-            item.quantity += 1
-          } else {
-            item.quantity -= 1
+
+            item.quantity = action.payload.qnt
+
             if (item.quantity === 0) {
               q_cart.splice(i, 1)
             }
-          }
+          
         }
         i++
       })
