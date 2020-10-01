@@ -5,19 +5,22 @@ import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
 import { Link } from "react-router-dom";
 import "./index.css";
 import { useDispatch, useSelector } from "react-redux";
-import { cartTotal, removeAllItemsFromCart } from '../../../store/actions/products'
+import {
+  cartTotal,
+  removeAllItemsFromCart,
+} from "../../../store/actions/products";
 
 export default function Shoppingcart() {
   const cartItems = useSelector((state) => state.products.cart);
   const totalPrice = useSelector((state) => state.products.cartTotal);
   const [shipping, setshipping] = useState(Number);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const clearCart = () => {
-    dispatch(removeAllItemsFromCart())
-    dispatch(cartTotal())
-  }
+    dispatch(removeAllItemsFromCart());
+    dispatch(cartTotal());
+  };
 
   const handleRadioChange = (e) => {
     const cost = e.target.value;
@@ -26,18 +29,20 @@ export default function Shoppingcart() {
     }
   };
 
-  console.log(cartItems.length);
-
   return (
     <div>
       <ShoppingCartCurrentStep step={1}></ShoppingCartCurrentStep>
       <div className="container cart-products mt-5">
         <div className="row">
           <div className="col-lg-8">
-
-            {
-              cartItems.length < 1
-              ? <span className="weight-bold text-size-18 px-3">
+            {cartItems.length < 1 ? (
+              <div>
+                <h5 className="py-5 text-center border">
+                  Your cart is empty :({" "}
+                </h5>
+              </div>
+            ) : (
+              <span className="weight-bold text-size-18 px-3">
                 <div className="grid-wrapper-cart-step-1">
                   <div className="grid-item-1">
                     <p className="font-size-smaller">Product</p>
@@ -48,15 +53,12 @@ export default function Shoppingcart() {
                   <div className="grid-item-3">
                     <p className="font-size-smaller">Quantity</p>
                   </div>
-                    <div className="grid-item-4">
-                      <p className="font-size-smaller">Subtotal</p>
-                    </div>
+                  <div className="grid-item-4">
+                    <p className="font-size-smaller">Subtotal</p>
                   </div>
-                </span>
-              : <div>tomt</div>
-            }
-
-
+                </div>
+              </span>
+            )}
 
             {cartItems.map((i) => {
               return (
@@ -66,7 +68,6 @@ export default function Shoppingcart() {
                 </div>
               );
             })}
-
 
             <hr className="cart-products-hr-breaker" />
             <div className="cart-footer d-flex flex-column flex-lg-row justify-content-between">
@@ -84,8 +85,9 @@ export default function Shoppingcart() {
                 </div>
               </div>
               <button
-              onClick={ () => clearCart() }
-              className="btn custom-theme-btn btn-second-color text-size-18 btn-update mt-3 mt-lg-0">
+                onClick={() => clearCart()}
+                className="btn custom-theme-btn btn-second-color text-size-18 btn-update mt-3 mt-lg-0"
+              >
                 CLEAR CART
               </button>
             </div>
@@ -169,11 +171,26 @@ export default function Shoppingcart() {
                     ${totalPrice + shipping}.00
                   </p>
                 </span>
-                <Link to="/checkout">
-                  <button className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3">
-                    PROCEED TO CHECKOUT
-                  </button>
-                </Link>
+
+                {cartItems.length !== 0 ? (
+                  <div>
+                    <Link to="/checkout">
+                      <button className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3">
+                        PROCEED TO CHECKOUT
+                      </button>
+                    </Link>
+                  </div>
+                ) : (
+                  <div>
+                    <button
+                      className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3"
+                      disabled
+                    >
+                      PROCEED TO CHECKOUT
+                    </button>
+                  </div>
+                )}
+
               </div>
             </div>
           </div>
