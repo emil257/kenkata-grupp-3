@@ -1,3 +1,11 @@
+.link-color {
+color: #aaa;
+}
+
+.link-color:hover {
+  color: #20D3c2;
+}
+
 .fix-controll {
   text-align: center;
   width: 100%;
@@ -79,6 +87,7 @@
 }
 
 .product-overlay {
+  cursor: pointer;
   display: none;
   background-color: #0e153ed9;
   height: 100%;
@@ -216,7 +225,7 @@
 }
 
 .cart-button:hover {
-  color: var(--theme-color) !important;
+  color: #20D3c2 !important;
   cursor: pointer;
 }
 
@@ -226,7 +235,7 @@
 }
 
 .fa-circle:hover {
-  color: red !important;
+  color: #20D3c2 !important;
   cursor: pointer;
 }
 
@@ -236,7 +245,7 @@
 }
 
 .search-button:hover {
-  color: orange !important;
+  color: #20D3c2 !important;
   cursor: pointer;
 }
 
@@ -246,7 +255,7 @@
 }
 
 .fa-arrows-alt-h:hover {
-  color: blue !important;
+  color: #20D3c2 !important;
   cursor: pointer;
 }
 
@@ -256,7 +265,7 @@
 }
 
 .heart-button:hover {
-  color: purple !important;
+  color: #20D3c2 !important;
   cursor: pointer;
 }
 

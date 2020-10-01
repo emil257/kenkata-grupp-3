@@ -26,11 +26,15 @@
 }
 .margin-button{
   margin-bottom: 5rem;
+  margin-top: 2rem;
 }
 
 @media(max-width: 576px) {
   .header-justify h2{
-    font-size: 0,2rem !important;
+    font-size: 2rem !important;
+  }
+  .header-justify p{
+    font-size: 1.3rem;
   }
 }
 

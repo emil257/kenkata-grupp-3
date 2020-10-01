@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { login, resetStatusCode } from '../../../store/actions/user'
+import { login } from '../../../store/actions/user'
 
 import '../index.css'
 

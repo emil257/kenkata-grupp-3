@@ -6,7 +6,7 @@ import Brands from '../app-brands/index'
 
 export default function Index() {
 
-    const { register, handleSubmit, errors } = useForm({
+    const { register, handleSubmit, errors, formState } = useForm({
         mode: 'onBlur',
     });
     const onSubmit = (data) => {
@@ -101,7 +101,7 @@ export default function Index() {
                             <small className="invalid-contact">Text should not be more than 140 characters</small>)}
 
                             {/* Submit */}
-                            <button className="btn custom-theme-btn send-btn" type="submit">SEND MESSAGE</button>
+                            <button className="btn custom-theme-btn send-btn" type="submit" disabled={formState.isSubmitting}>SEND MESSAGE</button>
                         </div>
                     </div>
                 </form>

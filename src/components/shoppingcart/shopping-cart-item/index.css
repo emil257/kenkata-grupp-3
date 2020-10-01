@@ -7,7 +7,7 @@
     width: 90px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     #mobile-cart-item {
       display: none !important;
     }
