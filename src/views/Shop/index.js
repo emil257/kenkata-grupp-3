@@ -83,7 +83,7 @@ export default function Shop({handleOpenModal}) {
             <div className="product-grid">
               
               {
-                products.map(product => {
+              products && products.map(product => {
                   return (
                     <Product key={product._id} product={product} className="product-background" handleOpenModal={handleOpenModal}/>
                   )
