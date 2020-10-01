@@ -12,7 +12,6 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import { addToCart, cartTotal, getProduct, loadCartTotalItems } from "../../store/actions/products";
 
-
 export default function Product() {
 
   const [qnt, setQnt] = useState(1)
@@ -40,18 +39,20 @@ export default function Product() {
       setQnt(qnt - 1)
   }
 
-
   return (
     <div className="product-section">
       <div className="container">
         <div className="row">
           <div className="product-prev col-12 col-md-10 offset-md-1 offset-lg-0 col-lg-6">
             <img className="product-prev-focus" src={product.image} alt="" />
-            <img className="product-next-prev" src={ProductIcon} alt="" />
-            <img className="product-next-prev" src={ProductIcon} alt="" />
-            <img className="product-next-prev" src={ProductIcon} alt="" />
-            <img className="product-next-prev" src={ProductIcon} alt="" />
+            <div className="product-next-images">
+              <img className="product-next-prev" src={ProductIcon} alt="" />
+              <img className="product-next-prev" src={ProductIcon} alt="" />
+              <img className="product-next-prev" src={ProductIcon} alt="" />
+              <img className="product-next-prev" src={ProductIcon} alt="" />
+            </div>
           </div>
+
           <div className="product-desc col-12 col-md-10 offset-md-1 offset-lg-0 col-lg-6 mt-5 mt-lg-0">
             <h3 className="weight-medium text-theme-color text-size-24 mb-3">
               {product.name}

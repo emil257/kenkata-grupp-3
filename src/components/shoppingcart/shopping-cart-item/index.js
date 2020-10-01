@@ -13,6 +13,12 @@ export default function Cartitem({product}) {
     dispatch(loadCartTotalItems())
   })
 
+  const handleRemoveFromCart = () => {
+    dispatch(removeFromCart(product._id))
+    dispatch(cartTotal())
+    dispatch(loadCartTotalItems())
+  }
+
   const handleDecQty = () => {
     let newNumber = Number(product.quantity)
 
@@ -40,17 +46,15 @@ export default function Cartitem({product}) {
       <div id="desktop-cart-item">
         <div className="d-flex class align-items-center justify-content-between">
           <span className="d-flex align-items-center">
-            <img src={Remove} alt="remove" className="mr-3 remove-logo" onClick={() => dispatch(removeFromCart(product._id))}/>
-            <img src={product.product.image} alt="remove" className="mr-3 d-none d-sm-block image-of-products" onClick={() => dispatch(removeFromCart(product._id))}/>
+            <img src={Remove} alt="remove" className="mr-3 remove-logo" onClick={ () => handleRemoveFromCart() }/>
+            <img src={product.product.image} alt="remove" className="mr-3 d-none d-sm-block image-of-products" onClick={ () => handleRemoveFromCart() }/>
             <p className="mx-2">{product.product.name}</p>
           </span>
           <span className="d-flex align-items-center">
             <p>${product.product.price - product.product.discount}.00</p>
             <div className="increase-qnt-btn-grp d-flex inc-button">
-              {/* <button className="increase-qnt-btn-dec" onClick={() => dispatch(changeQnt(product._id, false))}>-</button> */}
               <button className="increase-qnt-btn-dec" onClick={() => handleDecQty()}>-</button>
               <span className="increase-qnt-num d-flex align-items-center">{product.quantity}</span>
-              {/* <button className="increase-qnt-btn-inc" onClick={() => dispatch(changeQnt(product._id, true))}>+</button> */}
               <button className="increase-qnt-btn-inc" onClick={() => handleIncQty()}>+</button>
             </div>
             <p className="weight-bold text-theme-color">${(product.product.price - product.product.discount) * product.quantity}.00</p>
