@@ -5,7 +5,7 @@ import "./index.css";
 
 import AppLogin from '../../components/app-account/app-login'
 import AppRegister from '../../components/app-account/app-register'
-import AppAccountProfile from '../../components/app-account/app-account-profile'
+import AppAccountProfile from '../../components/app-account/app-account-profile-new'
 import AppBrands from '../../components/app-brands'
 import AppCurrentPath from '../../components/app-navigation/app-current-path'
 
