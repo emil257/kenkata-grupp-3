@@ -26,28 +26,37 @@ export default function Shoppingcart() {
     }
   };
 
+  console.log(cartItems.length);
+
   return (
     <div>
       <ShoppingCartCurrentStep step={1}></ShoppingCartCurrentStep>
       <div className="container cart-products mt-5">
         <div className="row">
           <div className="col-lg-8">
-            <span className="weight-bold text-size-18 px-3">
-              <div className="grid-wrapper-cart-step-1">
-                <div className="grid-item-1">
-                  <p className="font-size-smaller">Product</p>
-                </div>
-                <div className="grid-item-2">
-                  <p className="font-size-smaller">Price</p>
-                </div>
-                <div className="grid-item-3">
-                  <p className="font-size-smaller">Quantity</p>
-                </div>
-                <div className="grid-item-4">
-                  <p className="font-size-smaller">Subtotal</p>
-                </div>
-              </div>
-            </span>
+
+            {
+              cartItems.length < 1
+              ? <span className="weight-bold text-size-18 px-3">
+                <div className="grid-wrapper-cart-step-1">
+                  <div className="grid-item-1">
+                    <p className="font-size-smaller">Product</p>
+                  </div>
+                  <div className="grid-item-2">
+                    <p className="font-size-smaller">Price</p>
+                  </div>
+                  <div className="grid-item-3">
+                    <p className="font-size-smaller">Quantity</p>
+                  </div>
+                    <div className="grid-item-4">
+                      <p className="font-size-smaller">Subtotal</p>
+                    </div>
+                  </div>
+                </span>
+              : <div>tomt</div>
+            }
+
+
 
             {cartItems.map((i) => {
               return (
@@ -57,6 +66,7 @@ export default function Shoppingcart() {
                 </div>
               );
             })}
+
 
             <hr className="cart-products-hr-breaker" />
             <div className="cart-footer d-flex flex-column flex-lg-row justify-content-between">
@@ -80,6 +90,7 @@ export default function Shoppingcart() {
               </button>
             </div>
           </div>
+
           {/* Cart Total Box */}
           <div className="col-lg-4 mt-4">
             <div className="cart-total">

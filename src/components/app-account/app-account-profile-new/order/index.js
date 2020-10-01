@@ -28,6 +28,7 @@ export default function Index({ order, number }) {
                     <div className="custom-hr-3"></div>
 
                     {/* Middle Title-Items */}
+
                     <div className="item-middle-title-1 font-weight-bold">Product id</div>
                     <div className="item-middle-title-2 font-weight-bold">Product name</div>
                     <div className="item-middle-title-3 font-weight-bold">Product Price</div>
@@ -35,6 +36,7 @@ export default function Index({ order, number }) {
                     <div className="custom-hr-4"></div>
 
                     {/* Bottom Order-Items */}
+
                     {
                         order.order.map((o, index) => {
                             return (<OrderItem key={index} item={o} />)
@@ -42,8 +44,8 @@ export default function Index({ order, number }) {
                     }
 
                     {/* <div className="order-item-1"><p className="order-id">5f63624bebae650017b67d70</p></div>
-                                <div className="order-item-2"><p className="product-name">Nike</p></div>
-                                <div className="order-item-3 font-weight-bold"><p className="product-price text-theme">$300.00</p></div> */}
+                    <div className="order-item-2"><p className="product-name">Nike</p></div>
+                    <div className="order-item-3 font-weight-bold"><p className="product-price text-theme">$300.00</p></div> */}
 
                     {/* Shows only on small screens */}
                     <div className="d-none custom-hr-5"></div>

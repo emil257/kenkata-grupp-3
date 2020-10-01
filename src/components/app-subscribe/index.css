@@ -1,12 +1,11 @@
 .app-contact {
-    /* min-height: 313px; */
     background-color: var(--light-grey);
-    /* padding: 3rem 1rem; */
     padding: 5rem 0;
     background: url('../../assets/img/subscribe-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 50%;
+    margin-top: 5rem;
 }
 
 .app-contact h2 {
