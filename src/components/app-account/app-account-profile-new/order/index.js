@@ -35,6 +35,20 @@ export default function Index({ order, number }) {
 
                     <div className="custom-hr-4"></div>
 
+                    {/* Shows only on small screens */}
+                    <div className="d-none custom-hr-5"></div>
+                    <div className="d-none custom-hr-6"></div>
+                    <div className="d-none custom-hr-7"></div>
+                    <div className="d-none custom-hr-8"></div>
+                    <div className="d-none custom-hr-9"></div>
+                    <div className="d-none custom-hr-10"></div>
+                    <div className="d-none custom-hr-11"></div>
+                    <div className="d-none custom-hr-12"></div>
+                    <div className="d-none custom-hr-13"></div>
+                    <div className="d-none custom-hr-14"></div>
+                    <div className="d-none custom-hr-15"></div>
+                    <div className="d-none custom-hr-16"></div>
+
                     {/* Bottom Order-Items */}
 
                     {
@@ -59,19 +73,7 @@ export default function Index({ order, number }) {
                     
                     }
 
-                    {/* Shows only on small screens */}
-                    <div className="d-none custom-hr-5"></div>
-                    <div className="d-none custom-hr-6"></div>
-                    <div className="d-none custom-hr-7"></div>
-                    <div className="d-none custom-hr-8"></div>
-                    <div className="d-none custom-hr-9"></div>
-                    <div className="d-none custom-hr-10"></div>
-                    <div className="d-none custom-hr-11"></div>
-                    <div className="d-none custom-hr-12"></div>
-                    <div className="d-none custom-hr-13"></div>
-                    <div className="d-none custom-hr-14"></div>
-                    <div className="d-none custom-hr-15"></div>
-                    <div className="d-none custom-hr-16"></div>
+                    
 
                 </div>
             </div>
