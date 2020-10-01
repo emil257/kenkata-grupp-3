@@ -1,21 +1,29 @@
 .product-desc{
-    /* margin-bottom: 120px; */
     margin-bottom: 4rem;
 }
+.mobile-img-size{
+    width: 4rem;
+    margin-right: 1.5rem;
+ } 
 
 @media (min-width: 992px ) {
     .product-desc{
         margin-bottom: 6rem;
     }
+    .mobile-img-size{
+        width: 10rem;
+        margin-right: 1.5rem;
+     } 
 }
 @media (min-width: 768px ) {
     .product-desc{
         margin-bottom: 4rem;
     }
+    .mobile-img-size{
+        width: 10rem;
+        margin-right: 1.5rem;
+     } 
 }
-
-
-
 
 @media (max-width: 576px) {
     .mobile-review-header{
@@ -31,14 +39,7 @@
        margin-right: 1.5rem;
     }    
     
-   
 }
-
-
-
-
-
-
 
 .product-desc-hr{
     background-color: var(--theme-color);

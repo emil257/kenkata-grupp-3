@@ -1,6 +1,8 @@
 import React from "react";
 import "./index.css";
-import ClientThumbImage from "../../assets/img/review-img/review-thumb.png";
+// import ClientThumbImage from "../../assets/img/review-img/review-thumb.png";
+import Client1 from '../../assets/img/review-img/review-1.jpg'
+import Client2 from '../../assets/img/review-img/review-2.jpg'
 
 export default function Index() {
   return (
@@ -27,7 +29,7 @@ export default function Index() {
               <div className=" ">
                 <img
                   className="mobile-img-size"
-                  src={ClientThumbImage}
+                  src={Client1}
                   alt=""
                 />
               </div>
@@ -63,7 +65,7 @@ export default function Index() {
               <div className=" ">
                 <img 
                   className="mobile-img-size" 
-                  src={ClientThumbImage} 
+                  src={Client2} 
                   alt="" 
                 />
               </div>
@@ -71,7 +73,7 @@ export default function Index() {
                 <div className="d-flex justify-content-between flex-column flex-md-row">
                   <p className="mb-2">
                     <span className="weight-bold text-theme-color">
-                      Willium Cary
+                      Alice Cary
                     </span>
                     <span className="text-size-14 text-grey-color">
                       {" "}

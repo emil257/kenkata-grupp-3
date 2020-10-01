@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import ShoppingCartCurrentStep from "../shopping-cart-current-step";
 import ShoppingCartItem from "../shopping-cart-item/index";
+import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
 import { Link } from "react-router-dom";
 import "./index.css";
-import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
-
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { cartTotal, removeAllItemsFromCart } from '../../../store/actions/products'
 
 export default function Shoppingcart() {
   const cartItems = useSelector((state) => state.products.cart);
   const totalPrice = useSelector((state) => state.products.cartTotal);
   const [shipping, setshipping] = useState(Number);
+
+  const dispatch = useDispatch()
+
+  const clearCart = () => {
+    dispatch(removeAllItemsFromCart())
+    dispatch(cartTotal())
+  }
 
   const handleRadioChange = (e) => {
     const cost = e.target.value;
@@ -66,8 +73,10 @@ export default function Shoppingcart() {
                   <button className="contact-input-btn">Apply</button>
                 </div>
               </div>
-              <button className="btn custom-theme-btn btn-second-color text-size-18 btn-update mt-3 mt-lg-0">
-                UPDATE CART
+              <button
+              onClick={ () => clearCart() }
+              className="btn custom-theme-btn btn-second-color text-size-18 btn-update mt-3 mt-lg-0">
+                CLEAR CART
               </button>
             </div>
           </div>
