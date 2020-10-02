@@ -36,7 +36,7 @@ export default function Shoppingcart() {
         <div className="row">
           <div className="col-lg-8">
             {cartItems.length < 1 ? (
-              <div>
+              <div className="mt-3 mt-md-0">
                 <h5 className="py-5 text-center border">
                   Your cart is empty :({" "}
                 </h5>
