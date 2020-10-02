@@ -22,6 +22,13 @@
 .sorting-option-category{
   margin-top: 10px;
 }
+.sorting-option-category > p,
+.sorting-option-category > span{
+  cursor: pointer;
+}
+.sorting-option-category .custom-control-label {
+  cursor: pointer;
+}
 .sorting-option-category.active p{
   color: var(--theme-color);
 }
