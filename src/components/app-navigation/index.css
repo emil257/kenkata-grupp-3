@@ -230,3 +230,6 @@ a.text-light:hover {
   outline: none;
   padding: 0;
 }
+.mobile-toggle-btn:focus{
+  outline: none;
+}
