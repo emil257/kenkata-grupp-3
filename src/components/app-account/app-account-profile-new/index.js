@@ -48,9 +48,9 @@ export default function Index(props) {
                         {/* Order content from order component */}
 
                         {
-                            orders.map((o, index) => {
+                            orders && orders.map((order, index) => {
                                 return (
-                                    <Order key={o._id} order={o} number={index} />)
+                                    <Order key={order._id} order={order} number={index} />)
                             })
                         }
 

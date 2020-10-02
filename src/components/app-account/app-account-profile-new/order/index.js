@@ -52,28 +52,10 @@ export default function Index({ order, number }) {
                     {/* Bottom Order-Items */}
 
                     {
-                        order.order.map((o, index) => {
-                            return (<OrderItem key={index} item={o} />)
+                        order.order && order.order.map((order, index) => {
+                            return (<OrderItem key={index} item={order} />)
                         })
                     }
-
-                    {
-                        
-                    /* <div className="order-item-1"><p className="order-id">5f63624bebae650017b67d70</p></div>
-                    <div className="order-item-2"><p className="product-name">Nike</p></div>
-                    <div className="order-item-3 font-weight-bold"><p className="product-price text-theme">$300.00</p></div>
-
-                    <div className="order-item-1"><p className="order-id">5f63624bebae650017b67d70</p></div>
-                    <div className="order-item-2"><p className="product-name">Nike</p></div>
-                    <div className="order-item-3 font-weight-bold"><p className="product-price text-theme">$300.00</p></div>
-
-                    <div className="order-item-1"><p className="order-id">5f63624bebae650017b67d70</p></div>
-                    <div className="order-item-2"><p className="product-name">Nike</p></div>
-                    <div className="order-item-3 font-weight-bold"><p className="product-price text-theme">$300.00</p></div> */
-                    
-                    }
-
-                    
 
                 </div>
             </div>
