@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 
 export default function Topsellers({handleOpenModal}) {
 
-  const productMain = useSelector(state => state.products.products[13])
+  const productMain = useSelector(state => state.products.products[9])
   const product2 = useSelector(state => state.products.products[4])
   const product3 = useSelector(state => state.products.products[5])
 
