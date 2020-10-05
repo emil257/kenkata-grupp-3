@@ -1,5 +1,4 @@
 import React from 'react'
-import nike_hoodie from '../../../../assets/img/nike_hoodie.jpg' 
 import OrderItem from './order-item'
 
 export default function Orderitem({order, number}) {

@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../../store/actions/user'
 import { Link } from "react-router-dom";
 import "./index.css";
-import nike_hoodie from '../../../assets/img/nike_hoodie.jpg' 
 import Order from './order' 
 
 import { loadOrders } from '../../../store/actions/order'

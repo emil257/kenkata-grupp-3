@@ -12,6 +12,7 @@
 }
 .product-next-prev{
   height: 100%;
+  padding: 5px;
 }
 
 .p-old-price{
@@ -32,6 +33,18 @@
   .product-prev{
     grid-template-columns: auto auto;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-prev{
+    grid-template-columns: auto auto !important;
+    grid-template-rows: 25px !important;
+  }
+
+  .product-next-prev{
+    height: 100%;
+    padding: 10px;
   }
 }
 

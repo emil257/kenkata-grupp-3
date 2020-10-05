@@ -1,16 +1,26 @@
 import React, { useState } from "react";
 import ShoppingCartCurrentStep from "../shopping-cart-current-step";
 import ShoppingCartItem from "../shopping-cart-item/index";
+import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
 import { Link } from "react-router-dom";
 import "./index.css";
-import YouMayAlsoLikeSwiper from "../../app-you-may-also-like/index";
-
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  cartTotal,
+  removeAllItemsFromCart,
+} from "../../../store/actions/products";
 
 export default function Shoppingcart() {
   const cartItems = useSelector((state) => state.products.cart);
   const totalPrice = useSelector((state) => state.products.cartTotal);
   const [shipping, setshipping] = useState(Number);
+
+  const dispatch = useDispatch();
+
+  const clearCart = () => {
+    dispatch(removeAllItemsFromCart());
+    dispatch(cartTotal());
+  };
 
   const handleRadioChange = (e) => {
     const cost = e.target.value;
@@ -25,22 +35,30 @@ export default function Shoppingcart() {
       <div className="container cart-products mt-5">
         <div className="row">
           <div className="col-lg-8">
-            <span className="weight-bold text-size-18 px-3">
-              <div className="grid-wrapper-cart-step-1">
-                <div className="grid-item-1">
-                  <p className="font-size-smaller">Product</p>
-                </div>
-                <div className="grid-item-2">
-                  <p className="font-size-smaller">Price</p>
-                </div>
-                <div className="grid-item-3">
-                  <p className="font-size-smaller">Quantity</p>
-                </div>
-                <div className="grid-item-4">
-                  <p className="font-size-smaller">Subtotal</p>
-                </div>
+            {cartItems.length < 1 ? (
+              <div className="mt-3 mt-md-0">
+                <h5 className="py-5 text-center border">
+                  Your cart is empty :({" "}
+                </h5>
               </div>
-            </span>
+            ) : (
+              <span className="weight-bold text-size-18 px-3">
+                <div className="grid-wrapper-cart-step-1">
+                  <div className="grid-item-1">
+                    <p className="font-size-smaller">Product</p>
+                  </div>
+                  <div className="grid-item-2">
+                    <p className="font-size-smaller">Price</p>
+                  </div>
+                  <div className="grid-item-3">
+                    <p className="font-size-smaller">Quantity</p>
+                  </div>
+                  <div className="grid-item-4">
+                    <p className="font-size-smaller">Subtotal</p>
+                  </div>
+                </div>
+              </span>
+            )}
 
             {cartItems.map((i) => {
               return (
@@ -66,11 +84,15 @@ export default function Shoppingcart() {
                   <button className="contact-input-btn">Apply</button>
                 </div>
               </div>
-              <button className="btn custom-theme-btn btn-second-color text-size-18 btn-update mt-3 mt-lg-0">
-                UPDATE CART
+              <button
+                onClick={() => clearCart()}
+                className="btn custom-theme-btn btn-second-color text-size-18 btn-update mt-3 mt-lg-0"
+              >
+                CLEAR CART
               </button>
             </div>
           </div>
+
           {/* Cart Total Box */}
           <div className="col-lg-4 mt-4">
             <div className="cart-total">
@@ -149,11 +171,26 @@ export default function Shoppingcart() {
                     ${totalPrice + shipping}.00
                   </p>
                 </span>
-                <Link to="/checkout">
-                  <button className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3">
-                    PROCEED TO CHECKOUT
-                  </button>
-                </Link>
+
+                {cartItems.length !== 0 ? (
+                  <div>
+                    <Link to="/checkout">
+                      <button className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3">
+                        PROCEED TO CHECKOUT
+                      </button>
+                    </Link>
+                  </div>
+                ) : (
+                  <div>
+                    <button
+                      className="btn custom-theme-btn text-size-18 btn-p-t-c mt-3"
+                      disabled
+                    >
+                      PROCEED TO CHECKOUT
+                    </button>
+                  </div>
+                )}
+
               </div>
             </div>
           </div>

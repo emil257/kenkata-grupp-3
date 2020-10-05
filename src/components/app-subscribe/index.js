@@ -1,5 +1,4 @@
 import React from 'react'
-import ContactImage from '../../assets/img/contact-image.png'
 import './index.css';
 
 export default function Index() {
@@ -21,7 +20,6 @@ export default function Index() {
                             <button className="contact-input-btn">Subscribe</button>
                         </div>
                     </div>
-                    {/* <img className="contact-img" src={ContactImage} alt="contact img"></img> */}
                 </div>
             </div>
         </div>

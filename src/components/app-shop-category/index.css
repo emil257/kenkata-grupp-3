@@ -42,6 +42,8 @@
     position: relative;
     background-color: #CCCCCC;
     border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
   }
 
   .shop-category-footer{
