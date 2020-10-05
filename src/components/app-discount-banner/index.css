@@ -38,7 +38,7 @@
     display: flex !important;
     flex-direction: column !important;
     margin: auto !important;
-    background-color: rgba(32, 211, 193, 0.82);
+    background-color: rgba(32, 211, 193, 0.7);
   }
 
   .sale-info-desc {
@@ -47,7 +47,6 @@
 
   .sale-info {
     background-color: transparent;
-    /* background: none; */
   }
 
   .sale-info-off {
