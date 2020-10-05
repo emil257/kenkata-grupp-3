@@ -39,6 +39,8 @@ export default function Product() {
       setQnt(qnt - 1)
   }
 
+  console.log(product.data)
+
   return (
     <div className="product-section">
       <div className="container">
@@ -107,13 +109,19 @@ export default function Product() {
             </div>
 
             <p className="my-3">
-              Category: <span className="text-theme-color">Shoes</span>
+              Category: 
+              {
+                product.data !== undefined ? <span className="text-theme-color"> {product.data.category}</span> : <span className="text-theme-color"> category</span>
+              }
+              
             </p>
             <p>
-              Tags:
-              <span className="product-tag ml-3">Fashion</span>
-              <span className="product-tag ml-2">Shoes</span>
-              <span className="product-tag ml-2">Sneakers</span>
+              Tags: 
+              {
+                product.data !== undefined ? product.data.tags.map(t => {
+                return <span className="product-tag ml-2">{t}</span>
+                }) : <span className="product-tag ml-2">Tags</span>
+              } 
             </p>
             <div className="d-flex align-items-center mt-3">
               <p className="mr-2">Share:</p>
