@@ -37,10 +37,7 @@ export default (state = initState, action) => {
 
       state.products.map((p) => {
         if(
-          (filter.category.includes(p.data.category.toLowerCase()) || 
-          filter.brand.includes(p.data.brand.toLowerCase()) || 
-          filter.color.includes(p.data.color.toLowerCase())) &&
-          ((filter.priceRange[0] < (p.price - p.discount)) && (filter.priceRange[1] > (p.price - p.discount)))
+          ((filter.priceRange[0] < (p.price - p.discount)) && (filter.priceRange[1] > (p.price - p.discount)) && filter.brand.includes(p.data.brand.toLowerCase()) && filter.color.includes(p.data.color.toLowerCase()) && (filter.category.includes(p.data.category.toLowerCase())))
           ){
           filteredProducts.push(p)
         }
