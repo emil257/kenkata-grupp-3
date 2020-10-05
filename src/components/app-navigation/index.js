@@ -66,15 +66,38 @@ export default function Index() {
                 aria-label="Search"
                 aria-describedby="nav-search-btn"
               />
-              <a
+              {/* <a
                 className="nav-link nav-categories-link d-flex align-items-center"
-                href="/"
+                href="!#"
                 id="navbarDropdownMenuLink"
                 data-toggle="dropdown"
               >
                 Categories
                 <i className="fas fa-chevron-down fa-sm fa-lg ml-4 dropdown-icon"></i>
+              </a> */}
+              <a
+                className="nav-link nav-categories-link d-flex align-items-center "
+                href="/#"
+                role="button"
+                id="dropdownCategoryLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Categories
+                <i className="fas fa-chevron-down fa-sm fa-lg ml-4 dropdown-icon"></i>
               </a>
+              <div
+                className="dropdown-menu custom-dropdown"
+                aria-labelledby="dropdownCategoryLink"
+              >
+                <Link to="/shoppingcart" className="dropdown-item">
+                  Shopping Cart
+                </Link>
+                <Link to="/shop" className="dropdown-item">
+                  Browse
+                </Link>
+              </div>
               <div className="input-group-prepend">
                 <button
                   className="input-group-text nav-search-btn"
