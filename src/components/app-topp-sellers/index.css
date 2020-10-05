@@ -51,3 +51,9 @@
     position: initial;
   }
 }
+
+@media (max-width: 576px) {
+  .app-top-sellers {
+    margin-bottom: 8.5rem;
+  }
+}
