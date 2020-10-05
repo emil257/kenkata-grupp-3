@@ -46,12 +46,12 @@ export default function AccoutProfile(props) {
           </div>
           <div className="collapse" id="collapseExample1">
               
-                  {
-                    orders.map((o, index)=> {
-                      return (
-                        <Order key={o._id} order={o} number={index}/>)
-                    })
-                  }
+              {
+                orders.map((o, index)=> {
+                  return (
+                    <Order key={o._id} order={o} number={index}/>)
+                })
+              }
           </div>
           {/* Account Details */}
           <div className="collapse-box mx-auto mt-1">
