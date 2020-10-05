@@ -82,7 +82,7 @@ export default function ProductModal({product}) {
                   </span>
                   <button className="increase-qnt-btn-inc" onClick={() => setQnt(qnt + 1)}>+</button>
                 </div>
-                <button onClick={() => add(product)} className="btn custom-theme-btn s-offer-btn btn-add-cart d-none d-md-block mx-4 position-sticky">
+                <button onClick={() => add(product)} className="btn custom-theme-btn s-offer-btn btn-add-cart d-none d-lg-block mx-4 position-sticky">
                   <i className="fas fa-cart-plus mr-1"></i>
                   Add to cart
                 </button>
