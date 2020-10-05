@@ -75,6 +75,10 @@
         text-align: center;
     }
 
+     .custom-cta-btn {
+         margin-top: 2rem;
+     }
+
 }
 
 @media (max-width: 576px) {
@@ -89,5 +93,9 @@
 
     .banner {
         background-position: -550px;
+    }
+
+    .custom-cta-btn {
+        margin-top: 2rem;
     }
 }

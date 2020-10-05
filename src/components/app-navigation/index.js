@@ -124,7 +124,7 @@ export default function Index() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <i className="fas fa-bars fa-lg"></i>
+              <span className="navbar-toggler-icon-black"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav flex-column-reverse flex-lg-row">
