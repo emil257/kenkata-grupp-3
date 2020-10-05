@@ -29,8 +29,8 @@ export default function Index({ order, number }) {
 
                     {/* Middle Title-Items */}
 
-                    <div className="item-middle-title-1 font-weight-bold">Product id <span className="d-none product-id-sm">/Price</span> </div>
-                    <div className="item-middle-title-2 font-weight-bold">Product name</div>
+                    <div className="item-middle-title-1 font-weight-bold">Product id <span className="d-none product-id-sm">/Price/Quantity</span> </div>
+                    <div className="item-middle-title-2 font-weight-bold">Product name x quantity</div>
                     <div className="item-middle-title-3 font-weight-bold">Product Price</div>
 
                     <div className="custom-hr-4"></div>
@@ -39,9 +39,11 @@ export default function Index({ order, number }) {
                     {/* Bottom Order-Items */}
 
                     {
+                        
                         order.order && order.order.map((order, index) => {
                             return (<OrderItem key={index} item={order} />)
                         })
+                       
                     }
 
                 </div>
