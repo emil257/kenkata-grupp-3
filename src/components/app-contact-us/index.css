@@ -76,5 +76,15 @@ padding: 0.5rem 0;
         width: initial;
     }
 
+    .get-in-touch {
+        text-align: left;
+    }
 
+
+}
+
+@media(max-width: 576px) {
+     .get-in-touch {
+         text-align: left;
+     }
 }

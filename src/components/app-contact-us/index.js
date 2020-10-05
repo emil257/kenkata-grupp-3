@@ -44,7 +44,7 @@ export default function Index() {
                     <hr className="header-breaker" />
                     <div className="row contact-content">
                         <div className="col-12 col-md-6">
-                            <h3 className="text-size-24 weight-medium text-theme-color mb-4">Get in Touch</h3>
+                            <h3 className="text-size-24 weight-medium text-theme-color mb-4 get-in-touch">Get in Touch</h3>
                             <p>We have world-className, flexible support via live chat, email and phone. We guarantee that you’ll be able to have any issue resolved within 24 hours. You can contact support immediately here.</p>
                             <div className="mt-4 mb-4 mb-md-0">
                                 <span className="weight-bold">Follow us</span>
