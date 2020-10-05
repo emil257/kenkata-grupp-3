@@ -28,6 +28,7 @@ export const placeOrder = (userID, products, total) => {
       order: products,
       orderTotal: total
     }, { headers: { 'Authorization': 'bearer ' + localStorage.getItem('token') } }).then(res => {
+      console.log(res)
       dispatch({
         type: actiontypes().order.addOrder
       })
