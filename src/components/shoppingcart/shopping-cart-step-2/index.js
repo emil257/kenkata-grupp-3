@@ -62,17 +62,17 @@ export default function Index() {
     mode: "onBlur",
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (cartProducts.length !== 0 && user !== {}) {
-      dispatch(placeOrder(user._id, cartProducts, totalPrice));
-      dispatch(removeAllItemsFromCart());
+      await dispatch(placeOrder(user._id, cartProducts, totalPrice));
+      await dispatch(removeAllItemsFromCart());
       console.log("Order sent!");
+      window.location = "/complete";
     } else {
       console.log("No items!");
     }
 
     console.log(data);
-    window.location = "/complete";
   };
 
   useEffect(() => {

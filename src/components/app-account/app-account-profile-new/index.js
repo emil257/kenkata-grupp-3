@@ -47,11 +47,13 @@ export default function Index(props) {
                     <div className="collapse" id="collapseExample1">
                         {/* Order content from order component */}
 
-                        {
+                        {   orders.length > 0 ?
                             orders && orders.map((order, index) => {
                                 return (
                                     <Order key={order._id} order={order} number={index} />)
                             })
+                            :
+                            <div className="text-center font-weight-bold py-2">We could not find any orders..</div>
                         }
 
                     </div>

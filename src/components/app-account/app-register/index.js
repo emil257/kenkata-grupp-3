@@ -4,7 +4,7 @@ import Input from "react-validation/build/input";
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { register, login } from "../../../store/actions/user";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 // import validator from 'validator'
 
