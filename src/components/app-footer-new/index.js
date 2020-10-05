@@ -5,15 +5,15 @@ import Brand_footer from '../../assets/img/footer/brand_footer.png'
 import Theme_line from '../../assets/img/footer/theme_line.png'
 
 // Instagram Logos
-import Instagram1 from '../../assets/img/footer/instagram1.jpg'
-import Instagram2 from '../../assets/img/footer/instagram2.jpg'
-import Instagram3 from '../../assets/img/footer/instagram3.jpg'
-import Instagram4 from '../../assets/img/footer/instagram4.jpg'
-import Instagram5 from '../../assets/img/footer/instagram5.jpg'
-import Instagram6 from '../../assets/img/footer/instagram6.jpg'
-import Instagram7 from '../../assets/img/footer/instagram7.jpg'
-import Instagram8 from '../../assets/img/footer/instagram8.jpg'
-import Instagram9 from '../../assets/img/footer/instagram9.jpg'
+import Instagram1 from '../../assets/img/shop-by-category-img/glasses.jpg'
+import Instagram2 from '../../assets/img/shop-by-category-img/kids.jpg'
+import Instagram3 from '../../assets/img/shop-by-category-img/women.jpg'
+import Instagram4 from '../../assets/img/footer/instagram5.jpg'
+import Instagram5 from '../../assets/img/shop-by-category-img/shoes.jpg'
+import Instagram6 from '../../assets/img/shop-by-category-img/watch.jpg'
+import Instagram7 from '../../assets/img/footer/instagram4.jpg'
+import Instagram8 from '../../assets/img/shop-by-category-img/women.jpg'
+import Instagram9 from '../../assets/img/footer/instagram1.jpg'
 
 // Payments Logos
 import Mastercard from '../../assets/img/footer/mastercard.png'
@@ -56,7 +56,7 @@ export default function Index() {
                             <div className="d-none d-md-block col-md-3 mt-5">
                                 <h6 className="text-theme footer-title">USEFUL LINKS</h6>
                                 <div><a href="/#" className="text-white text-thiny">Privay Policy</a></div>
-                                <div><a href="/#" className="text-theme text-thiny"><u>Terms & Condition</u></a></div>
+                                <div><a href="/#" className="text-white text-thiny">Terms & Condition</a></div>
                                 <div><a href="/#" className="text-white text-thiny">Contact Us</a></div>
                                 <div><a href="/#" className="text-white text-thiny">Our Sitemap</a></div>
                                 <div><a href="/#" className="text-white text-thiny">Latest News</a></div>
