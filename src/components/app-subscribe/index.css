@@ -22,23 +22,21 @@
 
 @media (max-width: 768px) {
      .app-contact {
-         margin: auto;
+         margin-top: 3rem;
          text-align: center;
+         background-size: cover;
+         background-position-y: 50%;
+         background-size: 150%;
+         background-position-x: 5%;
      }
-     .contact-img {
-         display: none;
-     }
-
 }
 
 @media (max-width: 576px) {
-
     .app-contact {
-        margin: auto;
+        margin-top: 3rem;
         text-align: center;
-    }
-
-    .contact-img {
-        display: none;
+        background-size: 180%;
+        background-position-y: 38%;
+        background-position-x: 1%;
     }
 }
