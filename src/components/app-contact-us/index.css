@@ -55,6 +55,78 @@ padding: 0.5rem 0;
     margin-bottom: 15px;
 }
 
+.fa-facebook-f {
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.fa-facebook-f:hover {
+    color: #fff;
+}
+
+.fa-twitter {
+     transition: all 0.3s linear;
+     -webkit-transition: all 0.3s linear;
+     -moz-transition: all 0.3s linear;
+     -ms-transition: all 0.3s linear;
+     -o-transition: all 0.3s linear;
+}
+
+.fa-twitter:hover {
+    color: #fff;
+}
+
+.fa-instagram {
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.fa-instagram:hover {
+    color: #fff;
+}
+
+.fa-pinterest-p {
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.fa-pinterest-p:hover {
+    color: #fff;
+}
+
+.fa-pinterest-p {
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.fa-youtube {
+     transition: all 0.3s linear;
+     -webkit-transition: all 0.3s linear;
+     -moz-transition: all 0.3s linear;
+     -ms-transition: all 0.3s linear;
+     -o-transition: all 0.3s linear;
+}
+
+.fa-youtube:hover {
+  color: #fff;
+}
+
+
+
+
+
 .send-btn {
     margin-top: 25px;
     height: 48px;
