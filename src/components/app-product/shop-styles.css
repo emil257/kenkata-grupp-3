@@ -1,7 +1,7 @@
 
 @media (min-width: 768px) {
     .product-footer{
-        font-size: 1rem;
+        font-size: 0.8rem;
         background-color: var(--secondary-color);
         position: absolute;
         left: 0;
