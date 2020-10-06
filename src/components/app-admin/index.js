@@ -3,91 +3,85 @@ import "./index.css";
 
 export default function Index() {
     return (
-        <div>
+        <div className="admin-page">
             <div className="container">
                 <div className="row">
-                    <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-white">
-                        <div>
-                            <ul className="flex-column">
-                                <li className="nav-item">
-                                    <a className="nav-link active" href="#">
-                                        <span data-feather="home"></span>
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link text-dark" href="#">
-                                        <span data-feather="file"></span>
+                    <div id="sidebarMenu" className="col-md-1 d-md-block bg-white"> 
+                                <div className="admin-order">
+                                    <a className="text-dark" href="#">
                                         Orders
                                     </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link text-dark" href="#">
-                                        <span data-feather="shopping-cart"></span>
+                                </div>
+                                <div className="">
+                                    <a className="text-dark" href="#">
                                     Products
                                     </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link text-dark" href="#">
-                                        <span data-feather="users"></span>
+                                </div>
+                                <div className="">
+                                    <a className="text-dark" href="#">
                                     Customers
                                     </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link text-dark" href="#">
-                                        <span data-feather="bar-chart-2"></span>
+                                </div>
+                                <div className="">
+                                    <a className="text-dark" href="#">
                                     Reports
                                     </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                                </div>
+                    </div>
+                    <main className="col-md-10 mt-5 admin-main ml-auto">
                         <h2>User List</h2>
                         <div className="table-responsive">
                             <table className="table table-striped table-sm">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>#</th>
                                         <th>Username</th>
                                         <th>Email</th>
                                         <th>Created</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td className="id">5f647d4beceecd0017bbdd49</td>
                                         <td className="username">Emil</td>
-                                        <td classname="email">emil.saxlund@notlify.com</td>
+                                        <td className="email">emil.saxlund@notlify.com</td>
                                         <td className="created">2020-09-18T09:26:35.089Z</td>
+                                        <td><i class="far fa-trash-alt"></i></td>
 
                                     </tr>
                                     <tr>
                                         <td className="id">5f647d4beceecd0017bbdd49</td>
                                         <td className="username">Emil</td>
-                                        <td classname="email">emil.saxlund@notlify.com</td>
+                                        <td className="email">emil.saxlund@notlify.com</td>
                                         <td className="created">2020-09-18T09:26:35.089Z</td>
+                                        <td><i class="far fa-trash-alt"></i></td>
 
                                     </tr>
                                     <tr>
                                         <td className="id">5f647d4beceecd0017bbdd49</td>
                                         <td className="username">Emil</td>
-                                        <td classname="email">emil.saxlund@notlify.com</td>
+                                        <td className="email">emil.saxlund@notlify.com</td>
                                         <td className="created">2020-09-18T09:26:35.089Z</td>
+                                        <td><i class="far fa-trash-alt"></i></td>
 
                                     </tr>
                                     <tr>
                                         <td className="id">5f647d4beceecd0017bbdd49</td>
                                         <td className="username">Emil</td>
-                                        <td classname="email">emil.saxlund@notlify.com</td>
+                                        <td className="email">emil.saxlund@notlify.com</td>
                                         <td className="created">2020-09-18T09:26:35.089Z</td>
+                                        <td><i class="far fa-trash-alt"></i></td>
 
                                     </tr>
                                     <tr>
                                         <td className="id">5f647d4beceecd0017bbdd49</td>
                                         <td className="username">Emil</td>
-                                        <td classname="email">emil.saxlund@notlify.com</td>
+                                        <td className="email">emil.saxlund@notlify.com</td>
                                         <td className="created">2020-09-18T09:26:35.089Z</td>
+                                        <td><i class="far fa-trash-alt"></i></td>
                                     </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>

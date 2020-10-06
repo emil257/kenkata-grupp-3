@@ -1,44 +1,23 @@
+.admin-page {
+  margin-bottom: 20rem;
+}
+
 #sidebarMenu {
-  
-margin-top: 5rem;
-padding: 0;
-border: 1px solid;
-
+  border-right: 1px solid var(--theme-color);
+  margin-top: 4rem;
+  padding-right: 7.5rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
 }
 
-#sidebarMenu .sidebar {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    border: 1px solid red !important;
-    box-shadow: none !important;
-    margin: auto !important;
+#sidebarMenu .admin-order {
+    margin-top: 2.1rem;
 }
 
-#sidebarMenu .sidebar .nav-link.active {
-    color: #20D3C2 !important;
+#sidebarMenu a:hover {
+  color: var(--theme-color) !important;
 }
 
-#sidebarMenu a.nav-link:hover {
-    color: #20D3C2 !important;
+.admin-main .fa-trash-alt{
+    color: #f53d3d
 }
-
-
-
-
-#sidebarMenu .nav-link {
-
-    padding: 0rem !important;
-
-}
-
-#sidebarMenu .nav {
-
-    padding: 0rem !important;
-    margin: 0 !important;
-
-}
-
-
-
-
