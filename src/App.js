@@ -95,6 +95,8 @@ function App() {
         {/* <Route exact path="/thanksforregistring" component={ThanksForRegistring} /> */}
 
         <Route exact path="*" component={NotFound} />
+
+        
       </Switch>
 
       <AppFooterNew />
