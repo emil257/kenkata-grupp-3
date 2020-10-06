@@ -118,8 +118,8 @@ export default function Product() {
             <p>
               Tags: 
               {
-                product.data !== undefined ? product.data.tags.map(t => {
-                return <span className="product-tag ml-2">{t}</span>
+                product.data !== undefined ? product.data.tags.map(t=> {
+                return <span key={product._id} className="product-tag ml-2">{t}</span>
                 }) : <span className="product-tag ml-2">Tags</span>
               } 
             </p>
