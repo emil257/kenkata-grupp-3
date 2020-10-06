@@ -7,7 +7,7 @@ export default function Index() {
         <div>
             <div className="app-latest-blog-header d-flex align-items-center flex-column">
                 <h3>
-                    <span>FEATURED<span className="text-theme-color"> PRODUCTS</span></span>
+                    <span>FEATURED<span className="text-theme-color"> <br className="br-sm"/> PRODUCTS</span></span>
                 </h3>
                 <img src={Underline} alt="underline" />
                 <p className="text-second-color">Check out our monthly featured products from top brands</p>
