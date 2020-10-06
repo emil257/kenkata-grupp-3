@@ -1,0 +1,27 @@
+import React from "react";
+import { useDispatch } from "react-redux";
+// import { deleteUser } from "../../../store/actions/admin";
+
+export default function Index(user) {
+
+    // const dispatch = useDispatch()
+
+    // const handleClick = () => {
+    //     dispatch(deleteUser(user.user._id))
+    // }
+
+  return (
+    <tr>
+      <td className="id">{user.user._id}</td>
+      <td className="username">{user.user.userName}</td>
+      <td className="email">{user.user.email}</td>
+      <td className="created">{user.user.created}</td>
+      <td>
+        <i
+        className="far fa-trash-alt"
+        // onClick={handleClick(user.user._id)}
+        ></i>
+      </td>
+    </tr>
+  );
+}
