@@ -1,5 +1,5 @@
 .app-top-sellers{
-  margin-bottom: 14rem;
+  margin-bottom: 10.5rem;
 }
 
 .product-container{
@@ -11,6 +11,12 @@
 }
 
 @media(min-width: 768px){
+
+
+  .app-top-sellers {
+    margin-bottom: 15rem;
+  }
+
   .product-container{
     height: 500px;
     grid-template-columns: 49.5% 49.5%;
@@ -30,12 +36,8 @@
 }
 
 @media(min-width: 992px){
-  .main-seller{
-    /* position: initial; */
-  }
   .main-seller img {
     width: initial;
-    /* position: initial; */
     left: -10%;
   }
 }
@@ -47,6 +49,11 @@
   .main-seller img {
     width: initial;
     position: initial;
-    /* left: -10%; */
+  }
+}
+
+@media (max-width: 576px) {
+  .app-top-sellers {
+    margin-bottom: 8.5rem;
   }
 }

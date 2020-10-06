@@ -278,4 +278,12 @@ color: #aaa;
     margin-left: auto;
     margin-right: auto;
   }
+
+  .product-font-size {
+    font-size: 0.8rem !important;
+    font-weight: 900;
+
+  }
 }
+
+

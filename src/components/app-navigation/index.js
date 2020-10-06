@@ -66,15 +66,38 @@ export default function Index() {
                 aria-label="Search"
                 aria-describedby="nav-search-btn"
               />
-              <a
+              {/* <a
                 className="nav-link nav-categories-link d-flex align-items-center"
-                href="/"
+                href="!#"
                 id="navbarDropdownMenuLink"
                 data-toggle="dropdown"
               >
                 Categories
                 <i className="fas fa-chevron-down fa-sm fa-lg ml-4 dropdown-icon"></i>
+              </a> */}
+              <a
+                className="nav-link nav-categories-link d-flex align-items-center "
+                href="/#"
+                role="button"
+                id="dropdownCategoryLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Categories
+                <i className="fas fa-chevron-down fa-sm fa-lg ml-4 dropdown-icon"></i>
               </a>
+              <div
+                className="dropdown-menu custom-dropdown"
+                aria-labelledby="dropdownCategoryLink"
+              >
+                <Link to="/shoppingcart" className="dropdown-item">
+                  Shopping Cart
+                </Link>
+                <Link to="/shop" className="dropdown-item">
+                  Browse
+                </Link>
+              </div>
               <div className="input-group-prepend">
                 <button
                   className="input-group-text nav-search-btn"
@@ -85,7 +108,7 @@ export default function Index() {
               </div>
             </div>
 
-            <div className=" d-flex align-items-center  nav-mobile-links ">
+            <div className=" d-flex align-items-center  nav-mobile-links mt-sm-4 mt-md-0">
               <Link to="/account" className="custom-nav-link">
                 <i className="far fa-user custom-nav-link-icon pr-1 "></i>
                 <span className=" my-account "> My account </span>
@@ -124,7 +147,7 @@ export default function Index() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <i className="fas fa-bars fa-lg"></i>
+              <span className="navbar-toggler-icon-black"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav flex-column-reverse flex-lg-row">

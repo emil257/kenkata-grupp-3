@@ -1,10 +1,12 @@
 .banner {
     background-color: var(--product-bg);
     margin-bottom: 5rem;
+    margin-bottom: -2rem !important;
     background-image: url('../../assets/img/Pexels-banner.png');
     background-size: cover;
+    
     height: 700px;
-    filter: brightness(90%);
+    filter: brightness(50%);
 }
 
 .banner-content p,
@@ -29,7 +31,7 @@
 .banner-content {
     color: var(--secondary-color);
     position: absolute;
-    transform: translateY(-150%);
+    transform: translateY(-105%);
     text-align: left;
 }
 
@@ -67,13 +69,20 @@
      }
 
      .banner {
-        background-position: right;
+        background-repeat: no-repeat !important;
+        background-position: center;
+        height: 500px !important;
+        filter: brightness(50%);
     }
 
     .banner-content {
-        transform: translateY(-175%);
+        transform: translateY(-128%);
         text-align: center;
     }
+
+     .custom-cta-btn {
+         margin-top: 2rem;
+     }
 
 }
 
@@ -81,6 +90,7 @@
     .banner {
         margin: auto;
         text-align: center;
+        
     }
 
     .banner-content h1 {
@@ -88,6 +98,20 @@
     }
 
     .banner {
-        background-position: -550px;
+
+        background-repeat: no-repeat !important;
+        background-position: center;
+        height: 500px !important;
+        filter: brightness(50%);
     }
+
+    .banner-content {
+        transform: translateY(-128%);
+    }
+
+    .custom-cta-btn {
+        margin-top: 2rem;
+    }
+
+   
 }

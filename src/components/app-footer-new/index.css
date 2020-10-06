@@ -45,9 +45,10 @@ font-size: 0.9rem;
 }
 
 #footer .instagram-img {
-width: 68px;
-height: 60px;
+width: 70px;
+height: 68px;
 }
+
 
 #footer .bg-footer-bottom {
 background: #080C24;
@@ -87,6 +88,7 @@ height: auto;
     #footer .footer-brand {
         text-align: center !important;
         margin: auto !important;
+        margin-top: 0.8rem !important;
     }
 
     #footer .footer-mobiles {
@@ -96,5 +98,7 @@ height: auto;
     #footer .socials-footer-mobiles {
         display: inline-block !important;
         font-size: 1.4rem !important;
+        margin-top: 1.4rem !important;
+        
     }
 }
