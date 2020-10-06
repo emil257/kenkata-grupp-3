@@ -10,10 +10,10 @@ export default function Index() {
           <img src={NotFound} alt="notfound" />
           <p className="mt-5">Oops! The page you are looking for doesn't exist.</p>
           <div className="mt-4">
-            <button className="btn custom-cta-btn btn-w-u btn-theme-color mr-4">
+            <button className="btn-not-found btn-w-u btn-theme-color mr-4">
               HOME
             </button>
-            <button className="btn custom-cta-btn btn-w-u btn-second-color">
+            <button className="btn-not-found btn-second-color">
               CONTACT US
             </button>
           </div>
