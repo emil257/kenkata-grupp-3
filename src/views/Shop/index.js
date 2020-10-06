@@ -21,9 +21,10 @@ export default function Shop({ handleOpenModal }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProducts());
-    console.log("got products");
-  }, [dispatch]);
+    dispatch(getProducts())
+  }, [dispatch])
+
+
 
   const handleFilter = (filter) => {
     dispatch(filterProducts(filter));

@@ -13,3 +13,9 @@
     margin-top: 25px;
     margin-bottom: 40px;
 }
+
+@media(min-width: 576px) {
+.br-sm {
+    display: none !important;
+}
+}
