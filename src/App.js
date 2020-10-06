@@ -15,6 +15,7 @@ import NotFound from "./views/NotFound/index"
 import AppProductModal from './components/app-product-modal'
 import Contact from './components/app-contact-us'
 import BackToTopArrow from './components/app-back-to-top/index'
+import Admin from './components/app-admin/index'
 // import ThanksForRegistring from "./views/ThanksForRegistring";
 
 import OrderComplete from './components/shoppingcart/shopping-cart-step-3/'
@@ -93,7 +94,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/complete" component={OrderComplete} />
         {/* <Route exact path="/thanksforregistring" component={ThanksForRegistring} /> */}
-
+            <Route exact path="/admin" component={Admin} />
         <Route exact path="*" component={NotFound} />
       </Switch>
 
