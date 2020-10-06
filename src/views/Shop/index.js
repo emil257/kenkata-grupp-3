@@ -27,7 +27,6 @@ export default function Shop({handleOpenModal}) {
 
   useEffect(() => {
     dispatch(getProducts())
-    console.log("got products")
   }, [dispatch])
 
 

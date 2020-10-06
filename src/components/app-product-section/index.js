@@ -39,8 +39,6 @@ export default function Product() {
       setQnt(qnt - 1)
   }
 
-  console.log(product.data)
-
   return (
     <div className="product-section">
       <div className="container">
