@@ -101,14 +101,13 @@ function App() {
         {/* <Route exact path="/thanksforregistring" component={ThanksForRegistring} /> */}
 
         
-      {/* {
+      {
         routeAdmin === 'admin'
           ? <Route exact path="/admin" component={Admin} />
           : <Route exact path="*" component={NotFound} />
-      } */}
+      }
 
-      <Route exact path="/admin" component={Admin} />
-          
+      
  
         <Route exact path="*" component={NotFound} />
       </Switch>
