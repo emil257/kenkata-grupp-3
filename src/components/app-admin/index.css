@@ -19,5 +19,7 @@
 }
 
 .admin-main .fa-trash-alt{
-    color: #f53d3d
+    color: #333;
+    cursor: pointer;
+    font-size: 1.1rem;
 }
