@@ -3,9 +3,8 @@ color: #aaa;
 }
 
 .link-color:hover {
-  color: #20D3c2;
+  color: var(--theme-color) !important;
 }
-
 .fix-controll {
   text-align: center;
   width: 100%;
