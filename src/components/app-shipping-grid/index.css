@@ -92,3 +92,11 @@
      }
 }
 
+@media (min-width: 1920px) {
+    .box-image {
+        height: 80px !important;
+        width: auto !important;
+    }
+
+}
+
