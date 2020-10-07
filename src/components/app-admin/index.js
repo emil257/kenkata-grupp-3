@@ -20,22 +20,22 @@ export default function Index() {
         <div className="row">
           <div id="sidebarMenu" className="col-md-1 d-md-block bg-white">
             <div className="admin-order">
-              <a className="text-dark" href="#">
+              <a className="text-dark" href="/#">
                 Orders
               </a>
             </div>
             <div className="">
-              <a className="text-dark" href="#">
+              <a className="text-dark" href="/#">
                 Products
               </a>
             </div>
             <div className="">
-              <a className="text-dark" href="#">
+              <a className="text-dark" href="/#">
                 Customers
               </a>
             </div>
             <div className="">
-              <a className="text-dark" href="#">
+              <a className="text-dark" href="/#">
                 Reports
               </a>
             </div>
