@@ -123,13 +123,13 @@ export default function Index() {
                   </span>
                 </i>
               </Link>
-              <Link to="/shoppingcart" className="text-dark ml-3" href="/#">
+              <Link to="/shoppingcart" className="text-dark ml-3 d-flex align-items-center" href="/#">
                 <i className="fas fa-shopping-bag position-relative">
                   <span className="badge badge-pill badge-nav-font badge-theme position-absolute">
                     {totalProducts}
                   </span>
                 </i>
-                <span className="cart-money position-absolute"> ${totalPrice}.00</span>
+                <span className="cart-money"> ${totalPrice}.00</span>
               </Link>
             </div>
           </div>
