@@ -56,7 +56,7 @@ export default function Product(props) {
       <div className={props.className}>
         {tag(props.tag)}
         <img className="product-image" src={props.product.image} alt="" />
-        <div className="product-footer">
+        <div className="product-footer product-font-size">
           <p>{props.product.name}</p>
         </div>
 

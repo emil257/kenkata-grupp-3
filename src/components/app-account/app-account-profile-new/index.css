@@ -14,7 +14,7 @@
 }
 
 #user-style .product-price {
-    margin-left: 1.9rem;
+    margin-left: 2.5rem;
 }
 
 #user-style .custom-hr-1 {
@@ -161,7 +161,16 @@
         text-align: center !important;
     }
 
+    #user-style .item-top-title-1 {
+        font-size: 1.4rem;
+        font-weight: 900 !important;
+    }
+
+    
+
     #user-style .order-item-top-1 {
+        font-size: 1.4rem;
+        font-weight: 900 !important;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         padding-top: 0.5rem;
@@ -299,7 +308,14 @@
         text-align: center !important;
     }
 
+     #user-style .item-top-title-1 {
+         font-size: 1.25rem;
+         font-weight: 900 !important;
+     }
+
     #user-style .order-item-top-1 {
+        font-size: 1.25rem;
+        font-weight: 900 !important;
         margin-top: -0.4rem;
         border-top: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);

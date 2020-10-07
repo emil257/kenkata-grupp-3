@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.css'
+// import {Link} from 'react-router-dom'
 
 import Brand_footer from '../../assets/img/footer/brand_footer.png'
 import Theme_line from '../../assets/img/footer/theme_line.png'
@@ -61,6 +62,7 @@ export default function Index() {
                                 <div><a href="/#" className="text-white text-thiny">Our Sitemap</a></div>
                                 <div><a href="/#" className="text-white text-thiny">Latest News</a></div>
                                 <div><a href="/#" className="text-white text-thiny">Returns</a></div>
+                                {/* <div><Link to='/admin'  className="text-white text-thiny">Admin</Link></div> */}
                             </div>
                             {/* Fourth Column Instagram */}
                             <div className="d-none d-md-block col-md-3 mt-5 instagram-wrapper">

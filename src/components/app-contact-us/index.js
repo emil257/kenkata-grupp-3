@@ -53,7 +53,7 @@ export default function Index() {
                                     <i className="fab fa-facebook-f pr-2"></i>
                                     <i className="fab fa-twitter px-2"></i>
                                     <i className="fab fa-instagram px-2"></i>
-                                    <i className="fab fa-pinterest-p px-2 text-white"></i>
+                                    <i className="fab fa-pinterest-p px-2"></i>
                                     <i className="fab fa-youtube px-2"></i>
                                 </div>
                             </div>
