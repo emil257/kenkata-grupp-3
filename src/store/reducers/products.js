@@ -36,11 +36,12 @@ export default (state = initState, action) => {
       let filter = action.payload
 
       state.products.map((p) => {
-        if(
-          ((filter.priceRange[0] < (p.price - p.discount)) && (filter.priceRange[1] > (p.price - p.discount)) && filter.brand.includes(p.data.brand.toLowerCase()) && filter.color.includes(p.data.color.toLowerCase()) && (filter.category.includes(p.data.category.toLowerCase())))
+        if(((filter.priceRange[0] < (p.price - p.discount)) && (filter.priceRange[1] > (p.price - p.discount)) && filter.brand.includes(p.data.brand.toLowerCase()) && filter.color.includes(p.data.color.toLowerCase()) && (filter.category.includes(p.data.category.toLowerCase())))
+      
           ){
           filteredProducts.push(p)
-        }
+        } else
+          return null
       })
 
       return {
