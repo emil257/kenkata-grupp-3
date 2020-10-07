@@ -7,6 +7,9 @@ import Product1 from "../../assets/img/product-img/product-1.png";
 import ReactTooltip from "react-tooltip";
 import Ellipses from "../../assets/img/feature-icons/ellipses.png";
 
+import { useDispatch } from 'react-redux'
+import { addToCart, loadCartTotalItems, cartTotal } from '../../store/actions/products'
+
 const tag = (t) => {
   switch (t) {
     case "new":
@@ -42,11 +45,18 @@ const tag = (t) => {
 export default function Product(props) {
 
   let history = useHistory();
+  const dispatch = useDispatch()
 
   const handleClick = (e) => {
-    if(!e.target.classList.contains('quick-view')){
+    if(!e.target.classList.contains('quick-view') && !e.target.classList.contains('add-to-cart')){
       history.push(`/product/${props.product._id}`)
     }
+  }
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({product: props.product, qnt: 1}))
+    dispatch(loadCartTotalItems())
+    dispatch(cartTotal())
   }
 
 
@@ -151,9 +161,9 @@ export default function Product(props) {
               data-tip="Add to cart"
               // onClick={() => props.handleOpenModal(props.product)}
               // onClick={() => add(props.product)}
-              className="fas fa-cart-plus link-color"
+              onClick={() => handleAddToCart()}
+              className="fas fa-cart-plus link-color add-to-cart"
               data-place="left"
-              href="#"
             > </a>
 
             <ReactTooltip

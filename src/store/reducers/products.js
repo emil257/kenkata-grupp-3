@@ -13,22 +13,15 @@ export default (state = initState, action) => {
   switch (action.type) {
     case actiontypes().products.getProducts:
       return state = {
+        ...state,
         products: action.payload,
-        filteredProducts: action.payload,
-        currentProduct: state.currentProduct,
-        cart: state.cart,
-        cartTotal: state.cartTotal,
-        cartTotalProducts: state.cartTotalProducts
+        filteredProducts: action.payload
       }
 
     case actiontypes().products.getProductById:
       return state = {
-        products: state.products,
-        filteredProducts: state.filteredProducts,
-        currentProduct: action.payload,
-        cart: state.cart,
-        cartTotal: state.cartTotal,
-        cartTotalProducts: state.cartTotalProducts
+        ...state,
+        currentProduct: action.payload
       }
     case actiontypes().products.filterProducts:
       console.log("Filtered")
@@ -36,11 +29,11 @@ export default (state = initState, action) => {
       let filter = action.payload
 
       state.products.map((p) => {
-        if(
-          ((filter.priceRange[0] < (p.price - p.discount)) && (filter.priceRange[1] > (p.price - p.discount)) && filter.brand.includes(p.data.brand.toLowerCase()) && filter.color.includes(p.data.color.toLowerCase()) && (filter.category.includes(p.data.category.toLowerCase())))
+        if(((filter.priceRange[0] < (p.price - p.discount)) && (filter.priceRange[1] > (p.price - p.discount)) && filter.brand.includes(p.data.brand.toLowerCase()) && filter.color.includes(p.data.color.toLowerCase()) && (filter.category.includes(p.data.category.toLowerCase())))
+      
           ){
           filteredProducts.push(p)
-        }
+        } 
       })
 
       return {
@@ -72,11 +65,8 @@ export default (state = initState, action) => {
       }
 
       return state = {
-        products: state.products,
-        currentProduct: state.currentProduct,
+        ...state,
         cart: a_cart,
-        cartTotal: state.cartTotal,
-        cartTotalProducts: state.cartTotalProducts
       }
     case actiontypes().products.removeFromCart:
       let r_cart = [...state.cart]
@@ -89,11 +79,8 @@ export default (state = initState, action) => {
       })
 
       return state = {
-        products: state.products,
-        currentProduct: state.currentProduct,
+        ...state,
         cart: r_cart,
-        cartTotal: state.cartTotal,
-        cartTotalProducts: state.cartTotalProducts
       }
     case actiontypes().products.changeQnt:
       let q_cart = [...state.cart]
@@ -111,11 +98,8 @@ export default (state = initState, action) => {
         i++
       })
       return state = {
-        products: state.products,
-        currentProduct: state.currentProduct,
-        cart: q_cart,
-        cartTotal: state.cartTotal,
-        cartTotalProducts: state.cartTotalProducts
+        ...state,
+        cart: q_cart
       }
     case actiontypes().products.cartTotal:
       let total = 0
@@ -125,11 +109,8 @@ export default (state = initState, action) => {
       })
 
       return state = {
-        products: state.products,
-        currentProduct: state.currentProduct,
-        cart: state.cart,
-        cartTotal: total,
-        cartTotalProducts: state.cartTotalProducts
+        ...state,
+        cartTotal: total
       }
     case actiontypes().products.cartTotalItems:
       let totalItems = 0
@@ -139,16 +120,12 @@ export default (state = initState, action) => {
       })
 
       return state = {
-        products: state.products,
-        currentProduct: state.currentProduct,
-        cart: state.cart,
-        cartTotal: state.cartTotal,
+        ...state,
         cartTotalProducts: totalItems
       }
     case actiontypes().products.emptyCart:
       return state = {
-        products: state.products,
-        currentProduct: state.currentProduct,
+        ...state,
         cart: [],
         cartTotal: 0,
         cartTotalProducts: 0
