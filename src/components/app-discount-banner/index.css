@@ -3,6 +3,7 @@
   background-color: #000;
   background: url('../../assets//img/discount-banner-bg.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   background-position-x: 20%;
   background-position-y: 20%;
   margin-bottom: 5rem;
@@ -51,5 +52,14 @@
 
   .sale-info-off {
     width: 100%;
+  }
+}
+
+
+@media (min-width: 1920px) {
+  .sale-info {
+    
+    background-size: cover !important;
+    
   }
 }

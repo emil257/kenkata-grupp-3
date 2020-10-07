@@ -8,6 +8,11 @@ a.text-light:hover {
   color: #fff !important;
 }
 
+#nav-middle a:hover {
+  color: var(--theme-color) !important;
+  
+}
+
 .fa-facebook-f {
   cursor: pointer;
 }
