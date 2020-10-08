@@ -1,12 +1,44 @@
 @import './colors.css';
 
-body {
+body, html {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  
 }
 p, h5{
   margin: 0;
 }
+
+textarea {
+  resize: none !important;
+}
+
+.btn {
+  outline: none !important;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+/* Navbar Burger Black */
+
+.navbar-toggler-icon-black {
+  display: inline-block;
+  width: 1.9em;
+  height: 1.9em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml;..");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+}
+
+
 
 /* BUTTONS START */
 .custom-theme-btn{
@@ -36,6 +68,7 @@ p, h5{
   background-color: var(--secondary-color);
   color: white;
 }
+
 .btn-theme-color{
   background-color: var(--theme-color);
   color: white;
@@ -93,6 +126,11 @@ p, h5{
 /* MEDIA END */
 
 /* TEXT HELPERS START */
+.badge-theme {
+  color: white;
+  background-color: var(--theme-color);
+}
+
 .font-montserrat{
   font-family: 'Montserrat', sans-serif;
 }
@@ -145,6 +183,10 @@ p, h5{
   padding-left: 15px;
   color: var(--theme-color);
   margin: 40px 0;
+}
+
+.badge-nav-font {
+  font-family: 'Roboto', sans-serif;
 }
 /* TEXT HELPERS END */
 
@@ -251,6 +293,41 @@ p, h5{
 .owl-dots .owl-dot {
   margin:  0 3px !important;
 }
+
+
+.swiper-button-next.swiper-button-disabled,  .swiper-button-prev.swiper-button-disabled{
+  background-color: white !important;
+  opacity: 1 !important;
+  border: 2px solid var(--line-bullet);
+  color: var(--line-bullet) !important;
+}
+.swiper-button-next,  .swiper-button-prev{
+  color: white  !important;
+  background-color: var(--theme-color);
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50%;
+}
+.swiper-button-next{
+  padding-left: 8px;
+}
+
+.swiper-button-prev {
+  padding-right: 8px;
+
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next {
+    display: none !important;
+  }
+
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+}
+
 /* CAROUSELL END */
 
 /* STARS START */
